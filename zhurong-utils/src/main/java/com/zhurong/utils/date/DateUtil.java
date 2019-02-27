@@ -1,0 +1,227 @@
+/**
+ * @Title: DateUtil.java
+ * @Package: com.zhurong.utils.date
+ * @author LZG, liuzhongguochn@gmail.com  
+ * Copyright (c) 2018 https://onezg.cnblogs.com
+ */
+package com.zhurong.utils.date;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @description: 线程安全的日期时间工具类
+ * @author LZG
+ * @date 2018/8/27
+ */
+public class DateUtil {
+
+    /* "yyyy-MM-dd HH:mm:ss"格式类型 */
+    public static final String FORMAT_YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
+    /* "yyyyMMdd"格式类型 */
+    public static final String FORMAT_YYYYMMDD = "yyyyMMdd";
+    /* "yyyy-MM-dd"格式类型 */
+    public static final String FORMAT_YYYY_MM_DD = "yyyy-MM-dd";
+    /* "yyyyMMddHHmmss"格式类型 */
+    public static final String FORMAT_YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
+    /* "yyyyMMddHHmmssSSS"格式类型 */
+    public static final String FORMAT_YYYYMMDDHHMMSSSSS = "yyyyMMddhhmmssSSS";
+    /* "HH:mm:ss"格式类型 */
+    public final static String FORMAT_HH_MM_SS = "HH:mm:ss";
+
+    /*------start私有方法----------*/
+
+    // 用于存放不同模板的日期
+    private static final ThreadLocal<Map<String, SimpleDateFormat>> LOCAL = new ThreadLocal<Map<String, SimpleDateFormat>>() {
+        @Override
+        protected Map<String, SimpleDateFormat> initialValue() {
+            return new HashMap<String, SimpleDateFormat>();
+        }
+    };
+
+    // 返回一个SimpleDateFormat,每个线程只会new一次pattern对应的sdf
+    private static SimpleDateFormat getSdf(String pattern) {
+        Map<String, SimpleDateFormat> map = LOCAL.get();
+        SimpleDateFormat sdf = map.get(pattern);
+        if (sdf == null) {
+            sdf = new SimpleDateFormat(pattern);
+            map.put(pattern, sdf);
+        }
+        return sdf;
+    }
+
+    /*------end私有方法----------*/
+
+    /**
+     * @Description: String Date转化为指定模板的Date
+     * @param dateStr
+     * @param pattern
+     * @return java.util.Date
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static Date stringToDate(String dateStr, String pattern) {
+        try {
+            SimpleDateFormat sdf = getSdf(pattern);
+            return sdf.parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * @Description: date类型数据转化为指定模板的String
+     * @param date
+     * @param pattern
+     * @return java.lang.String
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static String dateToString(Date date, String pattern) {
+        SimpleDateFormat sdf = getSdf(pattern);
+        return sdf.format(date);
+    }
+
+    /**
+     * @Description: 获取当前日期
+     * @param pattern 日期的格式模板
+     * @return java.lang.String
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static String getNow(String pattern) {
+        SimpleDateFormat sdf = getSdf(pattern);
+        return sdf.format(new Date());
+    }
+
+    /**
+     * @Description: 获取昨天的日期(包含时分秒)
+     *      结合DateUtil.dateToString()效果更佳
+     * @return java.util.Date
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static Date getYesterday() {
+        Calendar c = Calendar.getInstance();
+        c.setTime(new Date());
+        c.add(Calendar.DAY_OF_MONTH, -1);
+        return c.getTime();
+    }
+
+    /**
+     * @Description: 获取明天的日期(包含时分秒)
+     *      结合DateUtil.dateToString()效果更佳
+     *      常用于限定日期时间内完成XXX事的场景
+     * @return java.util.Date
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static Date getTomorrow() {
+        Calendar c = Calendar.getInstance();
+        c.setTime(new Date());
+        c.add(Calendar.DAY_OF_MONTH, 1);
+        return c.getTime();
+    }
+
+    /**
+     * @Description: 某日期时间加上指定天数后的日期
+     * @param date 需要计算的日期时间
+     * @param days 天数
+     * @return java.util.Date
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static Date addDays(Date date, int days) {
+        Calendar ca = Calendar.getInstance();
+        ca.setTime(date);
+        ca.add(Calendar.DATE, days);
+        return ca.getTime();
+    }
+
+    /**
+     * @Description: 获取两个日期之间的天数
+     * @param before
+     * @param after
+     * @return int
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static int getDistanceTwoDate(Date before, Date after) {
+        long beforeTime = before.getTime();
+        long afterTime = after.getTime();
+        long result = (afterTime - beforeTime) / (DateUnit.DAY.getMillis()); //1000 * 60 * 60 * 24
+        return (int)result;
+    }
+
+    /**
+     * @Description: 获取某个date的年份
+     * @param date
+     * @return int
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static int getYear(Date date) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        return c.get(Calendar.YEAR);
+    }
+
+    /**
+     * @Description: 获取某个date的月份
+     * @param date
+     * @return int
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static int getMonth(Date date) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        return c.get(Calendar.MONTH) + 1;
+    }
+
+    /**
+     * @Description: 获取某个date的day
+     * @param date
+     * @return int
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static int getDayOfMonth(Date date) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        return c.get(Calendar.DAY_OF_MONTH);
+    }
+
+    /**
+     * @Description: 获取两个日期时间的时间差
+     * @param before
+     * @param after
+     * @param flag 0秒，1分，2时，3天
+     * @return int
+     * @author LZG
+     * @date 2018/8/27
+     */
+    public static int getDifferentNum(Date before, Date after, int flag) {
+        if (before == null || after == null) {
+            return 0;
+        }
+        long timeInterval = after.getTime() - before.getTime();
+        switch (flag) {
+            case 0:
+                return (int) (timeInterval / 1000);// 秒
+            case 1:
+                return (int) (timeInterval / (60 * 1000));// 分
+            case 2:
+                return (int) timeInterval / (60 * 60 * 1000);// 时
+            case 3:
+                return (int) timeInterval / (60 * 60 * 1000 * 24);// 天
+        }
+        return 0;
+    }
+
+}
