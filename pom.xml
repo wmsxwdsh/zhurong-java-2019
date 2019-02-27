@@ -12,6 +12,7 @@
     <modules>
         <module>zhurong-utils</module>
         <module>zhurong-concurrency</module>
+        <module>zhurong-solution</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
@@ -143,13 +144,6 @@
                 <version>3.13</version>
             </dependency>
             <!-- excel poi所用====结束 -->
-
-            <!--ehcache缓存-->
-            <dependency>
-                <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache</artifactId>
-                <version>2.8.3</version>
-            </dependency>
 
         </dependencies>
     </dependencyManagement>

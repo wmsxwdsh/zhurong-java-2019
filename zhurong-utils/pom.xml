@@ -127,11 +127,6 @@
         </dependency>
         <!-- excel poi所用====结束 -->
 
-        <!--ehcache缓存-->
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
