@@ -11,9 +11,9 @@
 
     <artifactId>zhurong-concurrency</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>zhurong-concurrency-base</module>
     </modules>
-
 
 </project>
