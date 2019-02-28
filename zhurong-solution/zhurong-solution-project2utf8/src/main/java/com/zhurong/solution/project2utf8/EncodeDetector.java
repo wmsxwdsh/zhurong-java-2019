@@ -24,8 +24,7 @@ public class EncodeDetector {
   
 	//测试
 	public static void main(String[] args) {
-		//String filePath = "F:\\mars2project\\14\\src\\com\\core\\HtmlUtils.java";
-		String filePath = "F:\\MainProject\\waimai2\\src\\main\\java\\com\\coursemanage\\sys\\controller\\SysController.java";
+		String filePath = "F:\\mars2project\\feima\\src\\com\\core\\HtmlUtils.java";
 		File file = new File(filePath);
 		
 		String fileEncode = getLocalFileEncode(file);
@@ -120,7 +119,6 @@ public class EncodeDetector {
     /**
      * 获得字符串的编码格式
      * @param stringValue 要判断的字符串
-     * @author 高焕杰
      */
     public static String getStringEncode(String stringValue) {
   
