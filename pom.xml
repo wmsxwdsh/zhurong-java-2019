@@ -14,6 +14,7 @@
         <module>zhurong-concurrency</module>
         <module>zhurong-solution</module>
         <module>zhurong-algorithm</module>
+        <module>zhurong-jdk</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
@@ -63,7 +64,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
-                <version>4.2.6.RELEASE</version>
+                <version>5.1.4.RELEASE</version>
             </dependency>
 
             <!-- freemarker -->
