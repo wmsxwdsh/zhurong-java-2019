@@ -16,7 +16,7 @@ import info.monitorenter.cpdetector.io.UnicodeDetector;
 /**
  * *****************************************************************
  * Created on 2017年4月23日 上午3:46:06
- * @author LZG (mailto:watingtoshine@163.com)
+ * @author LZG (mailto:liuzhongguochn@gmail.com)
  * 功能说明： 开源项目cpdetector实现文件编码检测
  ******************************************************************
  */
