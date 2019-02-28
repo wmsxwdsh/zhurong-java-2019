@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguochn@gmail.com  
  * Copyright (c) 2018 https://onezg.cnblogs.com
  */
-package com.zhurong.utils.general;
+package com.zhurong.utils.math;
 
 import java.math.BigDecimal;
 import org.junit.Test;
