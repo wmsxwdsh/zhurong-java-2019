@@ -132,10 +132,9 @@ public class EncodeDetector {
         codepageDetector.add(JChardetFacade.getInstance());//JChardetFacade封装了由Mozilla组织提供的JChardet，它可以完成大多数文件的编码 测定。所以，一般有了这个探测器就可满足大多数项目的要求，如果你还不放心，可以再多加几个探测器，比如下面的ASCIIDetector、UnicodeDetector等。
         codepageDetector.add(ASCIIDetector.getInstance());//ASCIIDetector用于ASCII编码测定
         codepageDetector.add(UnicodeDetector.getInstance());//UnicodeDetector用于Unicode家族编码的测定
-        Charset charset = null;
         try {
             InputStream inputStream = new ByteArrayInputStream(stringValue.getBytes());
-            charset = codepageDetector.detectCodepage(inputStream, 3);
+            Charset charset = codepageDetector.detectCodepage(inputStream, 3);
             if (charset != null){
                 return charset.name();
             }
