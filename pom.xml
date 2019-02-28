@@ -13,6 +13,7 @@
         <module>zhurong-utils</module>
         <module>zhurong-concurrency</module>
         <module>zhurong-solution</module>
+        <module>zhurong-algorithm</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
