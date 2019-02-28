@@ -138,4 +138,19 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <!--解决WatermarkUtil找不到com.sun.image.codec.jpeg程序包的问题-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
