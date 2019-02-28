@@ -25,40 +25,38 @@ import java.util.regex.Pattern;
 public class ConvertEncoding {
 
     public static void main(String[] args) throws Exception {
-//		String srcDir = "F:\\mars2project\\PoiDemo\\src";
         String srcDir = "F:\\MainProject\\waimai2\\src";
 
-        List<String> files = new ArrayList<String>();
+        List<String> fileNameList = new ArrayList<String>();
 
-        //fetchFileList(srcDir, files, ".properties");
-        fetchFileList(srcDir, files, ".java");
+        //fetchFileList(srcDir, fileNameList, ".properties");
+        fetchFileList(srcDir, fileNameList, ".java");
 
-        for (String fileName : files) {
+        for (String fileName : fileNameList) {
             //convert(fileName, "GB2312", fileName, "UTF-8");
             convert(fileName, "GBK", fileName, "UTF-8");
-            //convert(fileName, "windows-1252", fileName, "UTF-8");
         }
     }
 
-    public static void convert(String oldFile, String oldCharset, String newFlie, String newCharset) {
+    public static void convert(String oldFile, String oldCharset, String newFile, String newCharset) {
         BufferedReader bin;
         FileOutputStream fos;
         StringBuffer content = new StringBuffer();
         try {
             System.out.println(oldFile);
             bin = new BufferedReader(new InputStreamReader(new FileInputStream(oldFile), oldCharset));
-            String line = null;
+            String line;
             while ((line = bin.readLine()) != null) {
                 //System.out.println("content:" + content);
                 content.append(line);
                 content.append(System.getProperty("line.separator"));
             }
             bin.close();
-            File dir = new File(newFlie.substring(0, newFlie.lastIndexOf("\\")));
+            File dir = new File(newFile.substring(0, newFile.lastIndexOf("\\")));
             if (!dir.exists()) {
                 dir.mkdirs();
             }
-            fos = new FileOutputStream(newFlie);
+            fos = new FileOutputStream(newFile);
             Writer out = new OutputStreamWriter(fos, newCharset);
             out.write(content.toString());
             out.close();
@@ -72,21 +70,29 @@ public class ConvertEncoding {
         }
     }
 
-    public static void fetchFileList(String strPath, List<String> filelist, final String regex) {
-        File dir = new File(strPath);
+    /**
+     * @Description: 获取文件列表
+     * @param srcPath 根文件夹路径
+     * @param fileList 文件集合
+     * @param regex 正则匹配
+     * @return void
+     */
+    public static void fetchFileList(String srcPath, List<String> fileList, final String regex) {
+        File dir = new File(srcPath);
         File[] files = dir.listFiles();
         Pattern p = Pattern.compile(regex);
+
         if (files == null) {
             return;
         }
         for (int i = 0; i < files.length; i++) {
             if (files[i].isDirectory()) {
-                fetchFileList(files[i].getAbsolutePath(), filelist, regex);
+                fetchFileList(files[i].getAbsolutePath(), fileList, regex);
             } else {
                 String strFileName = files[i].getAbsolutePath().toLowerCase();
                 Matcher m = p.matcher(strFileName);
                 if (m.find()) {
-                    filelist.add(strFileName);
+                    fileList.add(strFileName);
                 }
             }
         }
