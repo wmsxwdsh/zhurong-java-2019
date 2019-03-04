@@ -1,4 +1,4 @@
-/**   
+/**
  * @Title: HttpClientUtil.java
  * @Package: com.zhurong.utils.web
  * @author LZG, liuzhongguochn@gmail.com  
@@ -97,7 +97,7 @@ public class HttpClientUtil {
             }
             // 执行http请求
             response = httpClient.execute(httpPost);
-            resultString = EntityUtils.toString(response.getEntity(), "utf-8");
+            resultString = EntityUtils.toString(response.getEntity());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -111,7 +111,46 @@ public class HttpClientUtil {
         return resultString;
     }
 
+    //2019.03.04对上面方法的扩展 1、Map<String, Object> param 2、支持中文
+    public static String doPostExpand(String url, Map<String, Object> param) {
+        // 创建Httpclient对象
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CloseableHttpResponse response = null;
+        String resultString = "";
+
+        try {
+            // 创建Http Post请求
+            HttpPost httpPost = new HttpPost(url);
+
+            // 创建参数列表
+            if (param != null) {
+                List<NameValuePair> paramList = new ArrayList<NameValuePair>();
+                for (String key : param.keySet()) {
+                    paramList.add(new BasicNameValuePair(key, param.get(key).toString()));
+                }
+                // 模拟表单
+                UrlEncodedFormEntity entity = new UrlEncodedFormEntity(paramList, "UTF-8");
+                httpPost.setEntity(entity);
+            }
+            // 执行http请求
+            response = httpClient.execute(httpPost);
+            resultString = EntityUtils.toString(response.getEntity());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                response.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return resultString;
+    }
+
+
     public static String doPost(String url) {
+
         return doPost(url, null);
     }
 

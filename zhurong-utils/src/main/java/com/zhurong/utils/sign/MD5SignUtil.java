@@ -19,6 +19,8 @@ import org.apache.commons.codec.digest.DigestUtils;
  */
 public class MD5SignUtil {
 
+    public static final String md5SignKey = "liuzhongguochn@gmail.com";
+
     /**
      * @Description: 加签（&key=拼接到最后）
      * @param text 需要签名的字符串
@@ -68,7 +70,7 @@ public class MD5SignUtil {
     //测试
     public static void main(String[] args) {
         //MD5加签验签测试
-        String key = "liuzhongguo@gmail.com";
+        String key = "liuzhongguochn@gmail.com";
         String text = "测试";
         String sign = sign(text, key);
 
@@ -77,9 +79,7 @@ public class MD5SignUtil {
         System.out.println("加签：" + sign);
         System.out.println("验签：" + verify(text, sign, key));
 
-
         System.out.println("------------------------");
-
 
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("accountId", "admin");
