@@ -41,7 +41,6 @@
         <dependency>
             <artifactId>zhurong-utils</artifactId>
             <groupId>com.zhurong</groupId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
