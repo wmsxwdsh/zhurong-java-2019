@@ -8,6 +8,7 @@ package com.zhurong.utils.web;
 
 import com.zhurong.utils.general.StringUtil;
 import com.zhurong.utils.json.JsonUtil;
+import com.zhurong.utils.response.InfoCoinResponse;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,8 +28,8 @@ public class JsonpController {
     public Object register(@RequestParam String userMail, @RequestParam String vCodeToken, @RequestParam String validateCode,
         @RequestParam String confirmUrl, @RequestParam String signInfo, String callback) {
 
-        //ResponseVO responseVO = merchUserService.merchUserRegister(userMail, vCodeToken, validateCode, confirmUrl, signInfo);
-        Object responseVO = null;
+        //InfoCoinResponse infoCoinResponse = merchUserService.merchUserRegister(userMail, vCodeToken, validateCode, confirmUrl, signInfo);
+        InfoCoinResponse responseVO = null;
         if (StringUtil.isBlank(callback)) {
             return responseVO;
         }
@@ -46,12 +47,14 @@ public class JsonpController {
     @ResponseBody
     public Object register2(@RequestParam String userMail, @RequestParam String vCodeToken, @RequestParam String validateCode,
         @RequestParam String confirmUrl, @RequestParam String signInfo, String callback) {
-        //ResponseVO responseVO = merchUserService.merchUserRegister(userMail, vCodeToken, validateCode, confirmUrl, signInfo);
-        Object responseVO = null;
-        if (StringUtil.isBlank(callback))
-            return responseVO;
 
-        MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(responseVO);
+        //InfoCoinResponse infoCoinResponse = merchUserService.merchUserRegister(userMail, vCodeToken, validateCode, confirmUrl, signInfo);
+        InfoCoinResponse infoCoinResponse = null;
+        if (StringUtil.isBlank(callback)) {
+            return infoCoinResponse;
+        }
+
+        MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(infoCoinResponse);
         //setJsopFunction方法被移除了？
         //mappingJacksonValue.setJsonpFunction(callback);
         return mappingJacksonValue;
