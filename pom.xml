@@ -16,6 +16,7 @@
         <module>zhurong-solution</module>
         <module>zhurong-algorithm</module>
         <module>zhurong-jdk</module>
+        <module>zhurong-io</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
@@ -37,7 +38,7 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
-                <scope>test</scope>
+                <!--<scope>test</scope>-->
             </dependency>
 
             <!-- commons-dbutils -->
