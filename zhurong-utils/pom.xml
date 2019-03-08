@@ -41,22 +41,10 @@
             <artifactId>commons-dbutils</artifactId>
         </dependency>
 
-        <!-- javax.servlet-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
-
         <!-- HttpClient -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-        </dependency>
-
-        <!-- Spring MVC -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
         </dependency>
 
         <!-- freemarker -->
@@ -107,25 +95,29 @@
             <artifactId>guava</artifactId>
         </dependency>
 
-        <!-- excel poi所用====开始 -->
+        <!--=============excel poi start===========================-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-scratchpad</artifactId>
+            <version>3.13</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
+            <version>3.13</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.13</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-excelant</artifactId>
+            <version>3.13</version>
         </dependency>
-        <!-- excel poi所用====结束 -->
+        <!--=============excel poi end===========================-->
 
         <!-- albfernandez dbf依赖 -->
         <dependency>
@@ -134,7 +126,11 @@
             <version>1.9.2</version>
         </dependency>
 
-
+        <!-- Spring MVC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
     </dependencies>
 
