@@ -9,7 +9,7 @@ package com.zhurong.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * @description: 冒泡排序。时间复杂度O(n2)
+ * @description: 冒泡排序。时间复杂度O(n²)
  * @author LZG
  * @date 2019/2/28
  */
