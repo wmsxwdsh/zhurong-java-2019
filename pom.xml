@@ -17,6 +17,7 @@
         <module>zhurong-algorithm</module>
         <module>zhurong-jdk</module>
         <module>zhurong-io</module>
+        <module>zhurong-db</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
@@ -38,7 +39,6 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
-                <!--<scope>test</scope>-->
             </dependency>
 
             <!-- commons-dbutils -->
@@ -149,10 +149,17 @@
             </dependency>
             <!-- excel poi所用====结束 -->
 
-            <!--zhurong工具库类-->
+            <!--zhurong工具库-->
             <dependency>
-                <artifactId>zhurong-utils</artifactId>
                 <groupId>com.zhurong</groupId>
+                <artifactId>zhurong-utils</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <!--zhurong持久化层-->
+            <dependency>
+                <groupId>com.zhurong</groupId>
+                <artifactId>zhurong-db-persistence</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
@@ -163,6 +170,27 @@
                 <version>2.1.2.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- orm mybatis-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>3.4.6</version>
+            </dependency>
+
+            <!--spring boot 和 mybatis的整合依赖，里面包含mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+
+            <!--spring boot 和 druid的整合依赖-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.10</version>
             </dependency>
 
         </dependencies>
