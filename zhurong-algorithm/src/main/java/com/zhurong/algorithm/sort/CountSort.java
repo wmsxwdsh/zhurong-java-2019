@@ -1,4 +1,4 @@
-/**   
+/**
  * @Title: CountSort.java
  * @Package: com.zhurong.algorithm.sort
  * @author LZG, liuzhongguochn@gmail.com  
@@ -19,8 +19,8 @@ public class CountSort {
 
         //1、得到数列的最大值
         int max = nums[0];
-        for(int i = 1; i < nums.length; i++) {
-            if(nums[i] > max) {
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > max) {
                 max = nums[i];
             }
         }
@@ -29,15 +29,15 @@ public class CountSort {
         int[] countArray = new int[max + 1];
 
         //3、遍历数列，填充统计数组
-        for(int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             countArray[nums[i]]++;
         }
 
         //4、遍历统计数组，输出结果
         int index = 0;
         int[] sortedArray = new int[nums.length];
-        for(int i = 0; i < countArray.length; i++) {
-            for(int j = 0; j < countArray[i]; j++) {
+        for (int i = 0; i < countArray.length; i++) {
+            for (int j = 0; j < countArray[i]; j++) {
                 sortedArray[index++] = i;
             }
         }
@@ -52,6 +52,5 @@ public class CountSort {
         int[] sortedArray = countSort(nums);
         System.out.println(Arrays.toString(sortedArray));
     }
-
 
 }
