@@ -1,4 +1,4 @@
-/**   
+/**
  * @Title: TestMathUtil.java
  * @Package: com.zhurong.utils.general
  * @author LZG, liuzhongguochn@gmail.com  
@@ -34,5 +34,14 @@ public class TestMathUtil {
         System.out.println(MathUtil.plus(number1, number2, new BigDecimal("0.33")));
         System.out.println(MathUtil.plus(number1, number2, new BigDecimal("0.52")));
     }
+
+    @Test
+    public void test2() {
+        for (int i = 0; i < 20; i++) {
+            int result = MathUtil.generateRandomNumber(5, 15);
+            System.out.println(result);
+        }
+    }
+
 
 }
