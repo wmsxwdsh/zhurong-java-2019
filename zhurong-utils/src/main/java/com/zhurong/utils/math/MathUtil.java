@@ -7,6 +7,7 @@
 package com.zhurong.utils.math;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 /**
  * @description: 计算工具类
@@ -154,6 +155,20 @@ public class MathUtil {
      */
     public static String negate(String num) {
         return new BigDecimal(num).negate().toString();
+    }
+
+    /**
+     * @Description: 生成min到max间的随机整数（包含min和max）
+     * @param min
+     * @param max
+     * @return int
+     * @author LZG
+     * @date 2019/3/12
+     */
+    public static int generateRandomNumber(int min, int max) {
+        Random random = new Random();
+        int s = random.nextInt(max) % (max - min + 1) + min;
+        return s;
     }
 
 }
