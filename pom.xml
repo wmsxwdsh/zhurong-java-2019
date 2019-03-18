@@ -18,6 +18,7 @@
         <module>zhurong-jdk</module>
         <module>zhurong-io</module>
         <module>zhurong-db</module>
+        <module>zhurong-designpattern</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
