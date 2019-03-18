@@ -9,7 +9,7 @@ package com.zhurong.designpattern;
     工厂方法
     建造者模式
     原型模式
-    单态模式
+    单态模式  --http://www.cnblogs.com/java-my-life/archive/2012/03/31/2425631.html
 
  二、结构型 - 7
     适配器模式
