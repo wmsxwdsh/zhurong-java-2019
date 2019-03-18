@@ -33,9 +33,15 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- <dependency>
+             <groupId>com.alibaba</groupId>
+             <artifactId>druid</artifactId>
+         </dependency>-->
+
+        <!--建议使用这个，和spring boot集成良好，使用上面那个过程中会有一些小问题。-->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>

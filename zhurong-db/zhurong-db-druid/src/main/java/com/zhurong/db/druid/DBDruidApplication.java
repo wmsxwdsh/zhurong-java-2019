@@ -13,8 +13,8 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * @description: druid监控台请求地址：http://localhost:9090/druid/login.html
- *               用户名：zhurong 密码：123456 --在DruidServlet里配置
+ * @description: druid监控台请求地址：http://localhost:9090/testDruid/druid/login.html
+ *               用户名：zhurong 密码：123456 --在application.properties里配置
  * @author LZG
  * @date 2019/3/5
  */

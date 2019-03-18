@@ -13,6 +13,7 @@ import com.zhurong.utils.gen.EmailGen;
 import com.zhurong.utils.gen.MobileNumberGen;
 import com.zhurong.utils.idgen.UuidUtil;
 import com.zhurong.utils.response.InfoCoinResponse;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +38,7 @@ public class MerchUserController {
         MerchUser merchUser = new MerchUser.Builder().id(UuidUtil.get32UUIDStr())
             .merchUserName(ChineseNameGen.generate())
             .merchUserEmail(EmailGen.generate()).merchUserMobile(MobileNumberGen.generate())
+            .createTime(new Date())
             .build();
         merchUserService.insert(merchUser);
 
