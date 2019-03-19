@@ -8,7 +8,7 @@ package com.zhurong.designpattern;
     抽象工厂
     工厂方法
     建造者模式
-    原型模式  --
+    原型模式  --myself
     单态模式  --http://www.cnblogs.com/java-my-life/archive/2012/03/31/2425631.html
 
  二、结构型 - 7
@@ -29,7 +29,7 @@ package com.zhurong.designpattern;
     备忘录模式
     观察者模式
     状态模式
-    策略模式  --我的云笔记
+    策略模式  --myself
     模板方法模式  --http://www.cnblogs.com/java-my-life/archive/2012/05/14/2495235.html
     访问者模式
 
