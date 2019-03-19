@@ -65,7 +65,7 @@ public class IdUtil {
         return System.currentTimeMillis() +                                             //时间戳-13位
             middle +                                                                 //标志-8位
             MathUtils.makeUpNewData(Thread.currentThread().hashCode() + "", 3) +       //3位线程标志
-            MathUtils.randomDigitNumber(8);                                         //随机9位数
+            MathUtils.randomDigitNumber(8);                                         //随机8位数
     }
 
     /**
