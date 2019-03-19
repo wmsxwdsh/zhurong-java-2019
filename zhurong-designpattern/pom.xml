@@ -33,6 +33,11 @@
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.zhurong</groupId>
+            <artifactId>zhurong-utils</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
