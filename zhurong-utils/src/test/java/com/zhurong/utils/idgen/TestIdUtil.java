@@ -39,8 +39,6 @@ public class TestIdUtil {
 
         System.out.println("IdUtil.getIncreaseIdByNanoTime()每个id的长度为" + IdUtil.getIncreaseIdByNanoTime().length());
         System.out.println("IdUtil.getIncreaseIdByCurrentTimeMillis()每个id的长度为" + IdUtil.getIncreaseIdByCurrentTimeMillis().length());
-
-
     }
 
 }
