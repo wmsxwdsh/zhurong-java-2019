@@ -12,7 +12,7 @@ package com.zhurong.designpattern;
     单态模式  --http://www.cnblogs.com/java-my-life/archive/2012/03/31/2425631.html
 
  二、结构型 - 7
-    适配器模式
+    适配器模式  --http://www.cnblogs.com/java-my-life/archive/2012/04/13/2442795.html
     桥接模式
     组合模式
     外观模式
