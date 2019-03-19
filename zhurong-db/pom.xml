@@ -14,7 +14,6 @@
     <modules>
         <module>zhurong-db-druid</module>
         <module>zhurong-db-persistence</module>
-        <module>zhurong-mybatis</module>
     </modules>
 
 
