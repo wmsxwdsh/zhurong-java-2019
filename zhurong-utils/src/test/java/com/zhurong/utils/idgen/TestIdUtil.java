@@ -21,7 +21,7 @@ public class TestIdUtil {
             System.out.println(IdUtil.getRandomIdByUUID());
         }
         //32位
-        System.out.println("每个人id的长度为" + IdUtil.getRandomIdByUUID().length());
+        System.out.println("每个id的长度为" + IdUtil.getRandomIdByUUID().length());
     }
 
 
@@ -30,6 +30,17 @@ public class TestIdUtil {
         for(int i = 0; i < 10; i++) {
             System.out.println(IdUtil.getIncreaseIdByNanoTime());
         }
+    }
+
+    @Test
+    public void test3() {
+        System.out.println("System.nanoTime()的长度" + String.valueOf(System.nanoTime()).length()); //15位
+        System.out.println("System.currentTimeMillis()的长度" + String.valueOf(System.currentTimeMillis()).length()); //13位
+
+        System.out.println("IdUtil.getIncreaseIdByNanoTime()每个id的长度为" + IdUtil.getIncreaseIdByNanoTime().length());
+        System.out.println("IdUtil.getIncreaseIdByCurrentTimeMillis()每个id的长度为" + IdUtil.getIncreaseIdByCurrentTimeMillis().length());
+
+
     }
 
 }

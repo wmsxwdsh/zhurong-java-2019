@@ -41,10 +41,10 @@ public class IdUtil {
      * @date 2018/11/20
      */
     public static String getIncreaseIdByNanoTime() {
-        return System.nanoTime() +                                                       //时间戳-14位
+        return System.nanoTime() +                                                       //时间戳-15位
             middle +                                                                  //标志-8位
             MathUtils.makeUpNewData(Thread.currentThread().hashCode() + "", 3) +        //3位线程标志
-            MathUtils.randomDigitNumber(7);                                          //随机7位数
+            MathUtils.randomDigitNumber(6);                                          //随机6位数
     }
 
     /**
@@ -62,10 +62,10 @@ public class IdUtil {
      * @date 2018/11/20
      */
     public static String getIncreaseIdByCurrentTimeMillis() {
-        return System.currentTimeMillis() +                                             //时间戳-14位
+        return System.currentTimeMillis() +                                             //时间戳-13位
             middle +                                                                 //标志-8位
             MathUtils.makeUpNewData(Thread.currentThread().hashCode() + "", 3) +       //3位线程标志
-            MathUtils.randomDigitNumber(8);                                         //随机8位数
+            MathUtils.randomDigitNumber(8);                                         //随机9位数
     }
 
     /**
