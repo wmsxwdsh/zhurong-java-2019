@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguochn@gmail.com  
  * Copyright (c) 2019 北京艾森思科技有限公司
  */
-package com.zhurong.designpattern.xingweixing11.mobanfangfams.example2;
+package com.zhurong.designpattern.xingweixing11.templateMethod.example2;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguochn@gmail.com  
  * Copyright (c) 2019 北京中数合一科技有限公司
  */
-package com.zhurong.designpattern.xingweixing11.celuems;
+package com.zhurong.designpattern.xingweixing11.strategy;
 
 /**
  * @description: 折扣策略接口
