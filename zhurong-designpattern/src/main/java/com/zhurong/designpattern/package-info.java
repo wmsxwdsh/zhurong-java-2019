@@ -7,7 +7,7 @@ package com.zhurong.designpattern;
  一、创建型 - 5
     抽象工厂
     工厂方法
-    建造者模式
+    建造者模式  --https://www.cnblogs.com/liaoweipeng/p/5790603.html
     原型模式  --myself
     单态模式  --http://www.cnblogs.com/java-my-life/archive/2012/03/31/2425631.html
 
