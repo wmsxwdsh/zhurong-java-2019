@@ -1,5 +1,6 @@
 package com.zhurong.db.persistence.domain;
 
+import com.zhurong.db.persistence.validator.IdCardValidator;
 import java.util.Date;
 import javax.validation.constraints.NotNull;
 
@@ -15,6 +16,7 @@ public class TbBookInfo {
 
     private String isbn;
 
+    @IdCardValidator
     private String bookWriter;
 
     private String bookTranslator;

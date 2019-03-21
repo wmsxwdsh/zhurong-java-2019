@@ -41,6 +41,11 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.zhurong</groupId>
+            <artifactId>zhurong-utils</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!-- 扫描mybatis的mapper.xml文件 -->
