@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhurong.db.persistence.mapper.generic.TbBookInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.zhurong.db.persistence.domain.TbBookInfo" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="CATEGORY_CODE" property="categoryCode" jdbcType="VARCHAR" />
+    <result column="BOOK_NAME" property="bookName" jdbcType="VARCHAR" />
+    <result column="ISBN" property="isbn" jdbcType="VARCHAR" />
+    <result column="BOOK_WRITER" property="bookWriter" jdbcType="VARCHAR" />
+    <result column="BOOK_TRANSLATOR" property="bookTranslator" jdbcType="VARCHAR" />
+    <result column="BOOK_PRESS" property="bookPress" jdbcType="VARCHAR" />
+    <result column="BOOK_PRICE" property="bookPrice" jdbcType="REAL" />
+    <result column="PUBLISH_DATE" property="publishDate" jdbcType="DATE" />
+    <result column="COVER_PIC_PATH" property="coverPicPath" jdbcType="VARCHAR" />
+    <result column="CONTENT_BRIEF" property="contentBrief" jdbcType="VARCHAR" />
+    <result column="WRITER_BRIEF" property="writerBrief" jdbcType="VARCHAR" />
+    <result column="BOOK_CATALOG" property="bookCatalog" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    ID, CATEGORY_CODE, BOOK_NAME, ISBN, BOOK_WRITER, BOOK_TRANSLATOR, BOOK_PRESS, BOOK_PRICE, 
+    PUBLISH_DATE, COVER_PIC_PATH, CONTENT_BRIEF, WRITER_BRIEF, BOOK_CATALOG
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zhurong.db.persistence.domain.TbBookInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_book_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_book_info
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_book_info
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.zhurong.db.persistence.domain.TbBookInfoExample" >
+    delete from tb_book_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.zhurong.db.persistence.domain.TbBookInfo" >
+    insert into tb_book_info (ID, CATEGORY_CODE, BOOK_NAME, 
+      ISBN, BOOK_WRITER, BOOK_TRANSLATOR, 
+      BOOK_PRESS, BOOK_PRICE, PUBLISH_DATE, 
+      COVER_PIC_PATH, CONTENT_BRIEF, WRITER_BRIEF, 
+      BOOK_CATALOG)
+    values (#{id,jdbcType=VARCHAR}, #{categoryCode,jdbcType=VARCHAR}, #{bookName,jdbcType=VARCHAR}, 
+      #{isbn,jdbcType=VARCHAR}, #{bookWriter,jdbcType=VARCHAR}, #{bookTranslator,jdbcType=VARCHAR}, 
+      #{bookPress,jdbcType=VARCHAR}, #{bookPrice,jdbcType=REAL}, #{publishDate,jdbcType=DATE}, 
+      #{coverPicPath,jdbcType=VARCHAR}, #{contentBrief,jdbcType=VARCHAR}, #{writerBrief,jdbcType=VARCHAR}, 
+      #{bookCatalog,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zhurong.db.persistence.domain.TbBookInfo" >
+    insert into tb_book_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="categoryCode != null" >
+        CATEGORY_CODE,
+      </if>
+      <if test="bookName != null" >
+        BOOK_NAME,
+      </if>
+      <if test="isbn != null" >
+        ISBN,
+      </if>
+      <if test="bookWriter != null" >
+        BOOK_WRITER,
+      </if>
+      <if test="bookTranslator != null" >
+        BOOK_TRANSLATOR,
+      </if>
+      <if test="bookPress != null" >
+        BOOK_PRESS,
+      </if>
+      <if test="bookPrice != null" >
+        BOOK_PRICE,
+      </if>
+      <if test="publishDate != null" >
+        PUBLISH_DATE,
+      </if>
+      <if test="coverPicPath != null" >
+        COVER_PIC_PATH,
+      </if>
+      <if test="contentBrief != null" >
+        CONTENT_BRIEF,
+      </if>
+      <if test="writerBrief != null" >
+        WRITER_BRIEF,
+      </if>
+      <if test="bookCatalog != null" >
+        BOOK_CATALOG,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryCode != null" >
+        #{categoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="bookName != null" >
+        #{bookName,jdbcType=VARCHAR},
+      </if>
+      <if test="isbn != null" >
+        #{isbn,jdbcType=VARCHAR},
+      </if>
+      <if test="bookWriter != null" >
+        #{bookWriter,jdbcType=VARCHAR},
+      </if>
+      <if test="bookTranslator != null" >
+        #{bookTranslator,jdbcType=VARCHAR},
+      </if>
+      <if test="bookPress != null" >
+        #{bookPress,jdbcType=VARCHAR},
+      </if>
+      <if test="bookPrice != null" >
+        #{bookPrice,jdbcType=REAL},
+      </if>
+      <if test="publishDate != null" >
+        #{publishDate,jdbcType=DATE},
+      </if>
+      <if test="coverPicPath != null" >
+        #{coverPicPath,jdbcType=VARCHAR},
+      </if>
+      <if test="contentBrief != null" >
+        #{contentBrief,jdbcType=VARCHAR},
+      </if>
+      <if test="writerBrief != null" >
+        #{writerBrief,jdbcType=VARCHAR},
+      </if>
+      <if test="bookCatalog != null" >
+        #{bookCatalog,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.zhurong.db.persistence.domain.TbBookInfoExample" resultType="java.lang.Integer" >
+    select count(*) from tb_book_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tb_book_info
+    <set >
+      <if test="record.id != null" >
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.categoryCode != null" >
+        CATEGORY_CODE = #{record.categoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookName != null" >
+        BOOK_NAME = #{record.bookName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isbn != null" >
+        ISBN = #{record.isbn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookWriter != null" >
+        BOOK_WRITER = #{record.bookWriter,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookTranslator != null" >
+        BOOK_TRANSLATOR = #{record.bookTranslator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookPress != null" >
+        BOOK_PRESS = #{record.bookPress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookPrice != null" >
+        BOOK_PRICE = #{record.bookPrice,jdbcType=REAL},
+      </if>
+      <if test="record.publishDate != null" >
+        PUBLISH_DATE = #{record.publishDate,jdbcType=DATE},
+      </if>
+      <if test="record.coverPicPath != null" >
+        COVER_PIC_PATH = #{record.coverPicPath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contentBrief != null" >
+        CONTENT_BRIEF = #{record.contentBrief,jdbcType=VARCHAR},
+      </if>
+      <if test="record.writerBrief != null" >
+        WRITER_BRIEF = #{record.writerBrief,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bookCatalog != null" >
+        BOOK_CATALOG = #{record.bookCatalog,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tb_book_info
+    set ID = #{record.id,jdbcType=VARCHAR},
+      CATEGORY_CODE = #{record.categoryCode,jdbcType=VARCHAR},
+      BOOK_NAME = #{record.bookName,jdbcType=VARCHAR},
+      ISBN = #{record.isbn,jdbcType=VARCHAR},
+      BOOK_WRITER = #{record.bookWriter,jdbcType=VARCHAR},
+      BOOK_TRANSLATOR = #{record.bookTranslator,jdbcType=VARCHAR},
+      BOOK_PRESS = #{record.bookPress,jdbcType=VARCHAR},
+      BOOK_PRICE = #{record.bookPrice,jdbcType=REAL},
+      PUBLISH_DATE = #{record.publishDate,jdbcType=DATE},
+      COVER_PIC_PATH = #{record.coverPicPath,jdbcType=VARCHAR},
+      CONTENT_BRIEF = #{record.contentBrief,jdbcType=VARCHAR},
+      WRITER_BRIEF = #{record.writerBrief,jdbcType=VARCHAR},
+      BOOK_CATALOG = #{record.bookCatalog,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhurong.db.persistence.domain.TbBookInfo" >
+    update tb_book_info
+    <set >
+      <if test="categoryCode != null" >
+        CATEGORY_CODE = #{categoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="bookName != null" >
+        BOOK_NAME = #{bookName,jdbcType=VARCHAR},
+      </if>
+      <if test="isbn != null" >
+        ISBN = #{isbn,jdbcType=VARCHAR},
+      </if>
+      <if test="bookWriter != null" >
+        BOOK_WRITER = #{bookWriter,jdbcType=VARCHAR},
+      </if>
+      <if test="bookTranslator != null" >
+        BOOK_TRANSLATOR = #{bookTranslator,jdbcType=VARCHAR},
+      </if>
+      <if test="bookPress != null" >
+        BOOK_PRESS = #{bookPress,jdbcType=VARCHAR},
+      </if>
+      <if test="bookPrice != null" >
+        BOOK_PRICE = #{bookPrice,jdbcType=REAL},
+      </if>
+      <if test="publishDate != null" >
+        PUBLISH_DATE = #{publishDate,jdbcType=DATE},
+      </if>
+      <if test="coverPicPath != null" >
+        COVER_PIC_PATH = #{coverPicPath,jdbcType=VARCHAR},
+      </if>
+      <if test="contentBrief != null" >
+        CONTENT_BRIEF = #{contentBrief,jdbcType=VARCHAR},
+      </if>
+      <if test="writerBrief != null" >
+        WRITER_BRIEF = #{writerBrief,jdbcType=VARCHAR},
+      </if>
+      <if test="bookCatalog != null" >
+        BOOK_CATALOG = #{bookCatalog,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhurong.db.persistence.domain.TbBookInfo" >
+    update tb_book_info
+    set CATEGORY_CODE = #{categoryCode,jdbcType=VARCHAR},
+      BOOK_NAME = #{bookName,jdbcType=VARCHAR},
+      ISBN = #{isbn,jdbcType=VARCHAR},
+      BOOK_WRITER = #{bookWriter,jdbcType=VARCHAR},
+      BOOK_TRANSLATOR = #{bookTranslator,jdbcType=VARCHAR},
+      BOOK_PRESS = #{bookPress,jdbcType=VARCHAR},
+      BOOK_PRICE = #{bookPrice,jdbcType=REAL},
+      PUBLISH_DATE = #{publishDate,jdbcType=DATE},
+      COVER_PIC_PATH = #{coverPicPath,jdbcType=VARCHAR},
+      CONTENT_BRIEF = #{contentBrief,jdbcType=VARCHAR},
+      WRITER_BRIEF = #{writerBrief,jdbcType=VARCHAR},
+      BOOK_CATALOG = #{bookCatalog,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
