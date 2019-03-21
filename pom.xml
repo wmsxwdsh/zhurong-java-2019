@@ -151,6 +151,13 @@
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
+            <!--bean验证器-->
+            <dependency>
+                <groupId>com.zhurong</groupId>
+                <artifactId>zhurong-solution-beanvalidation</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
             <!-- spring boot项目的必须依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
