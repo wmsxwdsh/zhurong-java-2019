@@ -6,6 +6,9 @@
  */
 package com.zhurong.utils.general;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * @description: String工具类
  * @author LZG
@@ -156,6 +159,72 @@ public class StringUtil {
             }
         }
         return new String(chars);
+    }
+
+    /**
+     * @Description: 去除下划线，并且下划线后面的字母变成大写（本身是大写则不变）
+     * @param str
+     * @return java.lang.String
+     * @author LZG
+     * @date 2019/3/27
+     */
+    public static String replaceUnderLine(String str) {
+        StringBuffer sb = new StringBuffer();
+        sb.append(str);
+        int count = sb.indexOf("_");
+
+        while (count != 0) {
+            int num = sb.indexOf("_", count);
+            count = num + 1;
+            if (num != -1) {
+                char ss = sb.charAt(count);
+                if(Character.isUpperCase(ss))
+                    continue;
+
+                char ia = (char) (ss - 32);
+                sb.replace(count, count + 1, ia + "");
+            }
+        }
+        String result = sb.toString().replaceAll("_", "");
+        return result;
+    }
+
+    /**
+     * @Description: 将包名转换成路径
+     * @param packagePath
+     * @return java.lang.String
+     * @author LZG
+     * @date 2019/3/27
+     */
+    public static String package2path(String packagePath) {
+        return packagePath.replaceAll("\\.", "\\\\");
+    }
+
+    /**
+     * @Description: 将大写字母转换为下划线
+     * @param param
+     * @return java.lang.String
+     * @author LZG
+     * @date 2019/3/27
+     */
+    public static String upperCharToUnderLine(String param) {
+
+        Pattern p = Pattern.compile("[A-Z]");
+        if (param == null || param.equals("")) {
+            return "";
+        }
+        StringBuilder builder = new StringBuilder(param);
+        Matcher mc = p.matcher(param);
+        int i = 0;
+        while (mc.find()) {
+            builder.replace(mc.start() + i, mc.end() + i, "_" + mc.group().toLowerCase());
+            i++;
+        }
+
+        if ('_' == builder.charAt(0)) {
+            builder.deleteCharAt(0);
+        }
+        return builder.toString();
     }
 
 
