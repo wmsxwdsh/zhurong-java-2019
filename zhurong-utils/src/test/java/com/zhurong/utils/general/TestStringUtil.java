@@ -25,4 +25,25 @@ public class TestStringUtil {
         System.out.println(resultMobile); //输出: 187****0050
 
     }
+
+    @Test
+    public void test2() {
+        String test1Str = "HHHHello_World";
+        System.out.println(StringUtil.replaceUnderLine(test1Str)); //输出：HHHHelloWorld
+
+        String test2Str = "project_group";
+        System.out.println(StringUtil.replaceUnderLine(test2Str)); //输出：projectGroup
+    }
+
+    @Test
+    public void test3() {
+        String packageName = "com.essence.edop.utils";
+        System.out.println(StringUtil.package2path(packageName));
+    }
+
+    @Test
+    public void test4() {
+        String className = "Proje_ctDataSource";
+        System.out.println(StringUtil.upperCharToUnderLine(className)); //输出：proje_ct_data_source
+    }
 }
