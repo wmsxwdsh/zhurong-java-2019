@@ -33,6 +33,9 @@ public class DateUtil {
     /* "HH:mm:ss"格式类型 */
     public final static String FORMAT_HH_MM_SS = "HH:mm:ss";
 
+    /* "yyyy/MM/dd"格式类型 */
+    public final static String FORMAT_SLASH_YYYYMMDD = "yyyy/MM/dd"; //slash斜杠的意思
+
     /*------start私有方法----------*/
 
     // 用于存放不同模板的日期
