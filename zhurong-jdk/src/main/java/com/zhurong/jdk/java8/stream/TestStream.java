@@ -92,4 +92,17 @@ public class TestStream {
         strList.forEach(System.out::println);
     }
 
+    //java8替代for循环的写法
+    @Test
+    public void test9() {
+        /*
+        List<ProjectDataSource> findAllDataSource = dataSourceService.findAllDataSource(paginatorParam);
+        findAllDataSource.stream().filter(element -> {
+            element.setDbPassword(AESUtil.decrypt(element.getDbPassword(), SysConstant.data_source_password_salt));
+            return true;
+        }).collect(Collectors.toList());
+        return EdopResponse.ok("数据源查询成功!", findAllDataSource);
+        */
+    }
+
 }
