@@ -19,6 +19,7 @@
         <module>zhurong-io</module>
         <module>zhurong-db</module>
         <module>zhurong-designpattern</module>
+        <module>zhurong-mybatis</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
@@ -223,6 +224,13 @@
                 <version>1.1.10</version>
             </dependency>
             <!--=============druid end=============================-->
+
+            <!--spring boot 和 PageHelper分页的整合依赖 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.5</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
