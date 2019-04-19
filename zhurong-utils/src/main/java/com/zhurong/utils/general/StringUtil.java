@@ -6,6 +6,7 @@
  */
 package com.zhurong.utils.general;
 
+import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,6 +16,10 @@ import java.util.regex.Pattern;
  * @date 2018/8/24
  */
 public class StringUtil {
+
+    public final static String FILE_SEPARATOR = File.separator;
+
+    public final static String DOT = ".";
 
     /**
      * @Description: 判断字符串是否为空或长度为0或由空白符(Whitespace)构成
