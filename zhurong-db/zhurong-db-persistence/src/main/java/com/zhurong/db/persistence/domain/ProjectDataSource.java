@@ -3,8 +3,6 @@ package com.zhurong.db.persistence.domain;
 public class ProjectDataSource {
     private String dataSourceId;
 
-    private String projectId;
-
     private String dbType;
 
     private String envType;
@@ -19,20 +17,14 @@ public class ProjectDataSource {
 
     private String dbPassword;
 
+    private String comment;
+
     public String getDataSourceId() {
         return dataSourceId;
     }
 
     public void setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId == null ? null : dataSourceId.trim();
-    }
-
-    public String getProjectId() {
-        return projectId;
-    }
-
-    public void setProjectId(String projectId) {
-        this.projectId = projectId == null ? null : projectId.trim();
     }
 
     public String getDbType() {
@@ -89,5 +81,13 @@ public class ProjectDataSource {
 
     public void setDbPassword(String dbPassword) {
         this.dbPassword = dbPassword == null ? null : dbPassword.trim();
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment == null ? null : comment.trim();
     }
 }

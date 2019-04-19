@@ -174,76 +174,6 @@ public class ProjectDataSourceExample {
             return (Criteria) this;
         }
 
-        public Criteria andProjectIdIsNull() {
-            addCriterion("project_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdIsNotNull() {
-            addCriterion("project_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdEqualTo(String value) {
-            addCriterion("project_id =", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdNotEqualTo(String value) {
-            addCriterion("project_id <>", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdGreaterThan(String value) {
-            addCriterion("project_id >", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdGreaterThanOrEqualTo(String value) {
-            addCriterion("project_id >=", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdLessThan(String value) {
-            addCriterion("project_id <", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdLessThanOrEqualTo(String value) {
-            addCriterion("project_id <=", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdLike(String value) {
-            addCriterion("project_id like", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdNotLike(String value) {
-            addCriterion("project_id not like", value, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdIn(List<String> values) {
-            addCriterion("project_id in", values, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdNotIn(List<String> values) {
-            addCriterion("project_id not in", values, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdBetween(String value1, String value2) {
-            addCriterion("project_id between", value1, value2, "projectId");
-            return (Criteria) this;
-        }
-
-        public Criteria andProjectIdNotBetween(String value1, String value2) {
-            addCriterion("project_id not between", value1, value2, "projectId");
-            return (Criteria) this;
-        }
-
         public Criteria andDbTypeIsNull() {
             addCriterion("db_type is null");
             return (Criteria) this;
@@ -721,6 +651,76 @@ public class ProjectDataSourceExample {
 
         public Criteria andDbPasswordNotBetween(String value1, String value2) {
             addCriterion("db_password not between", value1, value2, "dbPassword");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentIsNull() {
+            addCriterion("comment is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentIsNotNull() {
+            addCriterion("comment is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentEqualTo(String value) {
+            addCriterion("comment =", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentNotEqualTo(String value) {
+            addCriterion("comment <>", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentGreaterThan(String value) {
+            addCriterion("comment >", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentGreaterThanOrEqualTo(String value) {
+            addCriterion("comment >=", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentLessThan(String value) {
+            addCriterion("comment <", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentLessThanOrEqualTo(String value) {
+            addCriterion("comment <=", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentLike(String value) {
+            addCriterion("comment like", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentNotLike(String value) {
+            addCriterion("comment not like", value, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentIn(List<String> values) {
+            addCriterion("comment in", values, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentNotIn(List<String> values) {
+            addCriterion("comment not in", values, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentBetween(String value1, String value2) {
+            addCriterion("comment between", value1, value2, "comment");
+            return (Criteria) this;
+        }
+
+        public Criteria andCommentNotBetween(String value1, String value2) {
+            addCriterion("comment not between", value1, value2, "comment");
             return (Criteria) this;
         }
     }

@@ -3,7 +3,6 @@
 <mapper namespace="com.zhurong.db.persistence.mapper.generic.ProjectDataSourceMapper" >
   <resultMap id="BaseResultMap" type="com.zhurong.db.persistence.domain.ProjectDataSource" >
     <id column="data_source_id" property="dataSourceId" jdbcType="VARCHAR" />
-    <result column="project_id" property="projectId" jdbcType="VARCHAR" />
     <result column="db_type" property="dbType" jdbcType="VARCHAR" />
     <result column="env_type" property="envType" jdbcType="VARCHAR" />
     <result column="host" property="host" jdbcType="VARCHAR" />
@@ -11,6 +10,7 @@
     <result column="sid" property="sid" jdbcType="VARCHAR" />
     <result column="db_user" property="dbUser" jdbcType="VARCHAR" />
     <result column="db_password" property="dbPassword" jdbcType="VARCHAR" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -71,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    data_source_id, project_id, db_type, env_type, host, port, sid, db_user, db_password
+    data_source_id, db_type, env_type, host, port, sid, db_user, db_password, comment
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zhurong.db.persistence.domain.ProjectDataSourceExample" >
     select
@@ -104,23 +104,18 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.zhurong.db.persistence.domain.ProjectDataSource" >
-    insert into project_data_source (data_source_id, project_id, db_type, 
-      env_type, host, port, 
-      sid, db_user, db_password
-      )
-    values (#{dataSourceId,jdbcType=VARCHAR}, #{projectId,jdbcType=VARCHAR}, #{dbType,jdbcType=VARCHAR}, 
-      #{envType,jdbcType=VARCHAR}, #{host,jdbcType=VARCHAR}, #{port,jdbcType=DECIMAL}, 
-      #{sid,jdbcType=VARCHAR}, #{dbUser,jdbcType=VARCHAR}, #{dbPassword,jdbcType=VARCHAR}
-      )
+    insert into project_data_source (data_source_id, db_type, env_type, 
+      host, port, sid, db_user, 
+      db_password, comment)
+    values (#{dataSourceId,jdbcType=VARCHAR}, #{dbType,jdbcType=VARCHAR}, #{envType,jdbcType=VARCHAR}, 
+      #{host,jdbcType=VARCHAR}, #{port,jdbcType=DECIMAL}, #{sid,jdbcType=VARCHAR}, #{dbUser,jdbcType=VARCHAR}, 
+      #{dbPassword,jdbcType=VARCHAR}, #{comment,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.zhurong.db.persistence.domain.ProjectDataSource" >
     insert into project_data_source
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="dataSourceId != null" >
         data_source_id,
-      </if>
-      <if test="projectId != null" >
-        project_id,
       </if>
       <if test="dbType != null" >
         db_type,
@@ -143,13 +138,13 @@
       <if test="dbPassword != null" >
         db_password,
       </if>
+      <if test="comment != null" >
+        comment,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="dataSourceId != null" >
         #{dataSourceId,jdbcType=VARCHAR},
-      </if>
-      <if test="projectId != null" >
-        #{projectId,jdbcType=VARCHAR},
       </if>
       <if test="dbType != null" >
         #{dbType,jdbcType=VARCHAR},
@@ -172,6 +167,9 @@
       <if test="dbPassword != null" >
         #{dbPassword,jdbcType=VARCHAR},
       </if>
+      <if test="comment != null" >
+        #{comment,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <select id="countByExample" parameterType="com.zhurong.db.persistence.domain.ProjectDataSourceExample" resultType="java.lang.Integer" >
@@ -185,9 +183,6 @@
     <set >
       <if test="record.dataSourceId != null" >
         data_source_id = #{record.dataSourceId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.projectId != null" >
-        project_id = #{record.projectId,jdbcType=VARCHAR},
       </if>
       <if test="record.dbType != null" >
         db_type = #{record.dbType,jdbcType=VARCHAR},
@@ -210,6 +205,9 @@
       <if test="record.dbPassword != null" >
         db_password = #{record.dbPassword,jdbcType=VARCHAR},
       </if>
+      <if test="record.comment != null" >
+        comment = #{record.comment,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -218,14 +216,14 @@
   <update id="updateByExample" parameterType="map" >
     update project_data_source
     set data_source_id = #{record.dataSourceId,jdbcType=VARCHAR},
-      project_id = #{record.projectId,jdbcType=VARCHAR},
       db_type = #{record.dbType,jdbcType=VARCHAR},
       env_type = #{record.envType,jdbcType=VARCHAR},
       host = #{record.host,jdbcType=VARCHAR},
       port = #{record.port,jdbcType=DECIMAL},
       sid = #{record.sid,jdbcType=VARCHAR},
       db_user = #{record.dbUser,jdbcType=VARCHAR},
-      db_password = #{record.dbPassword,jdbcType=VARCHAR}
+      db_password = #{record.dbPassword,jdbcType=VARCHAR},
+      comment = #{record.comment,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -233,9 +231,6 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.zhurong.db.persistence.domain.ProjectDataSource" >
     update project_data_source
     <set >
-      <if test="projectId != null" >
-        project_id = #{projectId,jdbcType=VARCHAR},
-      </if>
       <if test="dbType != null" >
         db_type = #{dbType,jdbcType=VARCHAR},
       </if>
@@ -257,19 +252,22 @@
       <if test="dbPassword != null" >
         db_password = #{dbPassword,jdbcType=VARCHAR},
       </if>
+      <if test="comment != null" >
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
     </set>
     where data_source_id = #{dataSourceId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.zhurong.db.persistence.domain.ProjectDataSource" >
     update project_data_source
-    set project_id = #{projectId,jdbcType=VARCHAR},
-      db_type = #{dbType,jdbcType=VARCHAR},
+    set db_type = #{dbType,jdbcType=VARCHAR},
       env_type = #{envType,jdbcType=VARCHAR},
       host = #{host,jdbcType=VARCHAR},
       port = #{port,jdbcType=DECIMAL},
       sid = #{sid,jdbcType=VARCHAR},
       db_user = #{dbUser,jdbcType=VARCHAR},
-      db_password = #{dbPassword,jdbcType=VARCHAR}
+      db_password = #{dbPassword,jdbcType=VARCHAR},
+      comment = #{comment,jdbcType=VARCHAR}
     where data_source_id = #{dataSourceId,jdbcType=VARCHAR}
   </update>
 </mapper>
