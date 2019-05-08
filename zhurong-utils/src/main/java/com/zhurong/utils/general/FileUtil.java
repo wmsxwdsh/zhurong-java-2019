@@ -7,7 +7,9 @@
 package com.zhurong.utils.general;
 
 import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
+import org.apache.commons.io.FileUtils;
 
 /**
  * @description: File工具类
@@ -114,6 +116,25 @@ public class FileUtil {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * @Description: 删除文件夹
+     * @param folderPathAndName
+     * @return void
+     * @author LZG
+     * @date 2019/5/8
+     */
+    public static void delFolder(String folderPathAndName) {
+        File folder = new File(folderPathAndName);
+        if(folder.exists()) {
+            try {
+                FileUtils.deleteDirectory(folder);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
