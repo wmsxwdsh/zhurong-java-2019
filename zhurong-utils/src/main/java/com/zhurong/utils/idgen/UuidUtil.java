@@ -36,9 +36,13 @@ public class UuidUtil {
      * @date 2018/8/24
      */
     public static void main(String[] args) {
-        String uuidStr = get32UUIDStr();
-        System.out.println(uuidStr);
-        System.out.println(uuidStr.length());
+//        String uuidStr = get32UUIDStr();
+//        System.out.println(uuidStr);
+//        System.out.println(uuidStr.length());
+
+        for(int i = 0; i < 5; i++) {
+            System.out.println(get32UUIDStr());
+        }
     }
 
 }
