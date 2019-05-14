@@ -92,7 +92,8 @@ public class TestStream {
         strList.forEach(System.out::println);
     }
 
-    //java8替代for循环的写法
+    //-----实用例子start-----------------------------------
+    //1、java8替代for循环的写法
     @Test
     public void test9() {
         /*
@@ -104,5 +105,18 @@ public class TestStream {
         return EdopResponse.ok("数据源查询成功!", findAllDataSource);
         */
     }
+
+    //2、取某个List<Bean>的bean的某个属性成为集合
+    @Test
+    public void test10() {
+        /*
+        List<PubUserRoleKey> pubUserRoleList = pubUserRoleKeyService.getPubUserRoleList(userId);
+        List<String> roleIdList = pubUserRoleList.stream().map(element -> element.getRoleId()).collect(Collectors.toList());
+        */
+    }
+
+
+
+    //-----实用例子start-----------------------------------
 
 }
