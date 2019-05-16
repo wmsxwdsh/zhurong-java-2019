@@ -48,6 +48,21 @@ public class RegexUtil {
     /*字母(包括大小写)+数字+下划线*/
     private static final String LETTER_NUM_UNDERLINE_REGEX = "^\\w+$";
 
+    /* 密码1, 由大写字母、小写字母、数字、特殊字符的任意3种组成，8-32位*/
+    private static final String PASSWORD_1_REGEX = "^(?![A-Za-z]+$)(?![A-Z\\d]+$)(?![A-Z\\W]+$)(?![a-z\\d]+$)(?![a-z\\W]+$)"
+        + "(?![\\d\\W]+$)\\S{8,32}$";
+
+    /**
+     * @Description: 是否符合密码1的规则
+     * @param str
+     * @return boolean
+     * @author LZG
+     * @date 2019/5/16
+     */
+    public static boolean isPassword1(String str) {
+        return isMatch(PASSWORD_1_REGEX, str);
+    }
+
     /**
      * @Description: 是否为数字
      * @param str
@@ -223,7 +238,7 @@ public class RegexUtil {
     }
 
     /**
-     * @Description: 验证input是否能匹配上regex(该方法内部使用,不对外开放)
+     * @Description: 验证input是否能匹配上regex(建议该方法内部使用,不对外开放)
      * @param regex
      * @param input
      * @return boolean
