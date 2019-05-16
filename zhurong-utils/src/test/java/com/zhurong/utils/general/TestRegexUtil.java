@@ -39,4 +39,15 @@ public class TestRegexUtil {
         System.out.println(RegexUtil.isQQ("635555803")); //true
     }
 
+    @Test
+    public void test4() {
+        //验证密码规则1
+        String str1 = "abc11233443"; //fasle
+        String str2 = "abc123??555"; //true
+        String str3 = "abcABC123abc"; //true
+        System.out.println(RegexUtil.isPassword1(str1));
+        System.out.println(RegexUtil.isPassword1(str2));
+        System.out.println(RegexUtil.isPassword1(str3));
+    }
+
 }
