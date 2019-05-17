@@ -115,6 +115,31 @@ public class TestStream {
         */
     }
 
+    //3、得到一个List<PubUser>，PubUser里面只有用户id。但这个user需要加个所属部门id和部门名称，部门id在另一张，部门名称在另另一张表。进行如下处理
+    @Test
+    public void test11() {
+        /*
+         List<PubUser> resultPubUserList = pubUserMapper.selectByExample(example);
+
+        //处理机构名称显示
+        resultPubUserList = resultPubUserList.stream().filter(element -> {
+            PubUserCorpKey pubUserCorpKey = pubUserCorpKeyService.getPubUserCorpKeyListByUserId(element.getUserId());
+
+            if(null != pubUserCorpKey) {
+                String corpId = pubUserCorpKey.getCorpId();
+                String corpName = pubCorpService.getPubCorpByCorpId(corpId).getCorpName();
+                element.setCorpId(corpId);
+                element.setCorpName(corpName);
+            } else {
+                PubCorp pubCorp = pubCorpService.getRootCorp();
+                element.setCorpId(pubCorp.getCorpId());
+                element.setCorpName(pubCorp.getCorpName());
+            }
+            return true;
+        }).collect(Collectors.toList());
+        */
+    }
+
 
 
     //-----实用例子start-----------------------------------
