@@ -50,4 +50,12 @@ public class TestRegexUtil {
         System.out.println(RegexUtil.isPassword1(str3));
     }
 
+    @Test
+    public void test5() {
+        String str1 = "0531-5763722"; //true
+        String str2 = "101-56998951"; //false
+        System.out.println(RegexUtil.isHomePhoneNumber(str1));
+        System.out.println(RegexUtil.isHomePhoneNumber(str2));
+    }
+
 }

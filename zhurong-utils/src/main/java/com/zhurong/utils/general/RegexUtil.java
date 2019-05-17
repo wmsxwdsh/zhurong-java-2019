@@ -21,7 +21,10 @@ public class RegexUtil {
     private static final String IMAGE_REGEX = "(.*?)(?i)(jpg|jpeg|png|gif|bmp|webp)";
 
     /*手机号码*/
-    private static final String MOBILE_REGEX = "^(13[0-9]|14[57]|15[012356789]|17[0678]|18[0-9])[0-9]{8}$";
+    private static final String MOBILE_NUMBER_REGEX = "^(13[0-9]|14[57]|15[012356789]|17[0678]|18[0-9])[0-9]{8}$";
+
+    /*座机号码*/
+    private static final String HOMEPHONE_NUMBER_REGEX = "/0\\d{2}-\\d{7,8}/";
 
     /*18位身份证号*/
     private static final String IDCARD18_REGEX = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9Xx])$";
@@ -134,8 +137,23 @@ public class RegexUtil {
      * @author LZG
      * @date 2018/8/24
      */
-    public static boolean isMobile(String mobile) {
-        return isMatch(MOBILE_REGEX, mobile);
+    public static boolean isMobileNumber(String mobile) {
+        return isMatch(MOBILE_NUMBER_REGEX, mobile);
+    }
+
+    /**
+     * @Description: 是否是有效的座机号码（中国）
+     *         <p>中国的座机号码是有三个部分，分别是代表当地的区号、分隔符及具体的号码</p>
+     *         <p>区号：以数字0开始，并跟随2-3个数字</p>
+     *         <p>分隔符：以 - 代替，便于书面的理解；</p>
+     *         <p>具体的号码：大部分地区的号码是7-8位数字组成</p>
+     * @param homePhoneNumber
+     * @return boolean
+     * @author LZG
+     * @date 2019/5/17
+     */
+    public static boolean isHomePhoneNumber(String homePhoneNumber) {
+        return isMatch(HOMEPHONE_NUMBER_REGEX, homePhoneNumber);
     }
 
     /**
