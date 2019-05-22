@@ -52,8 +52,8 @@ public class TestRegexUtil {
 
     @Test
     public void test5() {
-        String str1 = "0531-5763722"; //true
-        String str2 = "101-56998951"; //false
+        String str1 = "0535-57637228"; //true
+        String str2 = "0101-56998951"; //false
         System.out.println(RegexUtil.isHomePhoneNumber(str1));
         System.out.println(RegexUtil.isHomePhoneNumber(str2));
     }

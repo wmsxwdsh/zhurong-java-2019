@@ -23,8 +23,8 @@ public class RegexUtil {
     /*手机号码*/
     private static final String MOBILE_NUMBER_REGEX = "^(13[0-9]|14[57]|15[012356789]|17[0678]|18[0-9])[0-9]{8}$";
 
-    /*座机号码*/
-    private static final String HOMEPHONE_NUMBER_REGEX = "/0\\d{2}-\\d{7,8}/";
+    /*座机号码（带区号验证）*/
+    private static final String HOMEPHONE_NUMBER_REGEX = "^[0][1-9]{2,3}-[0-9]{5,10}$";
 
     /*18位身份证号*/
     private static final String IDCARD18_REGEX = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9Xx])$";
