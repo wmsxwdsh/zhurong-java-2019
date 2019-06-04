@@ -16,6 +16,7 @@
         <module>zhurong-solution-project2utf8</module>
         <module>zhurong-solution-sign</module>
         <module>zhurong-solution-beanvalidation</module>
+        <module>zhurong-solution-uploadfile</module>
     </modules>
 
 </project>
