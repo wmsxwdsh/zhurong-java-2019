@@ -143,6 +143,11 @@
         </dependency>
         <!-- protobuff相关end  -->
 
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
