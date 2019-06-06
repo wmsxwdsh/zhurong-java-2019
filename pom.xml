@@ -20,6 +20,7 @@
         <module>zhurong-db</module>
         <module>zhurong-designpattern</module>
         <module>zhurong-mybatis</module>
+        <module>zhurong-generator</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
@@ -230,6 +231,26 @@
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>1.2.5</version>
+            </dependency>
+
+            <!-- protobuff相关start -->
+            <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-core</artifactId>
+                <version>1.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-runtime</artifactId>
+                <version>1.4.0</version>
+            </dependency>
+            <!-- protobuff相关end  -->
+
+            <!-- google开源图片压缩工具 -->
+            <dependency>
+                <groupId>net.coobird</groupId>
+                <artifactId>thumbnailator</artifactId>
+                <version>0.4.7</version>
             </dependency>
 
         </dependencies>
