@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary">
+  <resultMap id="BaseResultMap" type="com.zhurong.generator.persistence.mybatis.domain.TbDictionary">
+         <id column="ID"  property="id" jdbcType="VARCHAR"/>
+         <result column="DICT_NO"  property="dictNo" jdbcType="VARCHAR"/>
+         <result column="ITEM_CODE"  property="itemCode" jdbcType="VARCHAR"/>
+         <result column="ITEM_NAME"  property="itemName" jdbcType="VARCHAR"/>
+         <result column="VERSION"  property="version" jdbcType="INT"/>
+         <result column="MODEL_FLAG"  property="modelFlag" jdbcType="VARCHAR"/>
+         <result column="PARENT_ITEM_CODE"  property="parentItemCode" jdbcType="VARCHAR"/>
+         <result column="PARENT_DICT_NO"  property="parentDictNo" jdbcType="VARCHAR"/>
+         <result column="MODEL_ORDER"  property="modelOrder" jdbcType="INT"/>
+         <result column="CHK_STS"  property="chkSts" jdbcType="CHAR"/>
+         <result column="OPER_TYPE"  property="operType" jdbcType="VARCHAR"/>
+         <result column="AUDITOR"  property="auditor" jdbcType="VARCHAR"/>
+         <result column="AUDIT_OPINION"  property="auditOpinion" jdbcType="VARCHAR"/>
+         <result column="AUDIT_TIME"  property="auditTime" jdbcType="TIMESTAMP"/>
+         <result column="CREATOR"  property="creator" jdbcType="VARCHAR"/>
+         <result column="CREATE_TIME"  property="createTime" jdbcType="TIMESTAMP"/>
+         <result column="UPDATER"  property="updater" jdbcType="VARCHAR"/>
+         <result column="MODIFY_TIME"  property="modifyTime" jdbcType="TIMESTAMP"/>
+         <result column="REMARK"  property="remark" jdbcType="VARCHAR"/>
+  </resultMap>
+
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+  <sql id="Base_Column_List">
+      ID,
+      DICT_NO,
+      ITEM_CODE,
+      ITEM_NAME,
+      VERSION,
+      MODEL_FLAG,
+      PARENT_ITEM_CODE,
+      PARENT_DICT_NO,
+      MODEL_ORDER,
+      CHK_STS,
+      OPER_TYPE,
+      AUDITOR,
+      AUDIT_OPINION,
+      AUDIT_TIME,
+      CREATOR,
+      CREATE_TIME,
+      UPDATER,
+      MODIFY_TIME,
+      REMARK
+  </sql>
+
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List"/>
+    from project_data_source
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause"/>
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+      select
+      <include refid="Base_Column_List"/>
+      from tb_dictionary
+      where
+          ID =  #{ id,jdbcType=VARCHAR }
+  </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+      delete from tb_dictionary
+      where
+          ID = #{id,jdbcType=VARCHAR }
+    </delete>
+
+    <delete id="deleteByExample" parameterType="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary" >
+        delete from tb_dictionary
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" parameterType="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary" >
+        insert into tb_dictionary(
+            ID,
+            DICT_NO,
+            ITEM_CODE,
+            ITEM_NAME,
+            VERSION,
+            MODEL_FLAG,
+            PARENT_ITEM_CODE,
+            PARENT_DICT_NO,
+            MODEL_ORDER,
+            CHK_STS,
+            OPER_TYPE,
+            AUDITOR,
+            AUDIT_OPINION,
+            AUDIT_TIME,
+            CREATOR,
+            CREATE_TIME,
+            UPDATER,
+            MODIFY_TIME,
+            REMARK
+        )
+        values (
+            #{id,jdbcType=VARCHAR},
+            #{dictNo,jdbcType=VARCHAR},
+            #{itemCode,jdbcType=VARCHAR},
+            #{itemName,jdbcType=VARCHAR},
+            #{version,jdbcType=INT},
+            #{modelFlag,jdbcType=VARCHAR},
+            #{parentItemCode,jdbcType=VARCHAR},
+            #{parentDictNo,jdbcType=VARCHAR},
+            #{modelOrder,jdbcType=INT},
+            #{chkSts,jdbcType=CHAR},
+            #{operType,jdbcType=VARCHAR},
+            #{auditor,jdbcType=VARCHAR},
+            #{auditOpinion,jdbcType=VARCHAR},
+            #{auditTime,jdbcType=TIMESTAMP},
+            #{creator,jdbcType=VARCHAR},
+            #{createTime,jdbcType=TIMESTAMP},
+            #{updater,jdbcType=VARCHAR},
+            #{modifyTime,jdbcType=TIMESTAMP},
+            #{remark,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary" >
+        insert into tb_dictionary
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+
+            <if test="id != null" >
+              ID,
+            </if>
+            <if test="dictNo != null" >
+              DICT_NO,
+            </if>
+            <if test="itemCode != null" >
+              ITEM_CODE,
+            </if>
+            <if test="itemName != null" >
+              ITEM_NAME,
+            </if>
+            <if test="version != null" >
+              VERSION,
+            </if>
+            <if test="modelFlag != null" >
+              MODEL_FLAG,
+            </if>
+            <if test="parentItemCode != null" >
+              PARENT_ITEM_CODE,
+            </if>
+            <if test="parentDictNo != null" >
+              PARENT_DICT_NO,
+            </if>
+            <if test="modelOrder != null" >
+              MODEL_ORDER,
+            </if>
+            <if test="chkSts != null" >
+              CHK_STS,
+            </if>
+            <if test="operType != null" >
+              OPER_TYPE,
+            </if>
+            <if test="auditor != null" >
+              AUDITOR,
+            </if>
+            <if test="auditOpinion != null" >
+              AUDIT_OPINION,
+            </if>
+            <if test="auditTime != null" >
+              AUDIT_TIME,
+            </if>
+            <if test="creator != null" >
+              CREATOR,
+            </if>
+            <if test="createTime != null" >
+              CREATE_TIME,
+            </if>
+            <if test="updater != null" >
+              UPDATER,
+            </if>
+            <if test="modifyTime != null" >
+              MODIFY_TIME,
+            </if>
+            <if test="remark != null" >
+              REMARK,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+            #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="dictNo != null" >
+            #{dictNo,jdbcType=VARCHAR},
+            </if>
+            <if test="itemCode != null" >
+            #{itemCode,jdbcType=VARCHAR},
+            </if>
+            <if test="itemName != null" >
+            #{itemName,jdbcType=VARCHAR},
+            </if>
+            <if test="version != null" >
+            #{version,jdbcType=INT},
+            </if>
+            <if test="modelFlag != null" >
+            #{modelFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="parentItemCode != null" >
+            #{parentItemCode,jdbcType=VARCHAR},
+            </if>
+            <if test="parentDictNo != null" >
+            #{parentDictNo,jdbcType=VARCHAR},
+            </if>
+            <if test="modelOrder != null" >
+            #{modelOrder,jdbcType=INT},
+            </if>
+            <if test="chkSts != null" >
+            #{chkSts,jdbcType=CHAR},
+            </if>
+            <if test="operType != null" >
+            #{operType,jdbcType=VARCHAR},
+            </if>
+            <if test="auditor != null" >
+            #{auditor,jdbcType=VARCHAR},
+            </if>
+            <if test="auditOpinion != null" >
+            #{auditOpinion,jdbcType=VARCHAR},
+            </if>
+            <if test="auditTime != null" >
+            #{auditTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creator != null" >
+            #{creator,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+            #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updater != null" >
+            #{updater,jdbcType=VARCHAR},
+            </if>
+            <if test="modifyTime != null" >
+            #{modifyTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remark != null" >
+            #{remark,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" parameterType="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary" resultType="java.lang.Integer" >
+        select count(*) from tb_dictionary
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" parameterType="map" >
+        update tb_dictionary
+        <set >
+            <if test="id != null" >
+            #{ID,jdbcType=VARCHAR},
+            </if>
+            <if test="dictNo != null" >
+            #{DICT_NO,jdbcType=VARCHAR},
+            </if>
+            <if test="itemCode != null" >
+            #{ITEM_CODE,jdbcType=VARCHAR},
+            </if>
+            <if test="itemName != null" >
+            #{ITEM_NAME,jdbcType=VARCHAR},
+            </if>
+            <if test="version != null" >
+            #{VERSION,jdbcType=INT},
+            </if>
+            <if test="modelFlag != null" >
+            #{MODEL_FLAG,jdbcType=VARCHAR},
+            </if>
+            <if test="parentItemCode != null" >
+            #{PARENT_ITEM_CODE,jdbcType=VARCHAR},
+            </if>
+            <if test="parentDictNo != null" >
+            #{PARENT_DICT_NO,jdbcType=VARCHAR},
+            </if>
+            <if test="modelOrder != null" >
+            #{MODEL_ORDER,jdbcType=INT},
+            </if>
+            <if test="chkSts != null" >
+            #{CHK_STS,jdbcType=CHAR},
+            </if>
+            <if test="operType != null" >
+            #{OPER_TYPE,jdbcType=VARCHAR},
+            </if>
+            <if test="auditor != null" >
+            #{AUDITOR,jdbcType=VARCHAR},
+            </if>
+            <if test="auditOpinion != null" >
+            #{AUDIT_OPINION,jdbcType=VARCHAR},
+            </if>
+            <if test="auditTime != null" >
+            #{AUDIT_TIME,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creator != null" >
+            #{CREATOR,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+            #{CREATE_TIME,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updater != null" >
+            #{UPDATER,jdbcType=VARCHAR},
+            </if>
+            <if test="modifyTime != null" >
+            #{MODIFY_TIME,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remark != null" >
+            #{REMARK,jdbcType=VARCHAR},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+          <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" parameterType="map" >
+        update tb_dictionary
+        set
+            ID = #{record.id},jdbcType=VARCHAR},
+            DICT_NO = #{record.dictNo},jdbcType=VARCHAR},
+            ITEM_CODE = #{record.itemCode},jdbcType=VARCHAR},
+            ITEM_NAME = #{record.itemName},jdbcType=VARCHAR},
+            VERSION = #{record.version},jdbcType=INT},
+            MODEL_FLAG = #{record.modelFlag},jdbcType=VARCHAR},
+            PARENT_ITEM_CODE = #{record.parentItemCode},jdbcType=VARCHAR},
+            PARENT_DICT_NO = #{record.parentDictNo},jdbcType=VARCHAR},
+            MODEL_ORDER = #{record.modelOrder},jdbcType=INT},
+            CHK_STS = #{record.chkSts},jdbcType=CHAR},
+            OPER_TYPE = #{record.operType},jdbcType=VARCHAR},
+            AUDITOR = #{record.auditor},jdbcType=VARCHAR},
+            AUDIT_OPINION = #{record.auditOpinion},jdbcType=VARCHAR},
+            AUDIT_TIME = #{record.auditTime},jdbcType=TIMESTAMP},
+            CREATOR = #{record.creator},jdbcType=VARCHAR},
+            CREATE_TIME = #{record.createTime},jdbcType=TIMESTAMP},
+            UPDATER = #{record.updater},jdbcType=VARCHAR},
+            MODIFY_TIME = #{record.modifyTime},jdbcType=TIMESTAMP},
+            REMARK = #{record.remark},jdbcType=VARCHAR}
+        <if test="_parameter != null" >
+          <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary" >
+        update tb_dictionary
+        <set >
+            <if test="id != null" >
+            #{ID,jdbcType=VARCHAR},
+            </if>
+            <if test="dictNo != null" >
+            #{DICT_NO,jdbcType=VARCHAR},
+            </if>
+            <if test="itemCode != null" >
+            #{ITEM_CODE,jdbcType=VARCHAR},
+            </if>
+            <if test="itemName != null" >
+            #{ITEM_NAME,jdbcType=VARCHAR},
+            </if>
+            <if test="version != null" >
+            #{VERSION,jdbcType=INT},
+            </if>
+            <if test="modelFlag != null" >
+            #{MODEL_FLAG,jdbcType=VARCHAR},
+            </if>
+            <if test="parentItemCode != null" >
+            #{PARENT_ITEM_CODE,jdbcType=VARCHAR},
+            </if>
+            <if test="parentDictNo != null" >
+            #{PARENT_DICT_NO,jdbcType=VARCHAR},
+            </if>
+            <if test="modelOrder != null" >
+            #{MODEL_ORDER,jdbcType=INT},
+            </if>
+            <if test="chkSts != null" >
+            #{CHK_STS,jdbcType=CHAR},
+            </if>
+            <if test="operType != null" >
+            #{OPER_TYPE,jdbcType=VARCHAR},
+            </if>
+            <if test="auditor != null" >
+            #{AUDITOR,jdbcType=VARCHAR},
+            </if>
+            <if test="auditOpinion != null" >
+            #{AUDIT_OPINION,jdbcType=VARCHAR},
+            </if>
+            <if test="auditTime != null" >
+            #{AUDIT_TIME,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creator != null" >
+            #{CREATOR,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+            #{CREATE_TIME,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updater != null" >
+            #{UPDATER,jdbcType=VARCHAR},
+            </if>
+            <if test="modifyTime != null" >
+            #{MODIFY_TIME,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remark != null" >
+            #{REMARK,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where
+          ID = #{id,jdbcType=VARCHAR}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.zhurong.generator.persistence.mybatis.mapper.generic.TbDictionary" >
+        update tb_dictionary
+        set
+            ID = #{record.id},jdbcType=VARCHAR},
+            DICT_NO = #{record.dictNo},jdbcType=VARCHAR},
+            ITEM_CODE = #{record.itemCode},jdbcType=VARCHAR},
+            ITEM_NAME = #{record.itemName},jdbcType=VARCHAR},
+            VERSION = #{record.version},jdbcType=INT},
+            MODEL_FLAG = #{record.modelFlag},jdbcType=VARCHAR},
+            PARENT_ITEM_CODE = #{record.parentItemCode},jdbcType=VARCHAR},
+            PARENT_DICT_NO = #{record.parentDictNo},jdbcType=VARCHAR},
+            MODEL_ORDER = #{record.modelOrder},jdbcType=INT},
+            CHK_STS = #{record.chkSts},jdbcType=CHAR},
+            OPER_TYPE = #{record.operType},jdbcType=VARCHAR},
+            AUDITOR = #{record.auditor},jdbcType=VARCHAR},
+            AUDIT_OPINION = #{record.auditOpinion},jdbcType=VARCHAR},
+            AUDIT_TIME = #{record.auditTime},jdbcType=TIMESTAMP},
+            CREATOR = #{record.creator},jdbcType=VARCHAR},
+            CREATE_TIME = #{record.createTime},jdbcType=TIMESTAMP},
+            UPDATER = #{record.updater},jdbcType=VARCHAR},
+            MODIFY_TIME = #{record.modifyTime},jdbcType=TIMESTAMP},
+            REMARK = #{record.remark},jdbcType=VARCHAR}
+        where
+            ID = #{id,jdbcType=VARCHAR}
+    </update>
+
+</mapper>
