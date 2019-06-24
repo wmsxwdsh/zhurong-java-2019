@@ -183,8 +183,9 @@ public class StringUtil {
             count = num + 1;
             if (num != -1) {
                 char ss = sb.charAt(count);
-                if(Character.isUpperCase(ss))
+                if (Character.isUpperCase(ss)) {
                     continue;
+                }
 
                 char ia = (char) (ss - 32);
                 sb.replace(count, count + 1, ia + "");
@@ -240,16 +241,16 @@ public class StringUtil {
         int lastPos = 0;
         boolean var3 = false;
 
-        while(lastPos < src.length()) {
+        while (lastPos < src.length()) {
             int pos = src.indexOf("%", lastPos);
             if (pos == lastPos) {
                 char ch;
                 if (src.charAt(pos + 1) == 'u') {
-                    ch = (char)Integer.parseInt(src.substring(pos + 2, pos + 6), 16);
+                    ch = (char) Integer.parseInt(src.substring(pos + 2, pos + 6), 16);
                     tmp.append(ch);
                     lastPos = pos + 6;
                 } else {
-                    ch = (char)Integer.parseInt(src.substring(pos + 1, pos + 3), 16);
+                    ch = (char) Integer.parseInt(src.substring(pos + 1, pos + 3), 16);
                     tmp.append(ch);
                     lastPos = pos + 3;
                 }
@@ -267,5 +268,26 @@ public class StringUtil {
 
     //=== Used By AttachFile end ===========
 
+    /**
+     * @Description: 转换字符串。第一个字母大写。
+     *         -- 一般传的是驼峰标识的字符串
+     * @param param
+     * @return java.lang.String
+     * @author LZG
+     * @date 2019/6/24
+     */
+    public static String upperCaseFist(String param) {
+        if (isBlank(param)) {
+            throw new RuntimeException("param can't be null.");
+        }
+
+        byte[] items = param.getBytes();
+        items[0] = (byte) ((char) items[0] - 'a' + 'A');
+        return new String(items);
+
+//        String str1 = param.substring(0, 1).toUpperCase();
+//        String str2 = param.substring(2)
+//        return str1 + str2;
+    }
 
 }

@@ -52,6 +52,8 @@ public class TestDateUtil {
 
         Date before = DateUtil.stringToDate("2018-05-11 12:45:22", DateUtil.FORMAT_YYYY_MM_DD_HH_MM_SS);
         Date after = DateUtil.stringToDate("2018-05-15 20:10:55", DateUtil.FORMAT_YYYY_MM_DD_HH_MM_SS);
+
+        Date d1 = DateUtil.stringToDate("2019-06-24", DateUtil.FORMAT_YYYY_MM_DD);
     }
 
     @Test
