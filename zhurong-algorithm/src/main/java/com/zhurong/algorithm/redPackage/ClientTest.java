@@ -14,7 +14,7 @@ package com.zhurong.algorithm.redPackage;
 public class ClientTest {
 
     public static void main(String[] args) {
-        WxRedPackage redPackage = new WxRedPackage(5, 100);
+        WxRedPackage redPackage = new WxRedPackage(3, 41300);
 
         while(redPackage.remainSize != 0) {
             double randomMoney = WxRedPackageAlgorithm.getRandomMoney(redPackage);
