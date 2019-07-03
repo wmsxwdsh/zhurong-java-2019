@@ -1,4 +1,4 @@
-/**   
+/**
  * @Title: CacheVerifyRecordService.java
  * @Package: com.zhurong.utils.db.service
  * @author LZG, liuzhongguochn@gmail.com  
@@ -22,14 +22,13 @@ public class CacheVerifyRecordService {
     private static CacheVerifyRecordDao dao = new CacheVerifyRecordDaoImpl();
 
     public static void main(String[] args) throws SQLException {
-
-        // addCacheVerifyRecord();
-        // updateCacheVerifyRecord();
-        // deleteCacheVerifyRecord();
-        // findCacheVerifyRecordById();;
-        // findAllCacheVerifyRecord();
-        findCacheVerifyRecordByBankName();
-        // cacheVerifyRecord();
+//        addCacheVerifyRecord();
+//        updateCacheVerifyRecord();
+//        deleteCacheVerifyRecord();
+//        findCacheVerifyRecordById();
+//        findAllCacheVerifyRecord();
+//        findCacheVerifyRecordByBankName();
+        cacheVerifyRecord();
     }
 
     /**
