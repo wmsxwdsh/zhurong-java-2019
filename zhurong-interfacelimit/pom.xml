@@ -17,6 +17,7 @@
     <url>http://www.example.com</url>
     <modules>
         <module>zhurong-interfacelimit-single</module>
+        <module>zhurong-interfacelimit-distributed</module>
     </modules>
 
     <properties>
