@@ -6,14 +6,12 @@
  */
 package com.zhurong.interfacelimit.distributed.service;
 
-import com.zhurong.utils.response.edop.EdopResponse;
-
 /**
  * @description: 
  * @author LZG
  * @date 2019/7/5
  */
 public interface TestService {
-    EdopResponse getResultOne();
-    EdopResponse getResultTwo();
+    void getResultOne();
+    void getResultTwo();
 }

@@ -23,14 +23,12 @@ public class TestServiceImpl implements TestService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
-    public EdopResponse getResultOne() {
+    public void getResultOne() {
         logger.info("调用了方法getResultOne");
-        return EdopResponse.ok("调用方法成功！");
     }
 
     @Override
-    public EdopResponse getResultTwo() {
+    public void getResultTwo() {
         logger.info("调用了方法getResultTwo");
-        return EdopResponse.ok("调用方法成功！");
     }
 }
