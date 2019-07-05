@@ -22,6 +22,7 @@
         <module>zhurong-mybatis</module>
         <module>zhurong-generator</module>
         <module>zhurong-interfacelimit</module>
+        <module>zhurong-distributedlock</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
@@ -253,6 +254,14 @@
                 <artifactId>thumbnailator</artifactId>
                 <version>0.4.7</version>
             </dependency>
+
+            <!-- redis jedis -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>2.9.0</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
