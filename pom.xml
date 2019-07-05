@@ -21,6 +21,7 @@
         <module>zhurong-designpattern</module>
         <module>zhurong-mybatis</module>
         <module>zhurong-generator</module>
+        <module>zhurong-interfacelimit</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
