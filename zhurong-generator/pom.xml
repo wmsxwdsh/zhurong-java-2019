@@ -99,11 +99,9 @@
         </dependency>
         <!-- 数据库操作依赖end -->
 
-        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
         </dependency>
 
     </dependencies>
