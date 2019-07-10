@@ -1,0 +1,26 @@
+[
+	{
+		"paramName": "inCreateLineRasterRiverNetworkAbsolutePath",
+		"useItemIndexOutput": 7,
+		"useItemIndexParamName": "outCreateLineRasterRiverNetworkAbsolutePath",
+		"paramType": "in",
+		"outFileName": "",
+		"fileSuffix": "tif"
+	},
+	{
+		"paramName": "inRepeatCalculateFlowAbsolutePath",
+		"useItemIndexOutput": 4,
+		"useItemIndexParamName": "outRepeatCalculateFlowAbsolutePath",
+		"paramType": "in",
+		"outFileName": "",
+		"fileSuffix": "tif"
+	},
+	{
+		"paramName": "outCreateVectorRiverNetworkAbsolutePath",
+		"useItemIndexOutput": 0,
+		"useItemIndexParamName": "",
+		"paramType": "out",
+		"outFileName": "step9",
+		"fileSuffix": "shp"
+	}
+]
