@@ -7,6 +7,7 @@
 package com.zhurong.utils.date;
 
 import java.util.Date;
+import java.util.List;
 import org.junit.Test;
 
 /**
@@ -60,6 +61,18 @@ public class TestDateUtil {
     public void testGetNow() {
         System.out.println(DateUtil.getNow(DateUtil.FORMAT_YYYY_MM_DD));
         System.out.println(DateUtil.getNow(DateUtil.FORMAT_YYYY_MM_DD_HH_MM_SS));
+    }
+
+    @Test
+    public void testGetBetweenDate() {
+        String startTime = "2019-07-20";
+        String endTime = "2019-08-05";
+        List<String> betweenDateStrList = DateUtil.getBetweenDate(startTime, endTime);
+        for(String s : betweenDateStrList) {
+            System.out.println(s);
+        }
+
+
     }
 
 }
