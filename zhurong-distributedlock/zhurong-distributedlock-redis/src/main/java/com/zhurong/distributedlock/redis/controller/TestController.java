@@ -7,6 +7,7 @@
 package com.zhurong.distributedlock.redis.controller;
 
 import com.zhurong.distributedlock.redis.config.RedisLockUtil;
+import com.zhurong.distributedlock.redis.config.RedisUtil;
 import com.zhurong.utils.idgen.UuidUtil;
 import com.zhurong.utils.response.edop.EdopResponse;
 import org.slf4j.Logger;
@@ -27,6 +28,9 @@ public class TestController {
 
     @Autowired
     private RedisLockUtil redisLockUtil;
+
+    @Autowired
+    private RedisUtil redisUtil;
 
     @RequestMapping("/test")
     public EdopResponse test() {
@@ -52,6 +56,12 @@ public class TestController {
 
         //问题：occupy为false，即没有抢到锁，就什么都不执行?!
         return EdopResponse.ok("执行完毕！");
+    }
+
+    @RequestMapping("/testRedisTemplate")
+    public EdopResponse testRedisTemplate() {
+        redisUtil.set("hello", "world", 5000);
+        return EdopResponse.ok("testRedisTemplate测试完毕！");
     }
 
 }
