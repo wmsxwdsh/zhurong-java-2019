@@ -558,4 +558,42 @@ public class MerchUser implements Serializable {
             return new MerchUser(this);
         }
     }
+
+    @Override
+    public String toString() {
+        return "MerchUser{" +
+            "id='" + id + '\'' +
+            ", merchUserId='" + merchUserId + '\'' +
+            ", merchId='" + merchId + '\'' +
+            ", merchUserName='" + merchUserName + '\'' +
+            ", accountPwd='" + accountPwd + '\'' +
+            ", nickName='" + nickName + '\'' +
+            ", userBirthday=" + userBirthday +
+            ", birthplace='" + birthplace + '\'' +
+            ", gender='" + gender + '\'' +
+            ", merchUserEmail='" + merchUserEmail + '\'' +
+            ", merchUserEmailAuth='" + merchUserEmailAuth + '\'' +
+            ", allowEmailLogin='" + allowEmailLogin + '\'' +
+            ", merchUserMobile='" + merchUserMobile + '\'' +
+            ", merchUserMobileAuth='" + merchUserMobileAuth + '\'' +
+            ", allowMobileLogin='" + allowMobileLogin + '\'' +
+            ", accountStatus='" + accountStatus + '\'' +
+            ", roleCode='" + roleCode + '\'' +
+            ", isFirstLogin='" + isFirstLogin + '\'' +
+            ", lastLoginTime=" + lastLoginTime +
+            ", lastFailTimes=" + lastFailTimes +
+            ", resetPwdFlag='" + resetPwdFlag + '\'' +
+            ", idFrontFacePicPath='" + idFrontFacePicPath + '\'' +
+            ", idBackFacePicPath='" + idBackFacePicPath + '\'' +
+            ", idAuthFlag='" + idAuthFlag + '\'' +
+            ", isVip='" + isVip + '\'' +
+            ", creator='" + creator + '\'' +
+            ", createTime=" + createTime +
+            ", updater='" + updater + '\'' +
+            ", modifyTime=" + modifyTime +
+            ", remark='" + remark + '\'' +
+            '}';
+    }
+
+
 }
