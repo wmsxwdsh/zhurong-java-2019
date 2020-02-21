@@ -15,6 +15,7 @@
     <modules>
         <module>zhurong-concurrency-base</module>
         <module>zhurong-concurrency-advanced</module>
+        <module>zhurong-concurrency-zhanglong</module>
     </modules>
 
 </project>
