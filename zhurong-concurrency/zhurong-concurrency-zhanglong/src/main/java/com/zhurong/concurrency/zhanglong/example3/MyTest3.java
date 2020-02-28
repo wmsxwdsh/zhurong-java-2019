@@ -15,6 +15,7 @@ public class MyTest3 {
 
     public static synchronized void method3() {
         System.out.println("hello world");
+
     }
 
 }
