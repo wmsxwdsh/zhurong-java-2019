@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: myspringboot
+  mandatory-file-encoding: utf-8
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+
+server:
+  port: 9090
+
+#\u81EA\u5B9A\u4E49\u7684\u914D\u7F6E\uFF0C\u7528value\u6CE8\u5165
+myConfig:
+  myObject:
+    myName: zhangsan
+    myAge: 30
+
+
+
