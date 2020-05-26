@@ -18,7 +18,7 @@ public class Secretary implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println("秘书做出了行为" + arg);
+        System.out.println("秘书做出了行为(" + arg + ")");
     }
-
 }
+
