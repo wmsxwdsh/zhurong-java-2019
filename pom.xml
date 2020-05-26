@@ -27,6 +27,7 @@
         <module>zhurong-kafka</module>
         <module>zhurong-spring</module>
         <module>zhurong-springboot</module>
+        <module>zhurong-spi</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
