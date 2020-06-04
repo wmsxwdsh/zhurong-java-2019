@@ -29,6 +29,7 @@
         <module>zhurong-springboot</module>
         <module>zhurong-spi</module>
         <module>zhurong-mq</module>
+        <module>zhurong-springboot-test</module>
     </modules>
 
     <!-- 规范写法,这里应该先定义依赖的版本号 -->
