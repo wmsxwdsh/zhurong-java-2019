@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguo@cdvcloud.com
  * Copyright (c) 2020 https://www.yunshicloud.com
  */
-package com.zhurong.springboot;
+package com.zhurong.springboot.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

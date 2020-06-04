@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguo@cdvcloud.com
  * Copyright (c) 2020 https://www.yunshicloud.com
  */
-package com.zhurong.springboot.config;
+package com.zhurong.springboot.test.config;
 
 import org.springframework.beans.factory.annotation.Value;
 

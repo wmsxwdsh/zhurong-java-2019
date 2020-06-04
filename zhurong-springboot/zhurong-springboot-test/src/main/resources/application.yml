@@ -1,6 +1,6 @@
 spring:
   application:
-    name: myspringboot
+    name: springboottest
   mandatory-file-encoding: utf-8
   http:
     encoding:

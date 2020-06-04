@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguo@cdvcloud.com
  * Copyright (c) 2020 https://www.yunshicloud.com
  */
-package com.zhurong.springboot.domain;
+package com.zhurong.springboot.test.domain;
 
 import java.util.Date;
 

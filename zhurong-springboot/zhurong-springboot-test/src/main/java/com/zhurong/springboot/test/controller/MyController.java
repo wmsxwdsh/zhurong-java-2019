@@ -4,10 +4,10 @@
  * @author LZG, liuzhongguo@cdvcloud.com
  * Copyright (c) 2020 https://www.yunshicloud.com
  */
-package com.zhurong.springboot.controller;
+package com.zhurong.springboot.test.controller;
 
-import com.zhurong.springboot.config.MyConfigBean;
-import com.zhurong.springboot.domain.Person;
+import com.zhurong.springboot.test.config.MyConfigBean;
+import com.zhurong.springboot.test.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
