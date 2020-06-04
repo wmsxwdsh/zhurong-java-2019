@@ -1,0 +1,21 @@
+server:
+  port: 9090
+
+
+spring:
+  mvc:
+    view:
+      prefix: WEB-INF/jsp/
+      suffix: .jsp
+
+
+# myself config
+myConfig:
+  myObject:
+    myName: zhangsan
+    myAge: 30
+
+#logging:
+#  level:
+#    root: debug
+#    path: logs/mylog
