@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguo@cdvcloud.com
  * Copyright (c) 2020 https://www.yunshicloud.com
  */
-package com.yuzhong.myspringboot.controller.config;
+package com.yuzhong.myspringboot.v1.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

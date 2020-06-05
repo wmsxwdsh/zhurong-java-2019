@@ -1,8 +1,8 @@
-package com.yuzhong.myspringboot.controller;
+package com.yuzhong.myspringboot.v1;
 
-import com.yuzhong.myspringboot.controller.echo.DefaultEchoService;
-import com.yuzhong.myspringboot.controller.echo.EchoServcie;
-import com.yuzhong.myspringboot.controller.echo.EchoWebSocketHandler;
+import com.yuzhong.myspringboot.v1.echo.DefaultEchoService;
+import com.yuzhong.myspringboot.v1.echo.EchoServcie;
+import com.yuzhong.myspringboot.v1.echo.EchoWebSocketHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

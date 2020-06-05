@@ -4,7 +4,7 @@
  * @author LZG, liuzhongguo@cdvcloud.com
  * Copyright (c) 2020 https://www.yunshicloud.com
  */
-package com.yuzhong.myspringboot.controller.util;
+package com.yuzhong.myspringboot.v1.util;
 
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
