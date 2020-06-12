@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 祝融。华夏族上古神话人物，火神。 -->
@@ -11,24 +11,25 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>zhurong-utils</module>
-        <module>zhurong-concurrency</module>
-        <module>zhurong-solution</module>
-        <module>zhurong-algorithm</module>
-        <module>zhurong-jdk</module>
-        <module>zhurong-io</module>
-        <module>zhurong-db</module>
-        <module>zhurong-designpattern</module>
-        <module>zhurong-mybatis</module>
-        <module>zhurong-generator</module>
-        <module>zhurong-interfacelimit</module>
-        <module>zhurong-distributedlock</module>
-        <module>zhurong-jersey</module>
-        <module>zhurong-kafka</module>
-        <module>zhurong-spring</module>
-        <module>zhurong-springboot</module>
-        <module>zhurong-spi</module>
-        <module>zhurong-mq</module>
+        <module>zhurong-utils</module> <!-- 工具类库 -->
+        <module>zhurong-concurrency</module> <!-- 并发 -->
+        <module>zhurong-solution</module> <!-- 常见问题解决方案 -->
+        <module>zhurong-algorithm</module> <!-- 算法 -->
+        <module>zhurong-jdk</module> <!-- 深入理解JDK -->
+        <module>zhurong-io</module> <!-- IO、NIO相关 -->
+        <module>zhurong-db</module> <!-- 数据库、druid、实体 -->
+        <module>zhurong-designpattern</module> <!-- 设计模式 -->
+        <module>zhurong-mybatis</module> <!-- mybatis框架 -->
+        <module>zhurong-generator</module> <!-- 自编的代码生成器 -->
+        <module>zhurong-interfacelimit</module> <!-- 接口限流 -->
+        <module>zhurong-distributedlock</module> <!-- 分布式锁 -->
+        <module>zhurong-jersey</module> <!-- jersey, restful风格轻量级框架 -->
+        <module>zhurong-kafka</module> <!-- kafka消息中间件 -->
+        <module>zhurong-spring</module> <!-- spring框架 -->
+        <module>zhurong-springboot</module> <!-- 深入spring boot -->
+        <module>zhurong-spi</module> <!-- java spi机制 -->
+        <module>zhurong-mq</module> <!-- mq中间件 -->
+        <module>zhurong-slb</module> <!-- 神州顺利办 -->
         <!-- next -->
     </modules>
 
