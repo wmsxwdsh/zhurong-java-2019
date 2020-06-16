@@ -6,6 +6,7 @@
  */
 package com.zhurong.utils;
 
+import com.zhurong.utils.content.MaskUtil;
 import org.junit.Test;
 
 /**
