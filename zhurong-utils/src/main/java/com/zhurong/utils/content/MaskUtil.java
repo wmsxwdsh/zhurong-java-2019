@@ -11,16 +11,16 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.UUID;
 
 /**
- * @author LZG
  * @description: 脱敏工具
+ * @author LZG
  * @date 2020年06月15日
  */
 public class MaskUtil {
 
     /**
+     * @Description: 身份证号脱敏
      * @param cardNum :
      * @return : java.lang.String
-     * @Description: 身份证号脱敏
      * @author LZG
      * @date 2020/6/15
      */
@@ -32,9 +32,9 @@ public class MaskUtil {
     }
 
     /**
+     * @Description: 手机号脱敏
      * @param phone :
      * @return : java.lang.String
-     * @Description: 手机号脱敏
      * @author LZG
      * @date 2020/6/15
      */
@@ -46,9 +46,9 @@ public class MaskUtil {
     }
 
     /**
+     * @Description: 银行卡脱敏
      * @param cardNum :
      * @return : java.lang.String
-     * @Description: 银行卡脱敏
      * @author LZG
      * @date 2020/6/15
      */
@@ -60,9 +60,9 @@ public class MaskUtil {
     }
 
     /**
+     * @Description: 字符串截取
      * @param url : 特定情况特定写。
      * @return : java.lang.String
-     * @Description: 字符串截取
      * @author LZG
      * @date 2020/6/15
      */
@@ -81,9 +81,9 @@ public class MaskUtil {
     }
 
     /**
+     * @Description: boolean 转 byte
      * @param bool :
      * @return : byte
-     * @Description: boolean 转 byte
      * @author LZG
      * @date 2020/6/15
      */
@@ -106,7 +106,6 @@ public class MaskUtil {
         //去掉“-”符号
         return uuid.replaceAll("-", "");
     }
-
 
     //获取短UUID
     public static String getRandomNum() {
