@@ -10,7 +10,7 @@ spring:
 server:
   port: 9090
 
-#\u81EA\u5B9A\u4E49\u7684\u914D\u7F6E\uFF0C\u7528value\u6CE8\u5165
+#自定义配置
 myConfig:
   myObject:
     myName: zhangsan
