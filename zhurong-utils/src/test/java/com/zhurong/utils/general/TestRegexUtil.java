@@ -58,4 +58,11 @@ public class TestRegexUtil {
         System.out.println(RegexUtil.isHomePhoneNumber(str2));
     }
 
+    @Test
+    public void test6() {
+        String s1 = "wangwei@12366.com";
+        boolean result = RegexUtil.isEmail(s1);
+        System.out.println(result);
+    }
+
 }
