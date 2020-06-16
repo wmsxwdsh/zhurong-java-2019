@@ -23,4 +23,16 @@ public class SayHelloServiceImpl implements SayHelloService {
     public String sayHello(String name) {
         return "hello, " + name;
     }
+
+    /**
+     * @Description: 跟世界打招呼
+     * @param name :
+     * @return : java.lang.String
+     * @author LZG
+     * @date 2020/6/16
+     */
+    @Override
+    public String sayWorld(String name) {
+        return null;
+    }
 }
