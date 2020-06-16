@@ -4,12 +4,10 @@
  * @author LZG, liuzg@12366.com
  * Copyright (c) 2020 http://www.12366.com
  */
-package com.zhurong.utils;
+package com.zhurong.utils.content;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.UUID;
 
 /**
