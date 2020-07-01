@@ -43,5 +43,19 @@ public class TestMathUtil {
         }
     }
 
+    @Test
+    public void test3() {
+        BigDecimal b1 = new BigDecimal(0.0005);
+        BigDecimal b2 = new BigDecimal(0.005);
+        BigDecimal b3 = new BigDecimal(0.05);
+        BigDecimal b4 = new BigDecimal(0.5);
+        BigDecimal b5 = new BigDecimal(5);
+
+        System.out.println(MathUtil.smallBigDecimal4ToPercent(b1));
+        System.out.println(MathUtil.smallBigDecimal4ToPercent(b2));
+        System.out.println(MathUtil.smallBigDecimal4ToPercent(b3));
+        System.out.println(MathUtil.smallBigDecimal4ToPercent(b4));
+
+    }
 
 }
