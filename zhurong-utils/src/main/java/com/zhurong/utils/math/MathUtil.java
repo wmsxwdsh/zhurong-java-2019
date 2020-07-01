@@ -7,6 +7,7 @@
 package com.zhurong.utils.math;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.Random;
 
 /**
@@ -169,6 +170,23 @@ public class MathUtil {
         Random random = new Random();
         int s = random.nextInt(max) % (max - min + 1) + min;
         return s;
+    }
+
+    /**
+     * @Description: 小数转百分比（小数后4位）
+     *          0.0001 转换为 0.01%
+     *          0.001  转换为 0.1%
+     *          0.01   转换为 1%
+     *          0.1    转换为 10%
+     * @param d :
+     * @return : null
+     * @author LZG
+     * @date 2018/12/3
+     */
+    public static String smallBigDecimal4ToPercent(BigDecimal d) {
+        DecimalFormat df = new DecimalFormat("0.00%");
+        String percent = df.format(d);
+        return percent;
     }
 
 }
