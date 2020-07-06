@@ -8,6 +8,7 @@ package com.zhurong.slb.util.fathertoson;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 /**
  * @description: 父转子Util
@@ -24,9 +25,9 @@ public class F2SEntityUtil {
      * @author LZG
      * @date 2020/6/22
      */
-    public static Object doJob(Object oF, Object oS) {
+    public static Object doJob(Object oF, Object oS)  {
 
-        if(!oF.getClass().isAssignableFrom(oS.getClass()))
+        if (!oF.getClass().isAssignableFrom(oS.getClass()))
             throw new RuntimeException("F2SEntityUtil Exception - oS is not extends OF.");
 
         Class<?> fClass = oF.getClass();
@@ -39,6 +40,7 @@ public class F2SEntityUtil {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+
         Object fObject = oF;
 
         Method[] sMethods = sClass.getMethods();
@@ -49,28 +51,30 @@ public class F2SEntityUtil {
             if (sMethodName.startsWith("set")) {
                 Object setValue = null;
                 for (Method fMethod : fMethods) {
-                    String fMethodName = fMethod.getName();
-                    if (fMethodName.startsWith("get")) {
+                    if (Arrays.asList(fMethods).contains(sMethod)) {
+                        String fMethodName = fMethod.getName();
+                        if (fMethodName.startsWith("get")) {
 
-                        if (fMethodName.substring(3).equals(sMethodName.substring(3))) {
-                            fMethod.setAccessible(true);
-                            try {
-                                setValue = fMethod.invoke(fObject, null);
-                            } catch (IllegalAccessException e) {
-                                e.printStackTrace();
-                            } catch (InvocationTargetException e) {
-                                e.printStackTrace();
+                            if (fMethodName.substring(3).equals(sMethodName.substring(3))) {
+                                fMethod.setAccessible(true);
+                                try {
+                                    setValue = fMethod.invoke(fObject, null);
+                                } catch (IllegalAccessException e) {
+                                    e.printStackTrace();
+                                } catch (InvocationTargetException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
+                        sMethod.setAccessible(true);
+                        try {
+                            sMethod.invoke(sObject, setValue);
+                        } catch (IllegalAccessException e) {
+                            e.printStackTrace();
+                        } catch (InvocationTargetException e) {
+                            e.printStackTrace();
+                        }
                     }
-                }
-                sMethod.setAccessible(true);
-                try {
-                    sMethod.invoke(sObject, setValue);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
                 }
             }
         }

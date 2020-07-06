@@ -16,6 +16,10 @@ public class DictVO extends Dict {
 
     private String categoryName;
 
+    private int dictNo;
+
+    private boolean isBlack;
+
     public String getCategoryName() {
         return categoryName;
     }
@@ -24,10 +28,28 @@ public class DictVO extends Dict {
         this.categoryName = categoryName;
     }
 
+    public int getDictNo() {
+        return dictNo;
+    }
+
+    public void setDictNo(int dictNo) {
+        this.dictNo = dictNo;
+    }
+
+    public boolean isBlack() {
+        return isBlack;
+    }
+
+    public void setBlack(boolean black) {
+        isBlack = black;
+    }
+
     @Override
     public String toString() {
         return "DictVO{" +
                 "categoryName='" + categoryName + '\'' +
+                ", dictNo=" + dictNo +
+                ", isBlack=" + isBlack +
                 "} " + super.toString();
     }
 

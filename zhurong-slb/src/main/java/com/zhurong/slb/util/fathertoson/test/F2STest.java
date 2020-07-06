@@ -34,6 +34,8 @@ public class F2STest {
         for (Dict element : dictLit) {
             dictVO = (DictVO) F2SEntityUtil.doJob(element, dictVO);
             dictVO.setCategoryName("身份证地区");
+            dictVO.setDictNo((int) (Math.random() * 100)); //0-100的整数
+            dictVO.setBlack(false);
             System.out.println(dictVO);
             System.out.println("-------------");
         }
