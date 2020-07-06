@@ -55,6 +55,7 @@ public class TestMathUtil {
         System.out.println(MathUtil.smallBigDecimal4ToPercent(b2));
         System.out.println(MathUtil.smallBigDecimal4ToPercent(b3));
         System.out.println(MathUtil.smallBigDecimal4ToPercent(b4));
+        System.out.println(MathUtil.smallBigDecimal4ToPercent(b5));
 
     }
 
