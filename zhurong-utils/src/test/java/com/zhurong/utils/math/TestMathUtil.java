@@ -56,7 +56,35 @@ public class TestMathUtil {
         System.out.println(MathUtil.smallBigDecimal4ToPercent(b3));
         System.out.println(MathUtil.smallBigDecimal4ToPercent(b4));
         System.out.println(MathUtil.smallBigDecimal4ToPercent(b5));
+    }
 
+    @Test
+    public void test4() {
+        BigDecimal b1 = new BigDecimal(1.05);
+        BigDecimal b2 = new BigDecimal(1.050);
+        System.out.println(MathUtil.isEqual(b1, b2)); //true
+
+        BigDecimal b3 = new BigDecimal(5.89);
+        BigDecimal b4 = new BigDecimal(2.056);
+        System.out.println(MathUtil.isEqualAndGreater(b3, b4)); //true
+        System.out.println(MathUtil.isEqualAndGreater(b4, b3)); //false
+
+        BigDecimal b5 = new BigDecimal(4.11);
+        BigDecimal b6 = new BigDecimal(10.456);
+        System.out.println(MathUtil.isEqualAndLesser(b5, b6)); //true
+        System.out.println(MathUtil.isEqualAndLesser(b6, b5)); //false
+    }
+
+    @Test
+    public void test5() {
+        //NumberFormatException
+//        BigDecimal b1 = new BigDecimal("");
+
+        BigDecimal b2 = null;
+        BigDecimal b3 = new BigDecimal(0);
+
+        System.out.println(MathUtil.isNullOrZero(b2)); //true
+        System.out.println(MathUtil.isNullOrZero(b3)); //true
     }
 
 }

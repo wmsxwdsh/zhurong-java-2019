@@ -1,4 +1,4 @@
-/**   
+/**
  * @Title: MathUtil.java
  * @Package: com.zhurong.utils.general
  * @author LZG, liuzhongguochn@gmail.com  
@@ -28,12 +28,12 @@ public class MathUtil {
      */
     public static BigDecimal divide(int number1, int number2) {
         if (number2 == 0)
-            return new BigDecimal("0").setScale(0,BigDecimal.ROUND_HALF_UP);
+            return new BigDecimal("0").setScale(0, BigDecimal.ROUND_HALF_UP);
 
         double result = (double) number1 / number2;
 
         if (result == 0.00)
-            return new BigDecimal("0").setScale(0,BigDecimal.ROUND_HALF_UP);
+            return new BigDecimal("0").setScale(0, BigDecimal.ROUND_HALF_UP);
 
         BigDecimal value = new BigDecimal(result).setScale(2, BigDecimal.ROUND_HALF_UP);
         return value;
@@ -49,7 +49,7 @@ public class MathUtil {
      */
     public static BigDecimal divide(BigDecimal number1, BigDecimal number2) {
         if (number2.equals(BigDecimal.ZERO))
-            return new BigDecimal("0").setScale(0,BigDecimal.ROUND_HALF_UP);
+            return new BigDecimal("0").setScale(0, BigDecimal.ROUND_HALF_UP);
 
         BigDecimal result = number1.divide(number2, 4, BigDecimal.ROUND_HALF_UP);
         return result;
@@ -62,10 +62,10 @@ public class MathUtil {
      * @author LZG
      * @date 2018/8/27
      */
-    public static int plus(BigDecimal ...args) {
+    public static int plus(BigDecimal... args) {
 
         BigDecimal result = new BigDecimal("0");
-        for(int i = 0; i < args.length; i++) {
+        for (int i = 0; i < args.length; i++) {
             result = result.add(args[i]);
         }
         //四舍五入
@@ -116,7 +116,7 @@ public class MathUtil {
     }
 
     /**
-     * @Description: 两个数相除的商,保留两位小数
+     * @Description: 两个数相除的商, 保留两位小数
      * @param num1 被除数
      * @param num2 除数
      * @return java.lang.String
@@ -124,13 +124,13 @@ public class MathUtil {
      * @date 2018/11/9
      */
     public static String divide(String num1, String num2) {
-        if(0 == Integer.valueOf(num2))
+        if (0 == Integer.valueOf(num2))
             throw new RuntimeException("除数不能为0！");
         return divide(num1, num2, 2);
     }
 
     /**
-     * @Description: 两个除数的商,保留若干位小数
+     * @Description: 两个除数的商, 保留若干位小数
      * @param num1 被除数
      * @param num2 除数
      * @param scale 商的小数位数
@@ -139,7 +139,7 @@ public class MathUtil {
      * @date 2018/11/9
      */
     public static String divide(String num1, String num2, int scale) {
-        if(0 == Integer.valueOf(num2))
+        if (0 == Integer.valueOf(num2))
             throw new RuntimeException("除数不能为0！");
 
         BigDecimal dec1 = new BigDecimal(num1);
@@ -191,6 +191,63 @@ public class MathUtil {
         return percent;
     }
 
+    /**
+     * @Description: 比较大小，num1 >= num2
+     * @param num1 :
+     * @param num2 :
+     * @return : boolean
+     * @author LZG
+     * @date 2020/7/7
+     */
+    public static boolean isEqualAndGreater(BigDecimal num1, BigDecimal num2) {
+        if (num1.compareTo(num2) == 1 || num1.compareTo(num2) == 0) {
+            return true;
+        }
+        return false;
+    }
 
+    /**
+     * @Description: 比较大小，num1 <= num2
+     * @param num1 :
+     * @param num2 :
+     * @return : boolean
+     * @author LZG
+     * @date 2020/7/7
+     */
+    public static boolean isEqualAndLesser(BigDecimal num1, BigDecimal num2) {
+        if (num1.compareTo(num2) == -1 || num1.compareTo(num2) == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @Description: 比较大小。等于。
+     * @param num1 :
+     * @param num2 :
+     * @return : boolean
+     * @author LZG
+     * @date 2020/7/7
+     */
+    public static boolean isEqual(BigDecimal num1, BigDecimal num2) {
+        if (num1.compareTo(num2) == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @Description: 判断BigDecimal是否为空或null
+     * @param num :
+     * @return : boolean
+     * @author LZG
+     * @date 2020/7/7
+     */
+    public static boolean isNullOrZero(BigDecimal num) {
+        if(null == num || num.equals(BigDecimal.ZERO)) {
+            return true;
+        }
+        return false;
+    }
 
 }
