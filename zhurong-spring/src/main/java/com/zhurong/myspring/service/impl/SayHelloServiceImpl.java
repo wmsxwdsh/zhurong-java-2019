@@ -8,14 +8,12 @@ package com.zhurong.myspring.service.impl;
 
 import com.zhurong.myspring.service.SayHelloService;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @description: 
  * @author LZG
  * @date 2019/10/23
  */
-@Transactional
 @Service
 public class SayHelloServiceImpl implements SayHelloService {
 
