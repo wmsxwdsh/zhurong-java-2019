@@ -87,4 +87,13 @@ public class TestMathUtil {
         System.out.println(MathUtil.isNullOrZero(b3)); //true
     }
 
+    @Test
+    public void test6() {
+        BigDecimal b1 = new BigDecimal("9.0300");
+        BigDecimal b2 = new BigDecimal("9.00");
+        System.out.println(MathUtil.stripSuffix(b1));
+        System.out.println(MathUtil.stripSuffix(b2));
+    }
+
+
 }

@@ -244,10 +244,21 @@ public class MathUtil {
      * @date 2020/7/7
      */
     public static boolean isNullOrZero(BigDecimal num) {
-        if(null == num || num.equals(BigDecimal.ZERO)) {
+        if (null == num || num.equals(BigDecimal.ZERO)) {
             return true;
         }
         return false;
+    }
+
+    /**
+     * @Description: BigDecimal去除词尾
+     * @param num :
+     * @return : java.lang.String
+     * @author LZG
+     * @date 2020/7/7
+     */
+    public static String stripSuffix(BigDecimal num) {
+        return num.stripTrailingZeros().toPlainString();
     }
 
 }
