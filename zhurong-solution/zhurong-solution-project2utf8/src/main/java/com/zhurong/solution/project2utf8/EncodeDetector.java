@@ -33,7 +33,7 @@ public class EncodeDetector {
 	
     /**
      * 获取本地文件的编码格式
-     * @param file 要判断的文件
+     * @param localFile 要判断的文件
      */
     public static String getLocalFileEncode(File localFile) {
   
