@@ -20,7 +20,8 @@ public class WorkerCountDownLatchMain {
 
         System.out.println("all work begin at " + DateUtil.getNow(DateUtil.FORMAT_YYYY_MM_DD_HH_MM_SS));
 
-        CountDownLatch latch = new CountDownLatch(2); //两个工人的协作
+        //两个工人的协作
+        CountDownLatch latch = new CountDownLatch(2); 
 
         Thread worker1 = new Thread(new Worker("祝融", 5000, latch));
         Thread worker2 = new Thread(new Worker("共工", 10000, latch));
