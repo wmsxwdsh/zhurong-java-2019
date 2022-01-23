@@ -1,27 +1,24 @@
 package com.zhurong.concurrency.base.pool;
 
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
  * @author liuzhongguo
  */
-public class ThreadPoolWithRunnable {
+public class NewCachedThreadPool {
 
-
-    /**
-     * 通过线程池执行线程
-     * @param args
-     */
-    public static void main(String[] args) {
-        //创建一个线程池
-        ExecutorService pool = Executors.newFixedThreadPool(3);
+    public static void main(String[] args) throws Exception {
+        // 创建一个可缓存线程池
+        ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
 
         for (int i = 0; i < 10; i++) {
-            pool.execute(new Runnable() {
+
+            cachedThreadPool.execute(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println("thread name: " + Thread.currentThread().getName());
+                    System.out.println(Thread.currentThread().getName() + " 正在被执行");
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -30,7 +27,7 @@ public class ThreadPoolWithRunnable {
                 }
             });
         }
-        pool.shutdown();
+
     }
 
 }
