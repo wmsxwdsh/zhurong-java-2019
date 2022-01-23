@@ -12,8 +12,8 @@ public class ThreadPoolWithRunnable {
      */
     public static void main(String[] args) {
         //创建一个线程池
-        ExecutorService pool = Executors.newCachedThreadPool();
-        for (int i = 1; i < 5; i++) {
+        ExecutorService pool = Executors.newFixedThreadPool(3);
+        for (int i = 0; i < 10; i++) {
             pool.execute(new Runnable() {
                 @Override
                 public void run() {

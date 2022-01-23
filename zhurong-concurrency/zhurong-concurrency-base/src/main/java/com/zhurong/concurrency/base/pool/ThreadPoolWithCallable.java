@@ -17,13 +17,12 @@ import java.util.concurrent.Future;
 public class ThreadPoolWithCallable {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
-        ExecutorService pool = Executors.newFixedThreadPool(4);
+        ExecutorService pool = Executors.newCachedThreadPool();
 
         for (int i = 0; i < 10; i++) {
             Future<String> submit = pool.submit(new Callable<String>() {
                 @Override
                 public String call() throws Exception {
-                    //System.out.println("a");
                     Thread.sleep(5000);
                     return "b--" + Thread.currentThread().getName();
                 }
