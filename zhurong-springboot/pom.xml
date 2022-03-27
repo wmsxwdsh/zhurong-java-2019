@@ -15,7 +15,6 @@
     <modules>
         <module>zhurong-springboot-test</module>
         <module>zhurong-springboot-zhanglong-v1</module>
-        <module>zhurong-springboot-zhanglong-v2</module>
     </modules>
 
     <name>zhurong-springboot</name>
