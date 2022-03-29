@@ -33,9 +33,14 @@
         <!-- next -->
     </modules>
 
-    <!-- 规范写法,这里应该先定义依赖的版本号 -->
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <!-- 规范写法,这里应该先定义依赖的版本号 -->
         <pinyin4j.version>2.5.0</pinyin4j.version>
+
     </properties>
 
     <dependencyManagement>
