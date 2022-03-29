@@ -40,7 +40,8 @@ public class TestPool {
 		//打印结果
 		for(Future f: results){
 			boolean done = f.isDone();
-			System.out.println(done?"已完成":"未完成");  //从结果的打印顺序可以看到，即使未完成，也会阻塞等待
+			//从结果的打印顺序可以看到，即使未完成，也会阻塞等待
+			System.out.println(done?"已完成":"未完成");
 			System.out.println("线程返回future结果： " + f.get());
 		}
 		

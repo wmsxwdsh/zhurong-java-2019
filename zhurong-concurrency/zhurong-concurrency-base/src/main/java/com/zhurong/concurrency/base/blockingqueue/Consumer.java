@@ -1,4 +1,4 @@
-/**   
+/**
  * @Title: Consumer.java
  * @Package: com.zhurong.concurrency.base.blockingqueue
  * @author LZG, liuzhongguochn@gmail.com  
@@ -26,7 +26,8 @@ public class Consumer implements Runnable {
 
         try {
             String consumer = Thread.currentThread().getName();
-            String temp = queue.take(); //如果队列为空，会阻塞当前线程
+            //如果队列为空，会阻塞当前线程
+            String temp = queue.take();
 
             System.out.println(consumer + " get a product: " + temp);
 

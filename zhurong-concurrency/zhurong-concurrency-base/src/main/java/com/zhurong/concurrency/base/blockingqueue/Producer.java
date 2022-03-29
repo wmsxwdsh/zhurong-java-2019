@@ -28,7 +28,8 @@ public class Producer implements Runnable {
             System.out.println(producer + ": I have made a product.");
 
             String temp = "A Product, 生产线程：" + producer;
-            queue.put(temp); //如果队列是满的，会阻塞当前线程
+            //如果队列是满的，会阻塞当前线程
+            queue.put(temp);
 
         } catch (InterruptedException e) {
             e.printStackTrace();

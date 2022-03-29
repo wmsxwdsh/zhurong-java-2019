@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 public class NewScheduledThreadPool {
 
-
     /**
      * 定长线程池，可执行周期性的任务
      */

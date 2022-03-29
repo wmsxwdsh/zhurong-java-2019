@@ -3,6 +3,9 @@ package com.zhurong.concurrency.base.pool;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * @author LZG
+ */
 public class MyThreadFactory implements ThreadFactory {
 
     private AtomicInteger count = new AtomicInteger(0);

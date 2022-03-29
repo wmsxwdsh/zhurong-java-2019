@@ -1,6 +1,5 @@
 package com.zhurong.concurrency.base.pool;
 
-import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
