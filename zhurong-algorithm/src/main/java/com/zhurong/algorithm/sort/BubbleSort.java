@@ -21,7 +21,8 @@ public class BubbleSort {
 
         //有多少元素就循环多少遍
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length - 1; j++) {  //减1，是为了防止取最后一个元素时下标越界
+            //减1，是为了防止取最后一个元素时下标越界
+            for (int j = 0; j < nums.length - 1; j++) {
                 if (nums[j] > nums[j + 1]) {
                     int temp = nums[j];
                     nums[j] = nums[j + 1];
