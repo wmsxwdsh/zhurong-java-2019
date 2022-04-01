@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @date 2020年03月09日
  */
 @SpringBootApplication
-@EnableSwagger2
+//@EnableSwagger2
 public class MainApplication {
 
     public static void main(String[] args) {
