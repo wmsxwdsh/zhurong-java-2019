@@ -27,18 +27,18 @@ public class TestValidateCodeUtil {
      */
     @Test
     public void testWrite(String[] args) {
-        ValidateCodeUtil vCodeUtil = new ValidateCodeUtil(200, 60, 4, 10);
-        String vCode = vCodeUtil.getCode();
-        System.out.println("生成的验证是：" + vCode);
-        BufferedImage buffImg = vCodeUtil.getBuffImg();
-        String encodeBase64ImgCode = vCodeUtil.encodeBase64ImgCode(buffImg);
-        String imgFilePath = "D:\\hello.png";
-        boolean result = vCodeUtil.generateImage(encodeBase64ImgCode, imgFilePath);
-        if(result) {
-            System.out.println("成功,可到" + imgFilePath + "查看文件");
-        } else {
-            System.out.println("失败");
-        }
+//        ValidateCodeUtil vCodeUtil = new ValidateCodeUtil(200, 60, 4, 10);
+//        String vCode = vCodeUtil.getCode();
+//        System.out.println("生成的验证是：" + vCode);
+//        BufferedImage buffImg = vCodeUtil.getBuffImg();
+//        String encodeBase64ImgCode = vCodeUtil.encodeBase64ImgCode(buffImg);
+//        String imgFilePath = "D:\\hello.png";
+//        boolean result = vCodeUtil.generateImage(encodeBase64ImgCode, imgFilePath);
+//        if(result) {
+//            System.out.println("成功,可到" + imgFilePath + "查看文件");
+//        } else {
+//            System.out.println("失败");
+//        }
 
     }
 

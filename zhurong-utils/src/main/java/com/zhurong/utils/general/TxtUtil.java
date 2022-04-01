@@ -31,8 +31,9 @@ public class TxtUtil {
 
     // 换行符
     @SuppressWarnings("restriction")
-    private final static String lineSeparator = java.security.AccessController
-        .doPrivileged(new sun.security.action.GetPropertyAction("line.separator"));
+//    private final static String lineSeparator = java.security.AccessController
+//        .doPrivileged(new sun.security.action.GetPropertyAction("line.separator"));
+    private final static String lineSeparator = "/";
 
 
     /**

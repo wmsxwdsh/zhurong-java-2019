@@ -8,7 +8,6 @@ package com.zhurong.utils.crawler;
 
 import com.zhurong.utils.general.StringUtil;
 import com.zhurong.utils.web.HttpClientUtil;
-import com.zhurong.utils.web.ValidateCodeUtil;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlForm;
@@ -89,10 +88,6 @@ public class HtmlUnitUtil {
 
         String base64Str = getVCodeBase64Str(url, vCodeElementId);
         //System.out.println(base64Str);
-
-        //两张图片一样，证明getVCodeBase64Str()没有问题
-        ValidateCodeUtil vCodeUtil = new ValidateCodeUtil();
-        vCodeUtil.generateImage(base64Str, "D:\\main.png");
 
         //调用OCR识别（这类付费的服务很多）
         Map<String, String> paramsMap = new HashMap<String, String>();

@@ -6,7 +6,6 @@
  */
 package com.zhurong.utils.sms;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
