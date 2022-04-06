@@ -15,7 +15,8 @@
     <modules>
         <module>zhurong-springboot-test</module>
         <module>zhurong-springboot-zhanglong-v1</module>
-<!--        <module>zhurong-springboot-jwt</module>-->
+        <module>zhurong-springboot-jwt</module>
+        <!--        <module>zhurong-springboot-jwt</module>-->
     </modules>
 
     <name>zhurong-springboot</name>
