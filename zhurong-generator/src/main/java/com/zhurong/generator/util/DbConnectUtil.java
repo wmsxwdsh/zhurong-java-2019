@@ -11,23 +11,17 @@ import com.zhurong.generator.sysEnum.DataSourceDBTypeEnum;
 import com.zhurong.generator.sysEnum.JdbcDriverEnum;
 import com.zhurong.generator.sysEnum.JdbcUrlPrefixEnum;
 import com.zhurong.utils.general.StringUtil;
-import java.io.Serializable;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
+
+import java.io.Serializable;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -48,7 +42,6 @@ public class DbConnectUtil implements Serializable {
      * 测试数据源连接是否成功
      *
      * @param dbc
-     * @param druidConfiguration
      * @return
      * @throws SQLException
      * @throws ClassNotFoundException
@@ -243,9 +236,8 @@ public class DbConnectUtil implements Serializable {
     /**
      * 执行sql语句(查询使用)
      *
-     * @param dbc
-     * @param druidConfiguration
      * @param sql
+     * @param values
      * @return
      */
     public static String excuteQuery(Connection conn, String sql, Map<String, Object> values) {

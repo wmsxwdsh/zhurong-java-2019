@@ -28,7 +28,6 @@ public class KafkaProducerCallbackHandler implements ProducerListener {
         log.info("Message send success : " + producerRecord.toString());
     }
 
-    @Override
     public void onError(ProducerRecord producerRecord, Exception exception) {
         log.info("Message send error : " + producerRecord.toString());
     }
