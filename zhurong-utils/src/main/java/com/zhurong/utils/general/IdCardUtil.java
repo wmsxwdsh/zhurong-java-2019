@@ -14,8 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description: 身份证工具类(开源中国)
  * @author LZG
+ * @description: 身份证工具类(开源中国)
  * @date 2018/8/24
  */
 public class IdCardUtil {
@@ -26,7 +26,7 @@ public class IdCardUtil {
     private static final int CHINA_ID_MAX_LENGTH = 18;
 
     /* 每位加权因子 */
-    private static final int power[] = { 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2 };
+    private static final int[] power = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
     /* 最低年限 */
     private static final int MIN = 1930;
 
@@ -112,9 +112,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 将15位身份证号码转换为18位
      * @param idCard 15位身份编码
      * @return java.lang.String 18位身份编码
+     * @Description: 将15位身份证号码转换为18位
      * @author LZG
      * @date 2018/8/24
      */
@@ -133,8 +133,9 @@ public class IdCardUtil {
                 e.printStackTrace();
             }
             Calendar cal = Calendar.getInstance();
-            if (birthDate != null)
+            if (birthDate != null) {
                 cal.setTime(birthDate);
+            }
             // 获取出生年(完全表现形式,如：2010)
             String sYear = String.valueOf(cal.get(Calendar.YEAR));
             idCard18 = idCard.substring(0, 6) + sYear + idCard.substring(8);
@@ -158,9 +159,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 验证身份证是否合法
      * @param idCard
      * @return boolean
+     * @Description: 验证身份证是否合法
      * @author LZG
      * @date 2018/8/24
      */
@@ -182,9 +183,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 验证18位身份证号码是否合法
      * @param idCard
      * @return boolean
+     * @Description: 验证18位身份证号码是否合法
      * @author LZG
      * @date 2018/8/24
      */
@@ -214,9 +215,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 验证15位身份证号码是否合法
      * @param idCard
      * @return boolean
+     * @Description: 验证15位身份证号码是否合法
      * @author LZG
      * @date 2018/8/24
      */
@@ -240,7 +241,7 @@ public class IdCardUtil {
             if (birthDate != null)
                 cal.setTime(birthDate);
             if (!validateDate(cal.get(Calendar.YEAR), Integer.valueOf(birthCode.substring(2, 4)),
-                Integer.valueOf(birthCode.substring(4, 6)))) {
+                    Integer.valueOf(birthCode.substring(4, 6)))) {
                 return false;
             }
         } else {
@@ -250,13 +251,13 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 验证10位身份证号码是否合法
-     *      [0] - 台湾、澳门、香港
-     *      [1] - 性别(男M,女F,未知N)
-     *      [2] - 是否合法(合法true,不合法false)
-     *      若不是身份证件号码则返回null
      * @param idCard
      * @return java.lang.String[]
+     * @Description: 验证10位身份证号码是否合法
+     * [0] - 台湾、澳门、香港
+     * [1] - 性别(男M,女F,未知N)
+     * [2] - 是否合法(合法true,不合法false)
+     * 若不是身份证件号码则返回null
      * @author LZG
      * @date 2018/8/24
      */
@@ -297,9 +298,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 验证台湾号码
      * @param idCard
      * @return boolean
+     * @Description: 验证台湾号码
      * @author LZG
      * @date 2018/8/24
      */
@@ -319,13 +320,13 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 验证香港身份证号码(存在Bug，部份特殊身份证无法检查)
-     *      1、身份证前2位为英文字符，如果只出现一个英文字符则表示第一位是空格，对应数字58
-     *        前2位英文字符A-Z分别对应数字10-35
-     *        最后一位校验码为0-9的数字加上字符"A"，"A"代表10
-     *      2、将身份证号码全部转换为数字，分别对应乘9-1相加的总和，整除11则证件号码有效
      * @param idCard
      * @return boolean
+     * @Description: 验证香港身份证号码(存在Bug ， 部份特殊身份证无法检查)
+     * 1、身份证前2位为英文字符，如果只出现一个英文字符则表示第一位是空格，对应数字58
+     * 前2位英文字符A-Z分别对应数字10-35
+     * 最后一位校验码为0-9的数字加上字符"A"，"A"代表10
+     * 2、将身份证号码全部转换为数字，分别对应乘9-1相加的总和，整除11则证件号码有效
      * @author LZG
      * @date 2018/8/24
      */
@@ -334,7 +335,7 @@ public class IdCardUtil {
         Integer sum = 0;
         if (card.length() == 9) {
             sum = (Integer.valueOf(card.substring(0, 1).toUpperCase().toCharArray()[0]) - 55) * 9
-                + (Integer.valueOf(card.substring(1, 2).toUpperCase().toCharArray()[0]) - 55) * 8;
+                    + (Integer.valueOf(card.substring(1, 2).toUpperCase().toCharArray()[0]) - 55) * 8;
             card = card.substring(1, 9);
         } else {
             sum = 522 + (Integer.valueOf(card.substring(0, 1).toUpperCase().toCharArray()[0]) - 55) * 8;
@@ -357,10 +358,11 @@ public class IdCardUtil {
 
 
     /*------------ start私有方法 -------------------------------*/
+
     /**
-     * @Description: 将字符数组转换成数字数组
      * @param ca 字符数组
      * @return int[] 数字数组
+     * @Description: 将字符数组转换成数字数组
      * @author LZG
      * @date 2018/8/24
      */
@@ -378,9 +380,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 将身份证的每位和对应位的加权因子相乘之后，再得到和值
      * @param iArr
      * @return int
+     * @Description: 将身份证的每位和对应位的加权因子相乘之后，再得到和值
      * @author LZG
      * @date 2018/8/24
      */
@@ -399,9 +401,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 将power和值与11取模获得余数进行校验码判断
      * @param iSum
      * @return java.lang.String 校验位
+     * @Description: 将power和值与11取模获得余数进行校验码判断
      * @author LZG
      * @date 2018/8/24
      */
@@ -446,9 +448,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 数字验证
      * @param val
      * @return boolean
+     * @Description: 数字验证
      * @author LZG
      * @date 2018/8/24
      */
@@ -457,11 +459,11 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 验证小于当前日期 是否有效
-     * @param iYear 待验证日期(年)
+     * @param iYear  待验证日期(年)
      * @param iMonth 待验证日期(月 1-12)
-     * @param iDate 待验证日期(日)
+     * @param iDate  待验证日期(日)
      * @return boolean
+     * @Description: 验证小于当前日期 是否有效
      * @author LZG
      * @date 2018/8/24
      */
@@ -484,7 +486,7 @@ public class IdCardUtil {
                 break;
             case 2:
                 boolean dm = ((iYear % 4 == 0 && iYear % 100 != 0) || (iYear % 400 == 0))
-                    && (iYear > MIN && iYear < year);
+                        && (iYear > MIN && iYear < year);
                 datePerMonth = dm ? 29 : 28;
                 break;
             default:
@@ -496,9 +498,9 @@ public class IdCardUtil {
     /*------------ end私有方法 -------------------------------*/
 
     /**
-     * @Description: 根据身份编号获取年龄
      * @param idCard
      * @return int
+     * @Description: 根据身份编号获取年龄
      * @author LZG
      * @date 2018/8/24
      */
@@ -515,9 +517,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 根据身份证号码获取生日
      * @param idCard
      * @return java.lang.String 生日(yyyyMMdd)
+     * @Description: 根据身份证号码获取生日
      * @author LZG
      * @date 2018/8/24
      */
@@ -532,9 +534,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 根据身份证号码获取生日年
      * @param idCard
      * @return java.lang.Short 年(yyyy)
+     * @Description: 根据身份证号码获取生日年
      * @author LZG
      * @date 2018/8/24
      */
@@ -549,9 +551,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 根据身份证号码获取生日月
      * @param idCard
      * @return java.lang.Short 月(MM)
+     * @Description: 根据身份证号码获取生日月
      * @author LZG
      * @date 2018/8/24
      */
@@ -566,9 +568,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 根据身份证号码获取生日天
      * @param idCard
      * @return java.lang.Short 日(dd)
+     * @Description: 根据身份证号码获取生日天
      * @author LZG
      * @date 2018/8/24
      */
@@ -583,9 +585,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 根据身份编号获取性别
      * @param idCard
      * @return java.lang.String 性别(M-男，F-女，N-未知)
+     * @Description: 根据身份编号获取性别
      * @author LZG
      * @date 2018/8/24
      */
@@ -604,9 +606,9 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description: 根据身份证号码获取户籍省份
      * @param idCard
      * @return java.lang.String
+     * @Description: 根据身份证号码获取户籍省份
      * @author LZG
      * @date 2018/8/24
      */
@@ -622,11 +624,11 @@ public class IdCardUtil {
     }
 
     /**
-     * @Description:  隐藏指定位置的几个身份证号数字为“*”
      * @param idCard
      * @param startInclude 开始位置（包含）
-     * @param endExclude 结束位置（不包含）
+     * @param endExclude   结束位置（不包含）
      * @return java.lang.String 隐藏后的身份证号码
+     * @Description: 隐藏指定位置的几个身份证号数字为“*”
      * @author LZG
      * @date 2018/8/24
      */
@@ -636,9 +638,9 @@ public class IdCardUtil {
 
 
     /**
-     * @Description: test
      * @param args
      * @return void
+     * @Description: test
      * @author LZG
      * @date 2018/8/24
      */
