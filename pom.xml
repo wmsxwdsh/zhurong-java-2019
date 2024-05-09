@@ -29,7 +29,8 @@
         <module>zhurong-springboot</module> <!-- 深入spring boot -->
         <module>zhurong-spi</module> <!-- java spi机制 -->
         <module>zhurong-mq</module> <!-- mq中间件 -->
-        <module>zhurong-slb</module> <!-- 神州顺利办 -->
+        <module>zhurong-slb</module>
+        <module>zhurong-test</module> <!-- 神州顺利办 -->
         <!-- next -->
     </modules>
 
