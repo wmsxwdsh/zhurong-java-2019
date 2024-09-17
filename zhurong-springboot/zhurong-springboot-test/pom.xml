@@ -37,10 +37,12 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>2.7.0</version>
         </dependency>
+
+        <!-- 2024-09-17，更新 -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.7.0</version>
+            <version>[2.10.0,)</version>
         </dependency>
 
         <!-- Jackson Json处理工具包 -->
