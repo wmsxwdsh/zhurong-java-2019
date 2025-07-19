@@ -14,20 +14,19 @@
         <module>zhurong-common-utils</module> <!-- 工具类库 -->
         <module>zhurong-concurrency</module> <!-- 并发 -->
         <module>zhurong-solution</module> <!-- 常见问题解决方案 -->
-        <module>zhurong-jdk</module> <!-- 深入理解JDK -->
+        <module>zhurong-jdk</module> <!-- 深入理解 JDK -->
         <module>zhurong-db</module> <!-- 数据库、druid、实体 -->
         <module>zhurong-designpattern</module> <!-- 设计模式 -->
         <module>zhurong-mybatis</module> <!-- mybatis框架 -->
-        <module>zhurong-generator</module> <!-- 自编的代码生成器 -->
+        <module>zhurong-generator</module> <!-- 代码生成器 -->
         <module>zhurong-interfacelimit</module> <!-- 接口限流 -->
         <module>zhurong-distributedlock</module> <!-- 分布式锁 -->
-        <module>zhurong-kafka</module> <!-- kafka消息中间件 -->
-        <module>zhurong-spring</module> <!-- spring框架 -->
-        <module>zhurong-springboot</module> <!-- 深入spring boot -->
-        <module>zhurong-spi</module> <!-- java spi机制 -->
-        <module>zhurong-mq-rabbit</module> <!-- mq中间件 -->
+        <module>zhurong-kafka</module> <!-- kafka 消息中间件 -->
+        <module>zhurong-mq-rabbit</module> <!-- RabbitMQ 中间件 -->
+        <module>zhurong-spring</module> <!-- spring 框架 -->
+        <module>zhurong-springboot</module> <!-- 深入 spring boot -->
+        <module>zhurong-spi</module> <!-- java spi 机制 -->
         <module>zhurong-slb</module>
-        <!-- next -->
     </modules>
 
     <properties>
@@ -282,7 +281,6 @@
                 <artifactId>jedis</artifactId>
                 <version>2.9.0</version>
             </dependency>
-
 
         </dependencies>
     </dependencyManagement>
