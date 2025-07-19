@@ -69,7 +69,7 @@
 
         <dependency>
             <groupId>com.zhurong</groupId>
-            <artifactId>zhurong-utils</artifactId>
+            <artifactId>zhurong-common-utils</artifactId>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.centit.support/centit-utils -->

@@ -11,7 +11,7 @@ import com.zhurong.db.persistence.domain.AttachFileExample;
 import com.zhurong.db.persistence.domain.AttachFileExample.Criteria;
 import com.zhurong.db.persistence.mapper.generic.AttachFileMapper;
 import com.zhurong.solution.uploadfile.service.AttachFileService;
-import com.zhurong.utils.general.FileUtil;
+import com.zhurong.utils.common.FileUtil;
 import com.zhurong.utils.idgen.UuidUtil;
 import java.io.File;
 import java.io.IOException;

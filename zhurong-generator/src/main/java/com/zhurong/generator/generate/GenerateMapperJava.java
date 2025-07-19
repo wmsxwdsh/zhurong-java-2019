@@ -10,7 +10,7 @@ import com.zhurong.generator.config.GenerateConfig;
 import com.zhurong.generator.domain.MapperXml;
 import com.zhurong.generator.support.IGenerate;
 import com.zhurong.generator.util.FreeMarkerTemplateUtil;
-import com.zhurong.utils.general.PathUtil;
+import com.zhurong.utils.common.PathUtil;
 import com.zhurong.utils.general.StringUtil;
 import java.io.File;
 

@@ -1,9 +1,3 @@
-/**
- * @Title: F2STest.java
- * @Package: com.zhurong.slb.util.fathertoson.test
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.slb.util.fathertoson.test;
 
 import com.zhurong.slb.util.fathertoson.F2SEntityUtil;
@@ -15,8 +9,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @description:
- * @author LZG
  * @date 2020年06月22日
  */
 public class F2STest {
@@ -44,9 +36,7 @@ public class F2STest {
     }
 
     /**
-     * @Description: 强转是不行的。会报ClassCastException
-     * @return : void
-     * @author LZG
+     * 强转是不行的。会报ClassCastException
      * @date 2020/6/22
      */
     private static void testForce() {

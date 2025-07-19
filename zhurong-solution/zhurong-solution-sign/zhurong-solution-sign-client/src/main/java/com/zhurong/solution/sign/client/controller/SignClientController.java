@@ -6,8 +6,8 @@
  */
 package com.zhurong.solution.sign.client.controller;
 
-import com.zhurong.utils.sign.VerifySignUtil;
-import com.zhurong.utils.web.HttpClientUtil;
+import com.zhurong.utils.sign.SignValidateUtil;
+import com.zhurong.utils.common.HttpClientUtil;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -37,7 +37,7 @@ public class SignClientController {
         paramMap.put("device", "android");
         paramMap.put("comment", "是个帅哥");
 
-        VerifySignUtil.md5Sign(paramMap);
+        SignValidateUtil.md5Sign(paramMap);
 
         String s = HttpClientUtil.doPostExpand(signServerUrl, paramMap); //支持中文
         return s;

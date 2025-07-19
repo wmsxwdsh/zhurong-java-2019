@@ -25,10 +25,11 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>4.13.1</version>
         </dependency>
 
         <dependency>
-            <artifactId>zhurong-utils</artifactId>
+            <artifactId>zhurong-common-utils</artifactId>
             <groupId>com.zhurong</groupId>
         </dependency>
 

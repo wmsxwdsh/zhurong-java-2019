@@ -9,7 +9,7 @@ package com.zhurong.solution.sign.server.config;
 import com.zhurong.solution.sign.server.annotation.VerifySign;
 import com.zhurong.utils.response.InfoCoinResponse;
 import com.zhurong.utils.response.ResponseEnum;
-import com.zhurong.utils.sign.VerifySignUtil;
+import com.zhurong.utils.sign.SignValidateUtil;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.lang.Nullable;
@@ -52,8 +52,8 @@ public class VerifySignInterceptor implements HandlerInterceptor {
                 verifySign = handlerMethod.getMethod().getDeclaringClass().getAnnotation(VerifySign.class);
             }
             if (verifySign != null) {
-                InfoCoinResponse infoCoinResponse = VerifySignUtil.md5Verify(request);
-                if (infoCoinResponse.getStatusCode().equals(ResponseEnum.success.getStatusCode())) {
+                InfoCoinResponse infoCoinResponse = SignValidateUtil.md5Verify(request);
+                if (infoCoinResponse.getStatusCode().equals(ResponseEnum.success.getCode())) {
                     return true;
                 }
                 return false;

@@ -7,7 +7,7 @@
 package com.zhurong.interfacelimit.distributed.config;
 
 import com.zhurong.interfacelimit.distributed.annotation.RateLimit;
-import com.zhurong.utils.general.IPAddressUtil;
+import com.zhurong.utils.common.IPAddressUtil;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.Collections;

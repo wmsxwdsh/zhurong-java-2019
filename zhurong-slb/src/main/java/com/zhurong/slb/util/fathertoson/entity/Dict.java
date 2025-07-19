@@ -1,16 +1,8 @@
-/**
- * @Title: Dict.java
- * @Package: com.zhurong.slb.util.fathertoson.entity
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.slb.util.fathertoson.entity;
 
 import java.io.Serializable;
 
 /**
- * @description:
- * @author LZG
  * @date 2020年06月22日
  */
 public class Dict implements Serializable {

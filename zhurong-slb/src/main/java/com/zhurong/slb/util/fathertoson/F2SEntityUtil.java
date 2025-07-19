@@ -1,9 +1,3 @@
-/**
- * @Title: F2SEntityUtil.java
- * @Package: com.zhurong.slb.util.fathertoson
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.slb.util.fathertoson;
 
 import java.lang.reflect.InvocationTargetException;
@@ -11,18 +5,14 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 /**
- * @description: 父转子Util
- * @author LZG
+ * 父转子 Util
  * @date 2020年06月22日
  */
 public class F2SEntityUtil {
 
     /**
-     * @Description:
      * @param oF : 父实体
      * @param oS : 子实体
-     * @return : java.lang.Object
-     * @author LZG
      * @date 2020/6/22
      */
     public static Object doJob(Object oF, Object oS)  {

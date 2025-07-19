@@ -6,7 +6,7 @@
  */
 package com.zhurong.db.persistence.validator;
 
-import com.zhurong.utils.general.IdCardUtil;
+import com.zhurong.utils.gen.IdCardValidateUtil;
 import com.zhurong.utils.general.StringUtil;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -26,7 +26,7 @@ public class CheckIdCardValidator implements ConstraintValidator<IdCardValidator
             return false;
         }
 
-        return  IdCardUtil.validateCard(value);
+        return  IdCardValidateUtil.validateCard(value);
     }
 
 }

@@ -30,7 +30,7 @@
 
         <dependency>
             <groupId>com.zhurong</groupId>
-            <artifactId>zhurong-utils</artifactId>
+            <artifactId>zhurong-common-utils</artifactId>
         </dependency>
     </dependencies>
 
