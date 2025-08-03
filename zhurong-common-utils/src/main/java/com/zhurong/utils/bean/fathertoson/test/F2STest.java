@@ -1,8 +1,8 @@
 package com.zhurong.utils.bean.fathertoson.test;
 
-import com.zhurong.slb.util.fathertoson.F2SEntityUtil;
-import com.zhurong.slb.util.fathertoson.entity.Dict;
-import com.zhurong.slb.util.fathertoson.entity.DictVO;
+import com.zhurong.utils.bean.fathertoson.F2SEntityUtil;
+import com.zhurong.utils.bean.fathertoson.entity.Dict;
+import com.zhurong.utils.bean.fathertoson.entity.DictVO;
 
 import java.util.ArrayList;
 import java.util.List;

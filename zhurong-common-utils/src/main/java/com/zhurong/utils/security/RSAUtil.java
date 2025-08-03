@@ -1,10 +1,6 @@
-/**
- * @Title: RSAUtil.java
- * @Package: com.essence.euauth.web.security
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.security;
+
+import com.zhurong.utils.common.LinkStrUtil;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -30,8 +26,7 @@ import java.util.Map;
 import javax.crypto.Cipher;
 
 /**
- * @description: RSA验签验密工具类
- * @author LZG
+ * RSA 加签验密工具类
  * @date 2019/5/17
  */
 public class RSAUtil {
@@ -87,10 +82,8 @@ public class RSAUtil {
     }
 
     /**
-     * @Description: 生成公钥私钥
+     * 生成公钥私钥
      * @param filePath 生成文件路径
-     * @return void
-     * @author LZG
      * @date 2018/10/15
      */
     @SuppressWarnings("static-access")
@@ -124,10 +117,9 @@ public class RSAUtil {
     }
 
     /**
-     * @Description: 从文件中读取公钥或私钥
+     * 从文件中读取公钥或私钥
      * @param filePath filePath 文件路径
      * @return java.lang.String 公钥或私钥
-     * @author LZG
      * @date 2018/10/15
      */
     public static String readKeyFromFile(String filePath) {
@@ -148,10 +140,8 @@ public class RSAUtil {
 
 
     /**
-     * @Description: 从字符串中加载公钥
-     * @param publicKeyStr
+     * 从字符串中加载公钥
      * @return java.security.interfaces.RSAPublicKey
-     * @author LZG
      * @date 2018/10/15
      */
     public static RSAPublicKey readPublicKeyFromString(String publicKeyStr) {
@@ -169,10 +159,8 @@ public class RSAUtil {
     }
 
     /**
-     * @Description: 从字符串中加载私钥
-     * @param privateKeyStr
+     * 从字符串中加载私钥
      * @return java.security.interfaces.RSAPrivateKey
-     * @author LZG
      * @date 2018/10/15
      */
     public static RSAPrivateKey readPrivateKeyFromString(String privateKeyStr) {
@@ -189,11 +177,10 @@ public class RSAUtil {
     }
 
     /**
-     * @Description: 私钥加签
+     * 私钥加签
      * @param content 明文
      * @param privateKey 私钥
      * @return java.lang.String 签名值
-     * @author LZG
      * @date 2018/10/15
      */
     public static String signByPrivateKey(String content, String privateKey) {
@@ -213,12 +200,11 @@ public class RSAUtil {
     }
 
     /**
-     * @Description: 公钥验签
+     * 公钥验签
      * @param content json串
      * @param publicKey 公钥
      * @param sign 签名值
      * @return boolean 验签是否通过
-     * @author LZG
      * @date 2018/10/15
      */
     public static boolean verifySignByPublicKey(String content, String publicKey, String sign) {
@@ -237,11 +223,10 @@ public class RSAUtil {
     }
 
     /**
-     * @Description: 公钥加密
+     * 公钥加密
      * @param plainText 明文
      * @param publicKey 公钥
      * @return java.lang.String
-     * @author LZG
      * @date 2018/10/15
      */
     public static String encryptByPublicKey(String plainText, RSAPublicKey publicKey) throws Exception {
@@ -261,11 +246,10 @@ public class RSAUtil {
     }
 
     /**
-     * @Description: 私钥解密
+     * 私钥解密
      * @param cipherText 密文
-     * @param privateKey
+     * @param privateKey 私钥
      * @return java.lang.String
-     * @author LZG
      * @date 2018/10/15
      */
     public static String decryptByPrivateKey(String cipherText, RSAPrivateKey privateKey) throws Exception {

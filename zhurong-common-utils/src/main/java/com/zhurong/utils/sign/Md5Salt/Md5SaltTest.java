@@ -1,16 +1,7 @@
-/**
- * @Title: Test.java
- * @Package: com.zhurong.slb.util.password
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.utils.sign.Md5Salt;
 
-import com.zhurong.slb.util.password.BossDigestUtils;
 
 /**
- * @description:
- * @author LZG
  * @date 2020年06月22日
  */
 public class Md5SaltTest {
