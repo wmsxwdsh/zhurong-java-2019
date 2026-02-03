@@ -4,18 +4,21 @@ import java.io.File;
 
 /**
  * 递归算法
- * @date 2019/2/28
+ * date 2019/2/28
  */
 public class Recursive {
 
     public static void readFiles(File file) {
         if(file.isDirectory()) {
             File[] files = file.listFiles();
-            for(int i = 0; i < files.length; i++) {
-                if(files[i].isDirectory()) {
-                    readFiles(files[i]);
+            if (files == null) {
+                return;
+            }
+            for (File value : files) {
+                if (value.isDirectory()) {
+                    readFiles(value);
                 }
-                System.out.println(files[i].getAbsolutePath());
+                System.out.println(value.getAbsolutePath());
             }
         }
     }
