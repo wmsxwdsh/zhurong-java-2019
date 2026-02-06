@@ -92,14 +92,14 @@ public class MaskUtil {
 
     //获取短UUID
     public static String getRandomNum() {
-        StringBuffer shortBuffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         String uuid = MaskUtil.getUUid();
         for (int i = 0; i < 6; i++) {
             String str = uuid.substring(i * 4, i * 4 + 4);
             int x = Integer.parseInt(str, 16);
-            shortBuffer.append(chars[x % 0x3E]);
+            builder.append(chars[x % 0x3E]);
         }
-        return shortBuffer.toString();
+        return builder.toString();
     }
 
 }
