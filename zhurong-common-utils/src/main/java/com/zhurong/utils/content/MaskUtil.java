@@ -1,9 +1,3 @@
-/**
- * @Title: MaskUtil.java
- * @Package: com.zhurong.utils
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.utils.content;
 
 import org.apache.commons.lang3.StringUtils;
@@ -11,18 +5,15 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.UUID;
 
 /**
- * @description: 脱敏工具
- * @author LZG
- * @date 2020年06月15日
+ * 脱敏工具
+ * 2020年06月15日
  */
 public class MaskUtil {
 
     /**
-     * @Description: 身份证号脱敏
+     * 身份证号脱敏
      * @param cardNum :
      * @return : java.lang.String
-     * @author LZG
-     * @date 2020/6/15
      */
     public static String iDCardDecryption(String cardNum) {
         if (StringUtils.isBlank(cardNum)) {
@@ -32,11 +23,9 @@ public class MaskUtil {
     }
 
     /**
-     * @Description: 手机号脱敏
+     * 手机号脱敏
      * @param phone :
      * @return : java.lang.String
-     * @author LZG
-     * @date 2020/6/15
      */
     public static String phoneDesensitization(String phone) {
         if (StringUtils.isBlank(phone)) {
@@ -46,11 +35,9 @@ public class MaskUtil {
     }
 
     /**
-     * @Description: 银行卡脱敏
+     * 银行卡脱敏
      * @param cardNum :
      * @return : java.lang.String
-     * @author LZG
-     * @date 2020/6/15
      */
     public static String bankCard(String cardNum) {
         if (StringUtils.isBlank(cardNum)) {
@@ -60,11 +47,9 @@ public class MaskUtil {
     }
 
     /**
-     * @Description: 字符串截取
+     * 字符串截取
      * @param url : 特定情况特定写。
      * @return : java.lang.String
-     * @author LZG
-     * @date 2020/6/15
      */
     public static String splitFileTypeName(String url) {
         String splitString = "?";
@@ -81,11 +66,9 @@ public class MaskUtil {
     }
 
     /**
-     * @Description: boolean 转 byte
+     * boolean 转 byte
      * @param bool :
      * @return : byte
-     * @author LZG
-     * @date 2020/6/15
      */
     public static byte convert(Boolean bool) {
         return (byte) (bool ? 1 : 0);

@@ -1,17 +1,10 @@
-/**
- * @Title: ContrastUtil.java
- * @Package: com.zhurong.utils.content
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.utils.content;
 
 import java.util.HashSet;
 
 /**
- * @description: 内容对比差标红工具
- * @author LZG
- * @date 2020年06月16日
+ * 内容对比差标红工具
+ * 2020年06月16日
  */
 public class ContrastUtil {
 
