@@ -1,12 +1,11 @@
 package com.zhurong.utils.content;
 
+import cn.hutool.core.util.DesensitizedUtil;
 import org.apache.commons.lang3.StringUtils;
-
-import java.util.UUID;
 
 /**
  * 脱敏工具
- * 2020年06月15日
+ * 更推荐使用 Hutool 提供的脱敏工具类 DesensitizedUtil
  */
 public class MaskUtil {
 
@@ -15,7 +14,7 @@ public class MaskUtil {
      * @param cardNum :
      * @return : java.lang.String
      */
-    public static String iDCardDecryption(String cardNum) {
+    public static String iDCardDesensitization(String cardNum) {
         if (StringUtils.isBlank(cardNum)) {
             return "";
         }
@@ -39,67 +38,32 @@ public class MaskUtil {
      * @param cardNum :
      * @return : java.lang.String
      */
-    public static String bankCard(String cardNum) {
+    public static String bankCardDesensitization(String cardNum) {
         if (StringUtils.isBlank(cardNum)) {
             return "";
         }
         return StringUtils.left(cardNum, 6).concat(StringUtils.removeStart(StringUtils.leftPad(StringUtils.right(cardNum, 4), StringUtils.length(cardNum), "*"), "******"));
     }
 
-    /**
-     * 字符串截取
-     * @param url : 特定情况特定写。
-     * @return : java.lang.String
-     */
-    public static String splitFileTypeName(String url) {
-        String splitString = "?";
-        String picName = "";
-        //https://file-img.test.12366.com/02/vou/content/39306465ca5d45fabca80f64c993ae27.jpg?Expires=1590322176&OSSAccessKeyId=LTAI4G7pdx2MDYJR4C4teLsK&Signature=hhLH5hT%2FMLA9BnSpr0NpqcloG1I%3D
-        if (url.indexOf(splitString) > 0) {
-            //https://file-img.test.12366.com/02/vou/content/39306465ca5d45fabca80f64c993ae27.jpg
-            url = url.substring(0, url.lastIndexOf("?"));
-        }
-        picName = url.substring(url.lastIndexOf("/") + 1);
-        String[] types = picName.split("\\.");
-        //39306465ca5d45fabca80f64c993ae27.jpg
-        return types[types.length - 1];
+
+    public static void main(String[] args) {
+        //身份证号脱敏测试
+        print(MaskUtil.iDCardDesensitization("511402199104096753"));
+        //手机号脱敏
+        print(MaskUtil.phoneDesensitization("18911387565"));
+        //银行卡号脱敏
+        print(MaskUtil.bankCardDesensitization("6217000034560370678"));
+
+        print("--------------------------------");
+
+        // Hutool脱敏
+        print(DesensitizedUtil.chineseName("李凯华"));
+        print(DesensitizedUtil.idCardNum("511402199104096753", 1, 4));
+        print(DesensitizedUtil.email("635555803@qq.com"));
     }
 
-    /**
-     * boolean 转 byte
-     * @param bool :
-     * @return : byte
-     */
-    public static byte convert(Boolean bool) {
-        return (byte) (bool ? 1 : 0);
-    }
-
-
-    public static String[] chars = new String[]{"a", "b", "c", "d", "e", "f",
-            "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-            "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5",
-            "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I",
-            "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-            "W", "X", "Y", "Z"};
-
-
-    //获得32位UUID
-    public static String getUUid() {
-        String uuid = UUID.randomUUID().toString();
-        //去掉“-”符号
-        return uuid.replaceAll("-", "");
-    }
-
-    //获取短UUID
-    public static String getRandomNum() {
-        StringBuilder builder = new StringBuilder();
-        String uuid = MaskUtil.getUUid();
-        for (int i = 0; i < 6; i++) {
-            String str = uuid.substring(i * 4, i * 4 + 4);
-            int x = Integer.parseInt(str, 16);
-            builder.append(chars[x % 0x3E]);
-        }
-        return builder.toString();
+    public static void print(String str) {
+        System.out.println(str);
     }
 
 }
