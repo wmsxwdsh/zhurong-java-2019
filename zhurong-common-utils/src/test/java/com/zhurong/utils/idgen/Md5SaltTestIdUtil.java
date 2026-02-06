@@ -18,17 +18,17 @@ public class Md5SaltTestIdUtil {
     @Test
     public void test1() {
         for(int i = 0; i < 10; i ++) {
-            System.out.println(IdGenerator.getRandomIdByUUID());
+            System.out.println(DistributedIdGen.getRandomIdByUUID());
         }
         //32位
-        System.out.println("每个id的长度为" + IdGenerator.getRandomIdByUUID().length());
+        System.out.println("每个id的长度为" + DistributedIdGen.getRandomIdByUUID().length());
     }
 
 
     @Test
     public void test2() {
         for(int i = 0; i < 10; i++) {
-            System.out.println(IdGenerator.getIncreaseIdByNanoTime());
+            System.out.println(DistributedIdGen.getIncreaseIdByNanoTime());
         }
     }
 
@@ -37,8 +37,8 @@ public class Md5SaltTestIdUtil {
         System.out.println("System.nanoTime()的长度" + String.valueOf(System.nanoTime()).length()); //15位
         System.out.println("System.currentTimeMillis()的长度" + String.valueOf(System.currentTimeMillis()).length()); //13位
 
-        System.out.println("IdUtil.getIncreaseIdByNanoTime()每个id的长度为" + IdGenerator.getIncreaseIdByNanoTime().length());
-        System.out.println("IdUtil.getIncreaseIdByCurrentTimeMillis()每个id的长度为" + IdGenerator.getIncreaseIdByCurrentTimeMillis().length());
+        System.out.println("IdUtil.getIncreaseIdByNanoTime()每个id的长度为" + DistributedIdGen.getIncreaseIdByNanoTime().length());
+        System.out.println("IdUtil.getIncreaseIdByCurrentTimeMillis()每个id的长度为" + DistributedIdGen.getIncreaseIdByCurrentTimeMillis().length());
     }
 
 }

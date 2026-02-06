@@ -8,9 +8,9 @@ import java.util.UUID;
 
 /**
  * ID 生成工具类（支持分布式ID生成）
- * @date 2018/11/20
+ * 2018/11/20
  */
-public class IdGenerator {
+public class DistributedIdGen {
 
     private static String middle = "";
 
@@ -20,7 +20,7 @@ public class IdGenerator {
     }
 
     /**
-     * 以毫微秒做基础计数, 返回唯一有序增长ID
+     * 以纳秒做基础计数, 返回唯一有序增长ID
      * <pre>System.nanoTime()</pre>
      * <pre>
      *  线程数量:   100
@@ -30,11 +30,9 @@ public class IdGenerator {
      *  Map Size:   100000
      * </pre>
      * @return ID长度32位
-     * @author LZG
-     * @date 2018/11/20
      */
     public static String getIncreaseIdByNanoTime() {
-        return System.nanoTime() +                                                       //时间戳-15位
+        return System.nanoTime() +                                                    //时间戳-15位
             middle +                                                                  //标志-8位
             MathUtils.makeUpNewData(Thread.currentThread().hashCode() + "", 3) +        //3位线程标志
             MathUtils.randomDigitNumber(6);                                          //随机6位数
@@ -51,18 +49,16 @@ public class IdGenerator {
      *  Map Size:   99992
      * </pre>
      * @return ID长度32位
-     * @author LZG
-     * @date 2018/11/20
      */
     public static String getIncreaseIdByCurrentTimeMillis() {
-        return System.currentTimeMillis() +                                             //时间戳-13位
+        return System.currentTimeMillis() +                                          //时间戳-13位
             middle +                                                                 //标志-8位
             MathUtils.makeUpNewData(Thread.currentThread().hashCode() + "", 3) +       //3位线程标志
             MathUtils.randomDigitNumber(8);                                         //随机8位数
     }
 
     /**
-     * 基于UUID+MD5产生唯一无序ID
+     * 基于 UUID+MD5 产生唯一无序ID
      * <pre>
      *  线程数量:   100
      *  执行次数:   1000
@@ -71,14 +67,10 @@ public class IdGenerator {
      *  Map Size:   100000
      * </pre>
      * @return ID长度32位
-     * @author LZG
-     * @date 2018/11/20
      */
     public static String getRandomIdByUUID() {
         return DigestUtils.md5Hex(UUID.randomUUID().toString());
     }
-
-    /* -----------------------------------分割线------------------------------------------------ */
 
     /** 字符串MD5处理类 */
     private static class DigestUtils {
@@ -114,9 +106,6 @@ public class IdGenerator {
         }
     }
 
-
-    /* ------------------------------------分割线------------------------------------------------ */
-
     /** 网络相关的处理类  */
     private static class NetworkUtils {
 
@@ -141,8 +130,6 @@ public class IdGenerator {
         }
 
     }
-
-    /* -----------------------------------分割线------------------------------------------------ */
 
     /** 数据处理的相关类  */
     private static class MathUtils {
@@ -186,6 +173,25 @@ public class IdGenerator {
             int start = Integer.parseInt(makeUpNewData("", length));//1000+8999=9999
             int end = Integer.parseInt(makeUpNewData("", length + 1)) - start;//9000
             return (int) (Math.random() * end) + start + "";
+        }
+
+    }
+
+    //test
+    public static void main(String[] args) {
+        System.out.println("毫秒ID");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(getIncreaseIdByCurrentTimeMillis());
+        }
+
+        System.out.println("纳秒ID");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(getIncreaseIdByNanoTime());
+        }
+
+        System.out.println("随机uuid");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(getRandomIdByUUID());
         }
 
     }
