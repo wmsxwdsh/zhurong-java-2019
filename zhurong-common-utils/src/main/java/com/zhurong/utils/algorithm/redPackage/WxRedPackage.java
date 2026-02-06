@@ -2,7 +2,7 @@ package com.zhurong.utils.algorithm.redPackage;
 
 /**
  * 微信红包
- * @date 2018/11/28
+ * 2018/11/28
  */
 public class WxRedPackage {
 

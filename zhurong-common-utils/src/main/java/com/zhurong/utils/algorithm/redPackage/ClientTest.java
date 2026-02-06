@@ -1,7 +1,7 @@
 package com.zhurong.utils.algorithm.redPackage;
 
 /**
- * @date 2018/11/28
+ * 2018/11/28
  */
 public class ClientTest {
 
