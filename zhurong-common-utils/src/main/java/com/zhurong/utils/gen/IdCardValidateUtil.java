@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * 身份证工具类（开源中国）
- * @date 2018/8/24
+ * 2018/8/24
  */
 public class IdCardValidateUtil {
 
@@ -110,7 +110,6 @@ public class IdCardValidateUtil {
      * 将 15位身份证号码转换为 18位
      * @param idCard 15位身份编码
      * @return java.lang.String 18位身份编码
-     * @date 2018/8/24
      */
     public static String conver15CardTo18(String idCard) {
         String idCard18 = "";
@@ -154,7 +153,6 @@ public class IdCardValidateUtil {
 
     /**
      * 验证身份证是否合法
-     * @date 2018/8/24
      */
     public static boolean validateCard(String idCard) {
         String card = idCard.trim();
@@ -175,7 +173,6 @@ public class IdCardValidateUtil {
 
     /**
      * 验证18位身份证号码是否合法
-     * @date 2018/8/24
      */
     public static boolean validateIdCard18(String idCard) {
         boolean bTrue = false;
@@ -204,7 +201,6 @@ public class IdCardValidateUtil {
 
     /**
      * 验证15位身份证号码是否合法
-     * @date 2018/8/24
      */
     public static boolean validateIdCard15(String idCard) {
         if (idCard.length() != CHINA_ID_MIN_LENGTH) {
@@ -241,7 +237,6 @@ public class IdCardValidateUtil {
      *      * [1] - 性别(男M, 女F, 未知N)
      *      * [2] - 是否合法(合法true, 不合法false)
      * 若不是身份证件号码则返回null
-     * @date 2018/8/24
      */
     public static String[] validateIdCard10(String idCard) {
         String[] info = new String[3];
@@ -281,7 +276,6 @@ public class IdCardValidateUtil {
 
     /**
      * 验证台湾身份证号码
-     * @date 2018/8/24
      */
     public static boolean validateTWCard(String idCard) {
         String start = idCard.substring(0, 1);
@@ -304,7 +298,6 @@ public class IdCardValidateUtil {
      *      * 前2位英文字符A-Z分别对应数字10-35
      *      * 最后一位校验码为0-9的数字加上字符"A"，"A"代表10
      *      * 2、将身份证号码全部转换为数字，分别对应乘9-1相加的总和，整除11则证件号码有效
-     * @date 2018/8/24
      */
     public static boolean validateHKCard(String idCard) {
         String card = idCard.replaceAll("[\\(|\\)]", "");
@@ -339,7 +332,6 @@ public class IdCardValidateUtil {
      * 将字符数组转换成数字数组
      * @param ca 字符数组
      * @return int[] 数字数组
-     * @date 2018/8/24
      */
     private static int[] converCharToInt(char[] ca) {
         int len = ca.length;
@@ -356,7 +348,6 @@ public class IdCardValidateUtil {
 
     /**
      * 将身份证的每位和对应位的加权因子相乘之后，再得到和值
-     * @date 2018/8/24
      */
     private static int getPowerSum(int[] iArr) {
         int iSum = 0;
@@ -375,7 +366,6 @@ public class IdCardValidateUtil {
     /**
      * 将power和值与11取模获得余数进行校验码判断
      * @return java.lang.String 校验位
-     * @date 2018/8/24
      */
     private static String getCheckCode18(int iSum) {
         String sCode = "";
@@ -419,7 +409,6 @@ public class IdCardValidateUtil {
 
     /**
      * 数字验证
-     * @date 2018/8/24
      */
     private static boolean isNum(String val) {
         return val == null || "".equals(val) ? false : val.matches("^[0-9]*$");
@@ -430,7 +419,6 @@ public class IdCardValidateUtil {
      * @param iYear  待验证日期(年)
      * @param iMonth 待验证日期(月 1-12)
      * @param iDate  待验证日期(日)
-     * @date 2018/8/24
      */
     private static boolean validateDate(int iYear, int iMonth, int iDate) {
         Calendar cal = Calendar.getInstance();
@@ -464,7 +452,6 @@ public class IdCardValidateUtil {
 
     /**
      * 根据身份编号获取年龄
-     * @date 2018/8/24
      */
     public static int getAgeByIdCard(String idCard) {
         int iAge = 0;
@@ -481,7 +468,6 @@ public class IdCardValidateUtil {
     /**
      * 根据身份证号码获取生日
      * @return java.lang.String 生日(yyyyMMdd)
-     * @date 2018/8/24
      */
     public static String getBirthByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -496,7 +482,6 @@ public class IdCardValidateUtil {
     /**
      * 根据身份证号码获取生日年
      * @return java.lang.Short 年(yyyy)
-     * @date 2018/8/24
      */
     public static Short getYearByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -511,7 +496,6 @@ public class IdCardValidateUtil {
     /**
      * 根据身份证号码获取生日月
      * @return java.lang.Short 月(MM)
-     * @date 2018/8/24
      */
     public static Short getMonthByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -526,7 +510,6 @@ public class IdCardValidateUtil {
     /**
      * 根据身份证号码获取生日天
      * @return java.lang.Short 日(dd)
-     * @date 2018/8/24
      */
     public static Short getDateByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -541,7 +524,6 @@ public class IdCardValidateUtil {
     /**
      * 根据身份编号获取性别
      * @return java.lang.String 性别(M-男，F-女，N-未知)
-     * @date 2018/8/24
      */
     public static String getGenderByIdCard(String idCard) {
         String sGender = "N";
@@ -559,7 +541,6 @@ public class IdCardValidateUtil {
 
     /**
      * 根据身份证号码获取户籍省份
-     * @date 2018/8/24
      */
     public static String getProvinceByIdCard(String idCard) {
         int len = idCard.length();
@@ -577,7 +558,6 @@ public class IdCardValidateUtil {
      * @param startInclude 开始位置（包含）
      * @param endExclude   结束位置（不包含）
      * @return java.lang.String 隐藏后的身份证号码
-     * @date 2018/8/24
      */
     public static String hide(String idCard, int startInclude, int endExclude) {
         return StringUtil.replace(idCard, startInclude, endExclude, '*');

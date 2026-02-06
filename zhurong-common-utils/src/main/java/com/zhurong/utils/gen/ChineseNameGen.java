@@ -1,18 +1,11 @@
-/**   
- * @Title: ChineseNameGen.java
- * @Package: com.zhurong.utils.gen
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.gen;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 /**
- * @description: 中文姓名生成器
- * @author LZG
- * @date 2018/11/5
+ * 中文姓名生成器
+ * 2018/11/5
  */
 public class ChineseNameGen {
 
@@ -40,10 +33,8 @@ public class ChineseNameGen {
     private static Random random = new Random();
 
     /**
-     * @Description: 生成中文姓名
+     * 生成中文姓名
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/11/5
      */
     public static String generate() {
         //姓名暂时还是两到三字，比较常见些
@@ -51,27 +42,23 @@ public class ChineseNameGen {
     }
 
     /**
-     * @Description: 随机获取一个姓
+     * 随机获取一个姓
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/11/5
      */
     private static String genFirstName() {
         return FIRST_NAMES[random.nextInt(FIRST_NAMES.length)];
     }
 
     /**
-     * @Description: 获取一个中文汉字
+     * 获取一个中文汉字
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/11/5
      */
     private static String genOneChineseChars() {
         String str = null;
         int highPos = (176 + Math.abs(random.nextInt(39)));
         int lowPos = 161 + Math.abs(random.nextInt(93));
-        byte[] b = new byte[]{(new Integer(highPos)).byteValue(),
-            (new Integer(lowPos)).byteValue()};
+        byte[] b = new byte[]{Integer.valueOf(highPos).byteValue(),
+            Integer.valueOf(lowPos).byteValue()};
 
         try {
             str = new String(b, "GB2312");
@@ -83,12 +70,8 @@ public class ChineseNameGen {
     }
 
     /**
-     * @Description: 获取start - end间随机个字符
-     * @param start
-     * @param end
+     * 获取 start-end 随机个字符
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/11/5
      */
     private static String genRandomLengthChineseChars(int start, int end) {
         String str = "";
@@ -101,6 +84,13 @@ public class ChineseNameGen {
             }
         }
         return str;
+    }
+
+
+    public static void main(String[] args) {
+        for(int i = 0; i < 10; i++) {
+            System.out.println(ChineseNameGen.generate());
+        }
     }
 
 }

@@ -1,21 +1,10 @@
-/**   
- * @Title: IdCardGen.java
- * @Package: com.zhurong.utils.gen
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.gen;
 
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
- * @description: 身份证号生成工具类
- * @author LZG
- * @date 2018/10/29
+ * 身份证号生成工具类
+ * 2018/10/29
  */
 public class IdCardGen {
 
@@ -3541,8 +3530,6 @@ public class IdCardGen {
 
     /**
      * 生成方法
-     *
-     * @return
      */
     public static String generate() {
         StringBuilder generator = new StringBuilder();
@@ -3555,8 +3542,6 @@ public class IdCardGen {
 
     /**
      * 随机地区
-     *
-     * @return
      */
     public static int randomAreaCode() {
         int index = (int) (Math.random() * IdCardGen.areaCode.size());
@@ -3573,8 +3558,6 @@ public class IdCardGen {
 
     /**
      * 随机出生日期
-     *
-     * @return
      */
     public static String randomBirthday() {
         Calendar birthday = Calendar.getInstance();
@@ -3625,8 +3608,6 @@ public class IdCardGen {
 
     /**
      * 随机产生3位数
-     *
-     * @return
      */
     public static String randomCode() {
         int code = (int) (Math.random() * 1000);
@@ -3636,6 +3617,20 @@ public class IdCardGen {
             return "0" + code;
         } else {
             return "" + code;
+        }
+    }
+
+    public static void main(String[] args) {
+        IdCardGen g = new IdCardGen();
+        List<String> idCardList = new ArrayList<String>();
+        for (int i = 0; i < 10; i++) {
+            idCardList.add(g.generate());
+        }
+
+        for (String idCardStr : idCardList) {
+            System.out.println("身份证号：" + idCardStr);
+            System.out.println("是否是有效身份证：" + IdCardValidateUtil.validateCard(idCardStr));
+            System.out.println("--------------------------");
         }
     }
 

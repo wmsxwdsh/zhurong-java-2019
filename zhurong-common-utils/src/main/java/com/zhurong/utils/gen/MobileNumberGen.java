@@ -1,18 +1,10 @@
-/**   
- * @Title: MobileNumberGen.java
- * @Package: com.zhurong.utils.gen
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.gen;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @description: 手机号生成器
- * @author LZG
- * @date 2018/11/5
+ * 手机号生成器
  */
 public class MobileNumberGen {
 
@@ -23,10 +15,8 @@ public class MobileNumberGen {
 
 
     /**
-     * @Description: 生成随机手机号码
+     * 生成随机手机号码
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/11/5
      */
     public static String generate() {
         return genMobilePre() + StringUtils
@@ -34,10 +24,8 @@ public class MobileNumberGen {
     }
 
     /**
-     * @Description: 生成假的手机号码（以19开头）
+     * 生成假的手机号码（以19开头）
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/11/5
      */
     public static String generateFake() {
         return "19" + StringUtils
@@ -45,13 +33,21 @@ public class MobileNumberGen {
     }
 
     /**
-     * @Description: 获取手机号的前缀
+     * 获取手机号的前缀
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/11/5
      */
     private static String genMobilePre() {
         return "" + MOBILE_PREFIX[RandomUtils.nextInt(0, MOBILE_PREFIX.length)];
     }
 
+
+    public static void main(String[] args) {
+        //生成真手机号码
+        String result = MobileNumberGen.generate();
+        System.out.println(result);
+
+        //生成假的手机号码
+        String result2 = MobileNumberGen.generateFake();
+        System.out.println(result2);
+    }
 }

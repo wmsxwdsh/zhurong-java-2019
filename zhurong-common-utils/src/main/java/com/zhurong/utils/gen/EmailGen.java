@@ -8,9 +8,9 @@ public class EmailGen {
 
     private static final String base = "abcdefghijklmnopqrstuvwxyz0123456789";
 
-    private static final String[] email_suffix = ("@gmail.com, @yahoo.com, @msn.com, @hotmail.com, @aol.com, @ask.com, " +
-            "@live.com, @qq.com, @0355.net, @163.com, @163.net, @263.net, @3721.net, @yeah.net, @googlemail.com, @126.com, " +
-            "@sina.com, @sohu.com, @yahoo.com.cn").split(",");
+    private static final String[] email_suffix = ("@gmail.com,@yahoo.com,@msn.com,@hotmail.com,@aol.com,@ask.com," +
+            "@live.com,@qq.com,@0355.net,@163.com,@163.net,@263.net,@3721.net,@yeah.net,@googlemail.com,@126.com, " +
+            "@sina.com,@sohu.com,@yahoo.com.cn").split(",");
 
     /**
      * 生成 email
@@ -33,6 +33,14 @@ public class EmailGen {
      */
     private static int getNum(int start, int end) {
         return (int) (Math.random() * (end - start + 1) + start);
+    }
+
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            String email = EmailGen.generate();
+            System.out.println(email);
+        }
     }
 
 }
