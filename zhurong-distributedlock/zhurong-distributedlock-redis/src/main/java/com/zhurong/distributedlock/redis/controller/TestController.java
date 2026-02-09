@@ -1,9 +1,3 @@
-/**
- * @Title: TestController.java
- * @Package: com.zhurong.distributedlock.redis.controller
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.distributedlock.redis.controller;
 
 import com.zhurong.distributedlock.redis.config.RedisLockUtil;
@@ -17,9 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @description: 参考资料 https://my.oschina.net/u/3452433/blog/3004997
- * @author LZG
- * @date 2019/7/5
+ * 参考资料 https://my.oschina.net/u/3452433/blog/3004997
+ * 2019/7/5
  */
 @RestController
 public class TestController {

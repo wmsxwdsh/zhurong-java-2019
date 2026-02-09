@@ -1,9 +1,3 @@
-/**
- * @Title: RedisLockUtil.java
- * @Package: com.zhurong.distributedlock.redis
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.distributedlock.redis.config;
 
 import java.util.Collections;
@@ -12,10 +6,9 @@ import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 
 /**
- * @description: Redis分布式锁，适用于Redis单节点部署。
- *      --具体内容参考笔记
- * @author LZG
- * @date 2019/7/5
+ * Redis分布式锁，适用于Redis单节点部署。
+ * -- 具体内容参考笔记
+ * 2019/7/5
  */
 @Service
 public class RedisLockUtil {
@@ -31,13 +24,10 @@ public class RedisLockUtil {
     private static final Long RELEASE_SUCCESS = 1L;
 
     /**
-     * @Description: 尝试获取分布式锁
+     * 尝试获取分布式锁
      * @param lockKey 锁 redis key
      * @param lockId 锁值 redis key对应value
-     * @param expireTime 超时时间
      * @return boolean 是否获取成功
-     * @author LZG
-     * @date 2019/7/5
      */
     public boolean tryGetDistributedLock(String lockKey, String lockId) {
         Jedis jedis = jedisFactory.getJedis();
@@ -49,11 +39,9 @@ public class RedisLockUtil {
     }
 
     /**
-     * @Description: 释放分布式锁
+     * 释放分布式锁
      * @param lockKey 锁
      * @return boolean 是否释放成功
-     * @author LZG
-     * @date 2019/7/5
      */
     public boolean releaseDistributedLock(String lockKey, String lockId) {
         Jedis jedis = jedisFactory.getJedis();
