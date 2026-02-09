@@ -1,20 +1,9 @@
-/**
- * @Title: MyTest1.java
- * @Package: com.zhurong.concurrency.zhanglong.lock
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.concurrency.zhanglong.lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年02月29日
- */
 public class MyTest1 {
 
     private Lock lock = new ReentrantLock(); //可重入锁

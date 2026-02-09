@@ -1,15 +1,8 @@
-/**
- * @Title: MyTest5.java
- * @Package: com.zhurong.concurrency.zhanglong.example3
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.concurrency.zhanglong.example3;
 
 /**
- * @description: 锁粗化
- * @author LZG
- * @date 2020年02月27日
+ * 锁粗化
+ * 2020年02月27日
  */
 public class MyTest5 {
 

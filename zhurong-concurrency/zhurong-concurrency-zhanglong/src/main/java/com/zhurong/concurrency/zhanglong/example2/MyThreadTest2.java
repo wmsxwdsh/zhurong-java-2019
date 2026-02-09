@@ -1,16 +1,5 @@
-/**
- * @Title: MyThreadTest2.java
- * @Package: com.zhurong.concurrency.zhanglong.example2
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.concurrency.zhanglong.example2;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年02月22日
- */
 public class MyThreadTest2 {
 
     public static void main(String[] args) {

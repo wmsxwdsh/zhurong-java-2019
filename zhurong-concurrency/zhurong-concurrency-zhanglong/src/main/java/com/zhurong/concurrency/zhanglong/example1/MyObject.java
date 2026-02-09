@@ -1,16 +1,5 @@
-/**
- * @Title: MyObject.java
- * @Package: com.zhurong.concurrency.zhanglong.example1
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.concurrency.zhanglong.example1;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年02月21日
- */
 public class MyObject {
 
     private int counter;

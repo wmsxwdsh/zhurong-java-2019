@@ -1,15 +1,8 @@
-/**
- * @Title: DeadLock.java
- * @Package: com.zhurong.concurrency.zhanglong.deadlock
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.concurrency.zhanglong.deadlock;
 
 /**
- * @description: 死锁
- * @author LZG
- * @date 2020年02月28日
+ * 死锁
+ * 2020年02月28日
  */
 public class DeadLock {
 
