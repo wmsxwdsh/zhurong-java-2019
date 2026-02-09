@@ -7,7 +7,6 @@ import com.rabbitmq.client.ConnectionFactory;
 
 /**
  * direct-exchange+routingKey：队列与交换机的绑定-ps有针对性的订阅监听消费
- *
  * @author steadyjack
  */
 public class OneProducer {

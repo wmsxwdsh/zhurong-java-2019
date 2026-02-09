@@ -13,18 +13,15 @@ import java.util.Map;
 
 /**
  * headers路由策略的交换机注入、Queue与Exchange的绑定注入
- *
  * @author JustryDeng
- * @date 2018年7月19日 下午4:42:09
+ * 2018年7月19日 下午4:42:09
  */
 @Configuration
 public class HeadersExchangeAndBindingConfiguration {
 
 	/**
 	 * 注入Headers路由策略的Exchange交换机实例
-	 *
 	 * @return Exchange“交换机”实例
-	 * @date 2018年7月18日 下午8:47:48
 	 */
 	@Bean(name = "myHeadersExchange")
 	HeadersExchange getDirectExchange() {
@@ -36,8 +33,6 @@ public class HeadersExchangeAndBindingConfiguration {
 	 * 将Queue绑定到此headersExchange(并指定:当headers中所有的“map”被此Queue匹配时,才可使用此队列)
 	 * 注:此示例是匹配的.whereAll(Map<String,Object> map);
 	 *    也可以只匹配.whereAll(String... headersKeys);
-	 *
-	 * @date 2018年7月19日 下午4:54:47
 	 */
 	@Bean
 	Binding bindingQueueOneToHeadersAllExchange(@Qualifier("myFirstQueue") Queue myFirstQueue,
@@ -52,8 +47,6 @@ public class HeadersExchangeAndBindingConfiguration {
 	 * 将Queue绑定到此headersExchange(并指定:当headers中任意一个map被此Queue匹配时,就会使用此队列)
 	 * 注:此示例是匹配的.whereAny(Map<String,Object> map);
 	 *    也可以只匹配.whereAny(String... headersKeys);
-	 *
-	 * @date 2018年7月19日 下午4:55:47
 	 */
 	@Bean
 	Binding bindingQueueOneToHeadersAnyExchange(@Qualifier("myThreeQueue") Queue myThreeQueue,

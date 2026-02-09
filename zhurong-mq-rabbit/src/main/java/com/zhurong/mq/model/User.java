@@ -2,9 +2,8 @@ package com.zhurong.mq.model;
 
 /**
  * 用户实体类模型
- *
  * @author JustryDeng
- * @date 2018年7月6日 上午1:55:59
+ * 2018年7月6日 上午1:55:59
  */
 public class User {
 

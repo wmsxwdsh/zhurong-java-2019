@@ -7,9 +7,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 注入 消息监听器
- *
  * @author JustryDeng
- * @date 2018年7月17日 下午8:53:41
+ * 2018年7月17日 下午8:53:41
  */
 @Component
 public class DemoMessageListener {

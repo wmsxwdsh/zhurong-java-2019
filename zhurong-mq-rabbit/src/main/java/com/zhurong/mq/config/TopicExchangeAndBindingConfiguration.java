@@ -10,18 +10,15 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * topic路由策略(路由键routingKey,且支持模糊匹配)的交换机注入、Queue与Exchange的绑定注入
- *
  * @author JustryDeng
- * @date 2018年7月16日 上午10:12:12
+ * 2018年7月16日 上午10:12:12
  */
 @Configuration
 public class TopicExchangeAndBindingConfiguration {
 
 	/**
 	 * 注入Topic路由策略的Exchange交换机实例
-	 *
 	 * @return Exchange“交换机”实例
-	 * @date 2018年7月18日 下午8:47:36
 	 */
 	@Bean(name = "myTopicExchange")
 	TopicExchange getTopicExchange() {
@@ -32,9 +29,7 @@ public class TopicExchangeAndBindingConfiguration {
 	
 	/**
 	 * 将myFirstQueue对应的Queue绑定到此topicExchange,并指定路由键为"routingKey.#"
-	 * 即:此Exchange中,路由键以"routingKey."开头的Queue将被匹配到
-	 *
-	 * @date 2018年7月19日 上午12:20:09
+	 * 即：此Exchange中，路由键以"routingKey."开头的Queue将被匹配到。
 	 */
 	@Bean
 	Binding bindingQueueOneToTopicExchange(@Qualifier("myFirstQueue") Queue myFirstQueue,
@@ -44,9 +39,7 @@ public class TopicExchangeAndBindingConfiguration {
 	
 	/**
 	 * 将myTwoQueue对应的Queue绑定到此topicExchange,并指定路由键为"#.topic"
-	 * 即:此Exchange中,路由键以".topic"结尾的Queue将被匹配到
-	 *
-	 * @date 2018年7月19日 上午12:20:09
+	 * 即：此Exchange中，路由键以".topic"结尾的Queue将被匹配到。
 	 */
 	@Bean
 	Binding bindingQueueTwoToTopicExchange(@Qualifier("myTwoQueue") Queue myTwoQueue,
@@ -56,9 +49,7 @@ public class TopicExchangeAndBindingConfiguration {
 	
 	/**
 	 * 将myThreeQueue对应的Queue绑定到此topicExchange,并指定路由键为"#"
-	 * 即:此topicExchange中,任何Queue都将被匹配到
-	 *
-	 * @date 2018年7月19日 上午12:20:09
+	 * 即：此topicExchange中，任何Queue都将被匹配到。
 	 */
 	@Bean
 	Binding bindingQueueThreeToTopicExchange(@Qualifier("myThreeQueue") Queue myThreeQueue,
