@@ -3,9 +3,9 @@ package com.zhurong.generator.persistence.mybatis.domain;
 import java.util.Date;
 
 /**
-* @description: tb_dictionary Domain
+* tb_dictionary Domain
 * @author LZG Robot
-* @date 2019/06/05
+* 2019/06/05
 */
 public class TbDictionary {
 

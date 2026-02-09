@@ -1,18 +1,7 @@
-/**
- * @Title: Model.java
- * @Package: com.essence.edop.generator.domain
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.domain;
 
 import java.util.List;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/3/27
- */
 public class Model extends BaseDomain {
 
     //类名

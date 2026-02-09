@@ -1,9 +1,3 @@
-/**
- * @Title: DbMetaDataUtil.java
- * @Package: com.essence.edop.generator.util
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.util;
 
 import com.zhurong.db.persistence.domain.ProjectDataSource;
@@ -19,19 +13,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @description: 封装元数据的工具类
- * @author LZG
- * @date 2019/3/28
+ * 封装元数据的工具类
+ * 2019/3/28
  */
 public class DbMetaDataUtil {
 
     /**
-     * @Description: 获取表信息（包括字段、注释等）
+     * 获取表信息（包括字段、注释等）
      * @param tableName
      * @param dataSource
      * @return com.essence.edop.generator.domain.Table
-     * @author LZG
-     * @date 2019/3/28
      */
     public static Table getTable(String tableName, ProjectDataSource dataSource) {
         Table table = new Table();
@@ -41,11 +32,9 @@ public class DbMetaDataUtil {
     }
 
     /**
-     * @Description: 根据表名获取所有字段信息
+     * 根据表名获取所有字段信息
      * @param tableName
      * @return java.util.List<com.essence.edop.generator.domain.Column>
-     * @author LZG
-     * @date 2019/3/28
      */
     public static List<Column> getColumns(String tableName, ProjectDataSource dataSource) {
         List<Column> columnList = new ArrayList<>();

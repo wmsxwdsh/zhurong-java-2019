@@ -1,9 +1,3 @@
-/**
- * @Title: FreeMarkerTemplateUtil.java
- * @Package: com.essence.edop.generator.util
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.util;
 
 import com.zhurong.generator.domain.BaseDomain;
@@ -18,9 +12,8 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 
 /**
- * @description: 模板工具类
- * @author LZG
- * @date 2019/3/27
+ * 模板工具类
+ * 2019/3/27
  */
 public class FreeMarkerTemplateUtil {
 
@@ -42,11 +35,7 @@ public class FreeMarkerTemplateUtil {
     }
 
     /**
-     * @Description: 获得模板
-     * @param templateName
-     * @return freemarker.template.Template
-     * @author LZG
-     * @date 2019/3/27
+     * 获得模板
      */
     public static Template getTemplate(String templateName) throws IOException {
         try {
@@ -57,23 +46,14 @@ public class FreeMarkerTemplateUtil {
     }
 
     /**
-     * @Description: 清除freemarker缓存
-     * @return void
-     * @author LZG
-     * @date 2019/3/27
+     * 清除freemarker缓存
      */
     public static void clearCache() {
         CONFIGURATION.clearTemplateCache();
     }
 
     /**
-     * @Description: 通过模板生成可以使用的文件
-     * @param templateName
-     * @param file
-     * @param entity
-     * @return void
-     * @author LZG
-     * @date 2019/3/27
+     * 通过模板生成可以使用的文件
      */
     public static void generateFile(final String templateName, File file, BaseDomain domain) throws Exception {
         Template template = getTemplate(templateName);

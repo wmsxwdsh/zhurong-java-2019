@@ -1,18 +1,7 @@
-/**   
- * @Title: PageInfo.java
- * @Package: com.essence.euauth.web.config
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.domain;
 
 import java.util.List;
 
-/**
- * @description: 
- * @author LZG
- * @date 2019/5/15
- */
 public class PageInfo<T> {
 
     //当前页

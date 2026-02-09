@@ -1,15 +1,8 @@
-/**   
- * @Title: JdbcUrlPrefixEnum.java
- * @Package: com.essence.edop.common.constant
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.sysEnum;
 
 /**
- * @description: prefix指ip前面所有
- * @author LZG
- * @date 2019/3/20
+ * prefix指ip前面所有
+ * 2019/3/20
  */
 public enum JdbcUrlPrefixEnum {
 

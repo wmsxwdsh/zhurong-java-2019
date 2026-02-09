@@ -1,16 +1,5 @@
-/**   
- * @Title: JdbcDriverEnum.java
- * @Package: com.essence.edop.common.constant
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.sysEnum;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/3/20
- */
 public enum JdbcDriverEnum {
 
     mysql_driver("com.mysql.jdbc.Driver"),

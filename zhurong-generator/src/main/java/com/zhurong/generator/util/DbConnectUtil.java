@@ -10,7 +10,7 @@ import com.zhurong.db.persistence.domain.ProjectDataSource;
 import com.zhurong.generator.sysEnum.DataSourceDBTypeEnum;
 import com.zhurong.generator.sysEnum.JdbcDriverEnum;
 import com.zhurong.generator.sysEnum.JdbcUrlPrefixEnum;
-import com.zhurong.utils.general.StringUtil;
+import com.zhurong.utils.common.StringUtil;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,8 +26,6 @@ import java.util.Map;
 /**
  *
  * @author NoBugNoCode
- *
- *         2019年3月20日 下午2:16:14
  */
 public class DbConnectUtil implements Serializable {
 
@@ -40,13 +38,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 测试数据源连接是否成功
-     *
-     * @param dbc
-     * @return
-     * @throws SQLException
-     * @throws ClassNotFoundException
-     * @throws IllegalAccessException
-     * @throws InstantiationException
      */
     public static synchronized boolean testConnectionByDataSource(ProjectDataSource dbc) {
         if (null == dbc) {
@@ -81,13 +72,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 根据数据源获取数据库连接
-     *
-     * @param dbc
-     * @return
-     * @throws SQLException
-     * @throws ClassNotFoundException
-     * @throws IllegalAccessException
-     * @throws InstantiationException
      */
     public static synchronized Connection getConnectionByDataSource(ProjectDataSource dbc) {
         if (null == dbc) {
@@ -124,8 +108,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 关闭连接
-     *
-     * @param conn
      */
     public static void closeConnect(Connection conn) {
         if (conn != null) {
@@ -139,9 +121,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 查询数据库表（所有表名称）
-     *
-     * @param dbc
-     * @return
      */
     public static String queryDataSourceTables(ProjectDataSource dbc) {
 
@@ -175,10 +154,8 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 获取数据库表（某表或全表）字段结构 如果tableName不为空或null则查询 该表表结构，否则查询全库表结构
-     *
      * @param dbSource 数据源
      * @param tableName 查询表结构表名
-     * @return
      */
     public static String getTableColumns(ProjectDataSource dbSource, String tableName) {
         Connection conn = null;
@@ -214,7 +191,7 @@ public class DbConnectUtil implements Serializable {
     }
 
     /**
-     * @Description: 获取表的主键
+     * 获取表的主键
      * @param conn 数据库连接
      * @param table 表名
      * @return java.util.List<java.lang.String>
@@ -235,10 +212,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 执行sql语句(查询使用)
-     *
-     * @param sql
-     * @param values
-     * @return
      */
     public static String excuteQuery(Connection conn, String sql, Map<String, Object> values) {
         try {
@@ -252,11 +225,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 通过sql解析sql中查询的字段名称
-     *
-     * @param dbc
-     * @param druidConfiguration
-     * @param sql
-     * @return
      */
     public static String[] querySqlColumn(Connection conn, String sql, Map<String, Object> values) {
         try {
@@ -304,11 +272,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 执行sql语句(增删改使用)
-     *
-     * @param dbc
-     * @param druidConfiguration
-     * @param sql
-     * @return
      */
     public static int excuteUpdate(Connection conn, String sql, Object[] values) {
         try {
@@ -322,9 +285,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 获取对应数据库连接路径
-     *
-     * @param dataSource
-     * @return
      */
     private static String urlHandler(ProjectDataSource dataSource) {
         String url = null;
@@ -350,9 +310,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 获取数据库对应驱动
-     *
-     * @param dataSource
-     * @return
      */
     private static String driverHandler(ProjectDataSource dataSource) {
         String driver = null;
@@ -376,11 +333,7 @@ public class DbConnectUtil implements Serializable {
 
 
     /**
-     * @Description: 获取数据库的表名数组
-     * @param connection
-     * @return java.util.List<java.lang.String>
-     * @author LZG
-     * @date 2019/3/25
+     * 获取数据库的表名数组
      */
     public static List<String> getTableNameByConnection(Connection connection) {
         List<String> tableNameList = new ArrayList<>();
@@ -400,12 +353,7 @@ public class DbConnectUtil implements Serializable {
     }
 
     /**
-     * @Description: 获取数据库列相关信息
-     * @param connect
-     * @param tableName
-     * @return java.util.List<java.lang.String               [               ]>
-     * @author LZG
-     * @date 2019/3/25
+     * 获取数据库列相关信息
      */
     public static List<String[]> getColumnByConnectionAndTableName(Connection connect, String tableName) {
 
@@ -484,8 +432,6 @@ public class DbConnectUtil implements Serializable {
 
     /**
      * 将驼峰命名转下划线命名（实体对应数据库字段类型）
-     *
-     * @return
      */
     public static String strToLine(String clunmName) {
         StringBuffer stringBuffer = new StringBuffer();
@@ -524,12 +470,7 @@ public class DbConnectUtil implements Serializable {
     }
 
     /**
-     * @Description: 根据数据库连接和用户名获取oracle表名
-     * @param connect
-     * @param dbUser
-     * @return java.util.List<java.lang.String>
-     * @author LZG
-     * @date 2019/4/1
+     * 根据数据库连接和用户名获取oracle表名
      */
     public static List<String> getOracleTableNameByConnectionAndDbUser(Connection connection, String dbUser) {
         List<String> tableNameList = new ArrayList<>();

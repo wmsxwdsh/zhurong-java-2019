@@ -1,9 +1,3 @@
-/**   
- * @Title: GenerateFactory.java
- * @Package: com.essence.edop.generator.support
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.support;
 
 
@@ -15,9 +9,7 @@ import com.zhurong.generator.generate.GenerateModel;
 import com.zhurong.generator.generate.GenerateModelExample;
 
 /**
- * @description: 代码生成器工厂类
- * @author LZG
- * @date 2019/3/27
+ * 代码生成器工厂类
  */
 public class GenerateFactory {
 

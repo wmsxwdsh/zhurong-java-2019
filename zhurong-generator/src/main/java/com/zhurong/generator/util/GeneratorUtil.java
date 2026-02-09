@@ -1,28 +1,15 @@
-/**   
- * @Title: GeneratorUtil.java
- * @Package: com.essence.edop.generator.util
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 
-/**
- * @description: 
- * @author LZG
- * @date 2019/3/28
- */
 public class GeneratorUtil {
 
     /**
-     * @Description: 去掉下划线和把首字母转成大写
-     *          --setter和getter方法时用到
-     *          --比如：create_time -> CreateTime -> setCreateTime/getCreateTime
-     * @param str
-     * @return
+     * 去掉下划线和把首字母转成大写
+     * -- setter和getter方法时用到
+     * -- 比如：create_time -> CreateTime -> setCreateTime/getCreateTime
      */
     public static String toUpperCase(String str) {
         //防止数据库表字段名称本来就全是大写
@@ -33,11 +20,7 @@ public class GeneratorUtil {
     }
 
     /**
-     * @Description: 去除下划线，并且下划线后面的字母变成大写（本身是大写则不变）
-     * @param str
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/3/27
+     * 去除下划线，并且下划线后面的字母变成大写（本身是大写则不变）
      */
     public static String replaceUnderLine(String str) {
         StringBuffer sb = new StringBuffer();
@@ -61,22 +44,14 @@ public class GeneratorUtil {
     }
 
     /**
-     * @Description: 将包名转换成路径
-     * @param packagePath
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/3/27
+     * 将包名转换成路径
      */
     public static String package2path(String packagePath) {
         return packagePath.replaceAll("\\.", "\\\\");
     }
 
     /**
-     * @Description: 将大写字母转换为下划线
-     * @param param
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/3/27
+     * 将大写字母转换为下划线
      */
     public static String upperCharToUnderLine(String param) {
 

@@ -1,9 +1,3 @@
-/**   
- * @Title: CodeGeneratorServiceImpl.java
- * @Package: com.essence.edop.generator.service.impl
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.service.impl;
 
 import com.zhurong.db.persistence.domain.ProjectDataSource;
@@ -19,22 +13,9 @@ import com.zhurong.utils.date.DateUtil;
 import java.util.Date;
 import org.springframework.stereotype.Service;
 
-/**
- * @description: 
- * @author LZG
- * @date 2019/3/28
- */
 @Service
 public class CodeGeneratorServiceImpl implements CodeGeneratorService {
 
-    /**
-     * @Description:
-     * @param projectDataSource
-     * @param tableNameArr
-     * @return void
-     * @author LZG
-     * @date 2019/6/4
-     */
     @Override
     public void handle(ProjectDataSource projectDataSource, String[] tableNameArr) throws Exception {
 
@@ -77,8 +58,6 @@ public class CodeGeneratorServiceImpl implements CodeGeneratorService {
             //5、生成service
 
             //6、生成controller（正式开发这步基本省略）
-
-
         }
 
     }

@@ -9,8 +9,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author NoBugNoCode
- *
- *         2019年2月28日 下午2:45:59
+ * 2019年2月28日
  */
 @Service
 public class DataSourceServiceImpl implements DataSourceService {
@@ -19,11 +18,7 @@ public class DataSourceServiceImpl implements DataSourceService {
 	private ProjectDataSourceMapper projectDataSourceMapper;
 
 	/**
-	 * @Description: 通过主键获取数据源（并进行密码解密）
-	 * @param dataSourceId
-	 * @return com.essence.edop.common.dto.EdopResponse
-	 * @author LZG
-	 * @date 2019/3/25
+	 * 通过主键获取数据源（并进行密码解密）
 	 */
 	@Override
 	public ProjectDataSource getDataSourceById(String dataSourceId) {

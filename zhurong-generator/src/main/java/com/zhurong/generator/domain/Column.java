@@ -1,15 +1,8 @@
-/**
- * @Title: Column.java
- * @Package: com.essence.edop.generator.domain
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.domain;
 
 /**
- * @description: 字段类
- * @author LZG
- * @date 2019/3/27
+ * 字段类
+ * 2019/3/27
  */
 public class Column {
 

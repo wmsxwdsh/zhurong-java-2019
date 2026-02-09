@@ -1,24 +1,13 @@
-/**   
- * @Title: JdbcTypeConvertUtil.java
- * @Package: com.essence.edop.generator.util
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.util;
 
 /**
- * @description: jdbcType 类型转换工具类
- * @author LZG
- * @date 2019/3/28
+ * jdbcType 类型转换工具类
+ * 2019/3/28
  */
 public class JdbcTypeConvertUtil {
 
     /**
-     * @Description: 数据库的字段类型转换成jdbc的类型（先从支持mysql开始）
-     * @param sqlType
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/3/28
+     * 数据库的字段类型转换成jdbc的类型（先从支持mysql开始）
      */
     public static String sqlType2JdbcType(String sqlType) {
         String jdbcType = "";
@@ -100,11 +89,7 @@ public class JdbcTypeConvertUtil {
     }
 
     /**
-     * @Description: mysql字段的类型转换成java的类型
-     * @param sqlType
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/3/28
+     * mysql字段的类型转换成 java 的类型
      */
     public static String mysqlType2JavaType(String sqlType) {
         String javaType = "";
@@ -165,11 +150,7 @@ public class JdbcTypeConvertUtil {
     }
 
     /**
-     * @Description: sqlserver字段的类型转换成java的类型
-     * @param sqlType
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/3/28
+     * sqlserver字段的类型转换成 java 的类型
      */
     public static String sqlserverType2JavaType(String sqlType) {
         String javaType = "";
@@ -233,11 +214,7 @@ public class JdbcTypeConvertUtil {
     }
 
     /**
-     * @Description: oracle字段的类型转换成java的类型
-     * @param sqlType
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/3/28
+     * oracle字段的类型转换成 java 的类型
      */
     public static String oracleType2JavaType(String sqlType) {
         String javaType = "";

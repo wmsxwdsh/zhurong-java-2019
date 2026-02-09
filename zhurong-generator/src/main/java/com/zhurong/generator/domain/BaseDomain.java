@@ -1,15 +1,8 @@
-/**   
- * @Title: BaseDomain.java
- * @Package: com.essence.edop.generator.domain
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.domain;
 
 /**
- * @description: 实体基属
- * @author LZG
- * @date 2019/3/27
+ * 实体基属
+ * 2019/3/27
  */
 public class BaseDomain {
 

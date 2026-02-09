@@ -1,15 +1,7 @@
-/**
- * @Title: GenerateConfig.java
- * @Package: com.essence.edop.generator.config
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.config;
 
 /**
- * @description: 全局配置
- * @author LZG
- * @date 2019/3/27
+ * 全局配置
  */
 public class GenerateConfig {
 

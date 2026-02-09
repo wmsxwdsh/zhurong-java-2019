@@ -1,9 +1,3 @@
-/**   
- * @Title: TbCityInfoServiceImpl.java
- * @Package: com.zhurong.generator.persistence.mybatis
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package templates;
 
 import com.zhurong.generator.persistence.mybatis.domain.TbCityInfo;
@@ -14,11 +8,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * @description: 
- * @author LZG
- * @date 2019/6/5
- */
 @Service
 public class TbCityInfoServiceImpl implements TbCityInfoService {
 

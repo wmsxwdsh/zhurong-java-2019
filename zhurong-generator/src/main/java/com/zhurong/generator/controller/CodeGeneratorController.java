@@ -1,9 +1,3 @@
-/**   
- * @Title: CodeGeneratorController.java
- * @Package: com.essence.edop.oneservice.controller
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.generator.controller;
 
 import com.zhurong.db.persistence.domain.ProjectDataSource;
@@ -19,11 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @description: 
- * @author LZG
- * @date 2019/3/28
- */
 @RestController
 public class CodeGeneratorController {
 
@@ -34,10 +23,7 @@ public class CodeGeneratorController {
     private CodeGeneratorService codeGeneratorService;
 
     /**
-     * @Description: 生成代码
-     * @return com.essence.edop.common.dto.EdopResponse
-     * @author LZG
-     * @date 2019/3/28
+     * 生成代码
      */
     @RequestMapping(value = "/codeGen", method = RequestMethod.GET)
     public EdopResponse handle() throws Exception {
@@ -51,11 +37,7 @@ public class CodeGeneratorController {
     }
 
     /**
-     * @Description: 读取生成文件的代码，给前端做展示
-     * @param filePath
-     * @return java.lang.String
-     * @author LZG
-     * @date 2019/6/4
+     * 读取生成文件的代码，给前端做展示
      */
     private String readFileToString(String filePath) {
         String content = null;
