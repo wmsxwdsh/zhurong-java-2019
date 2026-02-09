@@ -3,9 +3,6 @@ package com.zhurong.concurrency.base.pool;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * @author liuzhongguo
- */
 public class NewCachedThreadPool {
 
     public static void main(String[] args) throws Exception {

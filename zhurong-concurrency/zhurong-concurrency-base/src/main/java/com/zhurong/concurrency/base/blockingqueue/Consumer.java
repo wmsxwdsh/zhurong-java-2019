@@ -1,17 +1,10 @@
-/**
- * @Title: Consumer.java
- * @Package: com.zhurong.concurrency.base.blockingqueue
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.concurrency.base.blockingqueue;
 
 import java.util.concurrent.BlockingQueue;
 
 /**
- * @description: 消费者
- * @author LZG
- * @date 2019/3/12
+ * 消费者
+ * 2019/3/12
  */
 public class Consumer implements Runnable {
 

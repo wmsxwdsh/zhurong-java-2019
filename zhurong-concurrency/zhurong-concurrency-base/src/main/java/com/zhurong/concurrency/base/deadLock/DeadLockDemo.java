@@ -1,16 +1,9 @@
-/**   
- * @Title: DeadLockDemo.java
- * @Package: com.zhurong.concurrency.base.deadLock
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.concurrency.base.deadLock;
 
 /**
- * @description: 死锁示例
- *      --运行后后台会一直在运行，必须手动停掉。
- * @author LZG
- * @date 2019/2/28
+ * 死锁示例
+ * -- 运行后后台会一直在运行，必须手动停掉。
+ * 2019/2/28
  */
 public class DeadLockDemo {
 

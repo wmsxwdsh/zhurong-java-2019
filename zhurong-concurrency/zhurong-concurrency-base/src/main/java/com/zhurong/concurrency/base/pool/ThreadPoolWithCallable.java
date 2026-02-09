@@ -11,8 +11,6 @@ import java.util.concurrent.Future;
  * runnable的run方法不会有任何返回结果，所以主线程无法获得任务线程的返回值
  *
  * callable的call方法可以返回结果，但是主线程在获取时是被阻塞，需要等待任务线程返回才能拿到结果
- * @author
- *
  */
 public class ThreadPoolWithCallable {
 

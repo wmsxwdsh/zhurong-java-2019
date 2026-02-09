@@ -3,15 +3,11 @@ package com.zhurong.concurrency.base.pool;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * @author liuzhongguo
- */
 public class ThreadPoolWithRunnable {
 
 
     /**
      * 通过线程池执行线程
-     * @param args
      */
     public static void main(String[] args) {
         //创建一个线程池

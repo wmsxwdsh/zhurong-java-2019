@@ -6,7 +6,6 @@ import java.util.concurrent.*;
 
 /**
  * 自定义线程池
- * @author liuzhongguo
  */
 public class SelfThreadPool {
 
@@ -66,7 +65,6 @@ public class SelfThreadPool {
 
     }
 }
-
 
 /**
  * 新方东面试题：

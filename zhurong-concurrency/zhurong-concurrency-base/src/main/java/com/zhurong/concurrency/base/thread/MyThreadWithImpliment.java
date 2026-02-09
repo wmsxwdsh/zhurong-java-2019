@@ -1,15 +1,7 @@
-/**
- * @Title: MyThreadWithImpliment.java
- * @Package: com.zhurong.concurrency.base.thread
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.concurrency.base.thread;
 
 /**
- * @description:
- * @author LZG
- * @date 2019/2/27
+ * 2019/2/27
  */
 public class MyThreadWithImpliment implements Runnable {
 
