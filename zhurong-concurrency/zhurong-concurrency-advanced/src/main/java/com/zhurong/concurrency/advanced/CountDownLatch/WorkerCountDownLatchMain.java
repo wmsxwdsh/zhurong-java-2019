@@ -1,18 +1,10 @@
-/**
- * @Title: WorkerCountDownLatchMain.java
- * @Package: com.zhurong.concurrency.advanced.CountDownLatch.demo1
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.concurrency.advanced.CountDownLatch;
 
 import com.zhurong.utils.date.DateUtil;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @description:
- * @author LZG
- * @date 2019/4/17
+ * 2019/4/17
  */
 public class WorkerCountDownLatchMain {
 

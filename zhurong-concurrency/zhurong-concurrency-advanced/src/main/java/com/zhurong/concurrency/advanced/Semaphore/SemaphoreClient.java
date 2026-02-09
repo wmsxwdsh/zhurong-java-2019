@@ -1,9 +1,3 @@
-/**
- * @Title: SemaphoreClient.java
- * @Package: com.zhurong.concurrency.advanced.Semaphore
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.concurrency.advanced.Semaphore;
 
 import com.zhurong.utils.date.DateUtil;
@@ -12,9 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
- * @description: semaphore 这个类是用作访问并发控制，可以设置资源最大同时访问的个数。
- * @author LZG
- * @date 2019/4/18
+ * semaphore 这个类是用作访问并发控制，可以设置资源最大同时访问的个数。
+ * 2019/4/18
  */
 public class SemaphoreClient {
 

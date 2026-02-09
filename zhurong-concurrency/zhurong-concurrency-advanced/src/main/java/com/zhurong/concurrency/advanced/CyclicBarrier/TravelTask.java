@@ -1,18 +1,11 @@
-/**
- * @Title: TravelTask.java
- * @Package: com.zhurong.concurrency.advanced.CyclicBarrier
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.concurrency.advanced.CyclicBarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * @description: 旅行线程
- * @author LZG
- * @date 2019/4/17
+ * 旅行线程
+ * 2019/4/17
  */
 public class TravelTask implements Runnable {
 

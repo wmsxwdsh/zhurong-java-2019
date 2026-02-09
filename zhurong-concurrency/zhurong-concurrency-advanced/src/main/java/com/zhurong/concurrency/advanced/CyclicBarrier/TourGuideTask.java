@@ -1,15 +1,8 @@
-/**   
- * @Title: TourGuideTask.java
- * @Package: com.zhurong.concurrency.advanced.CyclicBarrier
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.concurrency.advanced.CyclicBarrier;
 
 /**
- * @description: 导游线程，都到达目的地时，发放护照和签证
- * @author LZG
- * @date 2019/4/17
+ * 导游线程，都到达目的地时，发放护照和签证
+ * 2019/4/17
  */
 public class TourGuideTask implements Runnable {
 
