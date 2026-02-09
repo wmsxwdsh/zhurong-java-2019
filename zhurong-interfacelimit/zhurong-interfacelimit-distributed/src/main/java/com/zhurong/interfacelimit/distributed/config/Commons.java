@@ -1,9 +1,3 @@
-/**   
- * @Title: Commons.java
- * @Package: com.zhurong.interfacelimit.distributed.config
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.interfacelimit.distributed.config;
 
 import java.io.Serializable;
@@ -18,18 +12,14 @@ import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Component;
 
 /**
- * @description: 公共配置
- * @author LZG
- * @date 2019/7/5
+ * 公共配置
+ * 2019/7/5
  */
 @Component
 public class Commons {
 
     /**
-     * @Description: 读取限流脚Lua脚本
-     * @return org.springframework.data.redis.core.script.DefaultRedisScript<java.lang.Number>
-     * @author LZG
-     * @date 2019/7/5
+     * 读取限流脚 Lua 脚本
      */
     @Bean
     public DefaultRedisScript<Number> redisluaScript() {
@@ -40,11 +30,7 @@ public class Commons {
     }
 
     /**
-     * @Description: RedisTemplate
-     * @param redisConnectionFactory
-     * @return org.springframework.data.redis.core.RedisTemplate<java.lang.String,java.io.Serializable>
-     * @author LZG
-     * @date 2019/7/5
+     * RedisTemplate
      */
     @Bean
     public RedisTemplate<String, Serializable> limitRedisTemplate(LettuceConnectionFactory redisConnectionFactory) {

@@ -1,9 +1,3 @@
-/**   
- * @Title: AccessLimitController.java
- * @Package: com.zhurong.interfacelimit.distributed.controller
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.interfacelimit.distributed.controller;
 
 import com.zhurong.interfacelimit.distributed.annotation.RateLimit;
@@ -17,9 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @description: Lua+Redis实现分布式接口限流
- * @author LZG
- * @date 2019/7/5
+ * Lua+Redis 实现分布式接口限流
+ * 2019/7/5
  */
 @RestController
 public class AccessLimitController {

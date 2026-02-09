@@ -1,9 +1,3 @@
-/**
- * @Title: LimitAspect.java
- * @Package: com.zhurong.interfacelimit.distributed.config
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.interfacelimit.distributed.config;
 
 import com.zhurong.interfacelimit.distributed.annotation.RateLimit;
@@ -27,9 +21,8 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 /**
- * @description: 拦截器
- * @author LZG
- * @date 2019/7/5
+ * 拦截器
+ * 2019/7/5
  */
 @Aspect
 @Configuration
@@ -51,8 +44,9 @@ public class LimitAspect {
         RateLimit rateLimit = method.getAnnotation(RateLimit.class);
 
         if (rateLimit != null) {
-            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-            String ipAddress = IPAddressUtil.getClientIPAddress(request);
+            //HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+            //String ipAddress = IPAddressUtil.getClientIPAddress(request);
+            String ipAddress = "";
 
             StringBuffer stringBuffer = new StringBuffer();
             stringBuffer.append(ipAddress).append("-")

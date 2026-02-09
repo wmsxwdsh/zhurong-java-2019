@@ -1,9 +1,3 @@
-/**   
- * @Title: TestServiceImpl.java
- * @Package: com.zhurong.interfacelimit.distributed.service.impl
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.interfacelimit.distributed.service.impl;
 
 import com.zhurong.interfacelimit.distributed.service.TestService;
@@ -12,11 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-/**
- * @description: 
- * @author LZG
- * @date 2019/7/5
- */
 @Service
 public class TestServiceImpl implements TestService {
 

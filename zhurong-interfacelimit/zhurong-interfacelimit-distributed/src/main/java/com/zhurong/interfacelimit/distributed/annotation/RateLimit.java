@@ -13,26 +13,20 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface RateLimit {
     /**
-     * @Description: 限流唯一标示
+     * 限流唯一标示
      * @return java.lang.String
-     * @author LZG
-     * @date 2019/7/5
      */
     String key() default "";
 
     /**
-     * @Description: 限流时间
+     * 限流时间
      * @return int
-     * @author LZG
-     * @date 2019/7/5
      */
     int time();
 
     /**
-     * @Description: 限流次数
+     * 限流次数
      * @return int
-     * @author LZG
-     * @date 2019/7/5
      */
     int count();
 }
