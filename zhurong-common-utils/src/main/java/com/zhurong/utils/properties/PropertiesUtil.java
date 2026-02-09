@@ -1,9 +1,3 @@
-/**   
- * @Title: PropertiesUtil.java
- * @Package: com.zhurong.utils.properties
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.properties;
 
 import java.io.File;
@@ -14,18 +8,14 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @description: Properties工具类
- * @author LZG
- * @date 2018/8/27
+ * Properties 工具类
  */
 public class PropertiesUtil {
 
     /**
-     * @Description: 根据绝对路径文件名获取Properties对象
+     * 根据绝对路径文件名获取Properties对象
      * @param fileName
      * @return java.util.Properties
-     * @author LZG
-     * @date 2018/8/27
      */
     public static Properties readFromAbsolutePath(String fileName) {
         if (null == fileName || "".equals(fileName))
@@ -58,12 +48,10 @@ public class PropertiesUtil {
     }
 
     /**
-     * @Description: 根据相对路径文件名获取Properties对象
-     *      --使用最多。各种情况参考测试用例！
+     * 根据相对路径文件名获取Properties对象
+     * -- 使用最多。各种情况参考测试用例！
      * @param fileName
      * @return java.util.Properties
-     * @author LZG
-     * @date 2018/8/27
      */
     public static Properties read(String fileName) {
 
@@ -98,13 +86,11 @@ public class PropertiesUtil {
 
 
     /**
-     * @Description:  根据键名获取值
-     *      -- 也可以直接使用官方提供的properties.getProperty("XXX")
+     * 根据键名获取值
+     * -- 也可以直接使用官方提供的properties.getProperty("XXX")
      * @param prop
      * @param key
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/8/27
      */
     public static String readKeyValue(Properties prop, String key) {
         if (prop != null)

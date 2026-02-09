@@ -1,9 +1,3 @@
-/**   
- * @Title: ProtoBufUtil.java
- * @Package: com.zhurong.utils.protobuf
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.protobuf;
 
 import io.protostuff.LinkedBuffer;
@@ -13,18 +7,15 @@ import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
 
 /**
- * @description: 摘自https://blog.csdn.net/qq_36680439/article/details/79563349
- * @author LZG
- * @date 2019/5/22
+ * 摘自 <a href="https://blog.csdn.net/qq_36680439/article/details/79563349">...</a>
+ * 2019/5/22
  */
 public class ProtoBufUtil {
 
     /**
-     * @Description: 序列化
+     * 序列化
      * @param o
      * @return byte[]
-     * @author LZG
-     * @date 2019/5/22
      */
     public static <T> byte[] serializer(T o) {
         Schema schema = RuntimeSchema.getSchema(o.getClass());
@@ -32,12 +23,10 @@ public class ProtoBufUtil {
     }
 
     /**
-     * @Description: 反序列化
+     * 反序列化
      * @param bytes
      * @param clazz
      * @return T
-     * @author LZG
-     * @date 2019/5/22
      */
     public static <T> T deserializer(byte[] bytes, Class<T> clazz) {
 

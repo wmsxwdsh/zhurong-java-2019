@@ -1,9 +1,3 @@
-/**   
- * @Title: RedisConfigureUtil.java
- * @Package: com.zhurong.utils.properties
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.properties;
 
 import java.io.IOException;
@@ -11,10 +5,9 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @description: Redis配置工具类
- *      --本质上是对com.onezg.baolongtool.core.util.PropertiesUtil的合理运用和扩展
- * @author LZG
- * @date 2018/8/27
+ * Redis配置工具类
+ * --本质上是对com.onezg.baolongtool.core.util.PropertiesUtil 的合理运用和扩展
+ * 2018/8/27
  */
 public class RedisConfigureUtil {
 
