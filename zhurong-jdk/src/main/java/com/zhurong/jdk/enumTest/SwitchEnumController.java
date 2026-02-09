@@ -1,23 +1,13 @@
-/**   
- * @Title: SwitchEnumController.java
- * @Package: com.zhurong.jdk.enumTest
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.enumTest;
 
-import com.zhurong.utils.general.StringUtil;
 import javax.servlet.http.HttpServletRequest;
+
+import com.zhurong.utils.common.StringUtil;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @description: 
- * @author LZG
- * @date 2018/11/23
- */
 @RestController
 public class SwitchEnumController {
 

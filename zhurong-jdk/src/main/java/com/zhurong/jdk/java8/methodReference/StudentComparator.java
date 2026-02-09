@@ -1,8 +1,5 @@
 package com.zhurong.jdk.java8.methodReference;
 
-/**
- * @author LZG
- */
 public class StudentComparator {
 
     public int compareStudentByAge(Student student1, Student student2) {

@@ -1,15 +1,8 @@
-/**   
- * @Title: BizType.java
- * @Package: com.zhurong.jdk.enumTest
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.enumTest;
 
 /**
- * @description: 记账业务类型
- * @author LZG
- * @date 2018/10/24
+ * 记账业务类型
+ * 2018/10/24
  */
 public enum BizType {
 

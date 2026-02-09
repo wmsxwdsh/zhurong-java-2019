@@ -1,9 +1,3 @@
-/**   
- * @Title: StandardNIO.java
- * @Package: com.zhurong.io.nio
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.nio;
 
 import java.io.IOException;
@@ -19,9 +13,8 @@ import java.util.Scanner;
 import org.junit.Test;
 
 /**
- * @description: 非阻塞式IO标准实现
- * @author LZG
- * @date 2018/11/6
+ * 非阻塞式 IO 标准实现
+ * 2018/11/6
  */
 public class StandardNIO {
 

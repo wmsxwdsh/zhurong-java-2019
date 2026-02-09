@@ -1,19 +1,8 @@
-/**   
- * @Title: TestBuffer.java
- * @Package: com.zhurong.jdk.nio.base
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.nio.base;
 
 import java.nio.ByteBuffer;
 import org.junit.Test;
 
-/**
- * @description: 
- * @author LZG
- * @date 2018/11/5
- */
 public class Md5SaltTestBuffer {
 
     /*

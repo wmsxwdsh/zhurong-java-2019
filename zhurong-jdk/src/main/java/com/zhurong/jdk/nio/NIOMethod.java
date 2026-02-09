@@ -1,9 +1,3 @@
-/**   
- * @Title: NIOMethod.java
- * @Package: com.zhurong.io.nio
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.nio;
 
 import java.io.IOException;
@@ -22,9 +16,8 @@ import java.nio.file.attribute.DosFileAttributeView;
 import org.junit.Test;
 
 /**
- * @description: 和NIO相关可能会使用的方法
- * @author LZG
- * @date 2018/11/6
+ * 和 NIO 相关可能会使用的方法
+ * 2018/11/6
  */
 public class NIOMethod {
     //自动资源管理：自动关闭实现 AutoCloseable 接口的资源

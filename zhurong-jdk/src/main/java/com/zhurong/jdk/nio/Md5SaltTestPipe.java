@@ -1,9 +1,3 @@
-/**   
- * @Title: TestPipe.java
- * @Package: com.zhurong.io.nio
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.nio;
 
 import java.io.IOException;
@@ -12,9 +6,8 @@ import java.nio.channels.Pipe;
 import org.junit.Test;
 
 /**
- * @description: 单向通道
+ * 单向通道
  * @author LZG
- * @date 2018/11/6
  */
 public class Md5SaltTestPipe {
 

@@ -14,9 +14,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @description: 只有一个方法的接口，被声明成@FunctionalInterface就是函数式接口了。
- * @author LZG
- * @date 2019/3/11
+ * 只有一个方法的接口，被声明成 @FunctionalInterface 就是函数式接口了。
+ * 2019/3/11
  */
 public class TestCallable {
 

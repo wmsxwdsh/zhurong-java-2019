@@ -1,9 +1,3 @@
-/**
- * @Title: TestStream.java
- * @Package: com.zhurong.jdk.java8.stream
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.jdk.java8.stream;
 
 import java.util.Arrays;
@@ -13,9 +7,8 @@ import java.util.stream.Stream;
 import org.junit.Test;
 
 /**
- * @description: 处理集合的优雅姿势 ——stream
- * @author LZG
- * @date 2019/3/12
+ * 处理集合的优雅姿势 -- stream
+ * 2019/3/12
  */
 public class Md5SaltTestStream {
 

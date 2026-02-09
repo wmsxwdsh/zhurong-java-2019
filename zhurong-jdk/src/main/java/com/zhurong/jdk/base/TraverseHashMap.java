@@ -1,9 +1,3 @@
-/**
- * @Title: TraverseHashMap.java
- * @Package: com.zhurong.jdk.base
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.jdk.base;
 
 import java.util.HashMap;
@@ -11,9 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @description: 遍历HashMap
- * @author LZG
- * @date 2020年05月27日
+ * 遍历 HashMap
  */
 public class TraverseHashMap {
 

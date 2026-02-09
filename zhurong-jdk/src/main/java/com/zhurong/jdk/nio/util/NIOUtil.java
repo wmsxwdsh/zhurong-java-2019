@@ -1,9 +1,3 @@
-/**   
- * @Title: NIOUtil.java
- * @Package: com.zhurong.jdk.nio.util
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.nio.util;
 
 import java.io.File;
@@ -14,19 +8,15 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * @description: NIO文件复制工具(大文件复制的时候效率更显快)
- * @author LZG
- * @date 2018/11/6
+ * NIO文件复制工具（大文件复制的时候效率更显快）
+ * 2018/11/6
  */
 public class NIOUtil {
 
     /**
-     * @Description: 拷贝
+     * 拷贝
      * @param src 源文件
      * @param dst 目标文件
-     * @return void
-     * @author LZG
-     * @date 2018/11/6
      */
     public static void copyFileUseNIO(String src, String dst) throws IOException {
         //声明源文件和目标文件

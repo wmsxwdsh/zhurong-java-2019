@@ -1,15 +1,8 @@
-/**
- * @Title: MyRuntimeConstantPool.java
- * @Package: com.zhurong.jdk
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.RuntimeConstantPool;
 
 /**
- * @description: 运行时常量池Runtime Constant Pool
- * @author LZG
- * @date 2019/3/4
+ * 运行时常量池 Runtime Constant Pool
+ * 2019/3/4
  */
 public class MyRuntimeConstantPool {
 
@@ -19,7 +12,6 @@ public class MyRuntimeConstantPool {
      * 包装类不管理浮点型（float和double），整形只会管理-128到127）和String（也可以通过String.intern()方法强制将String放入常量池）
      * @author zhenbl
      */
-
     public static void main(String[] args) {
 
         String str1 = "abc";

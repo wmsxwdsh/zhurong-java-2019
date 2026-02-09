@@ -1,16 +1,5 @@
-/**
- * @Title: MyStatic.java
- * @Package: com.zhurong.jdk.staticTest
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.staticTest;
 
-/**
- * @description:
- * @author LZG
- * @date 2018/11/8
- */
 public class MyStatic {
 
     public static void main(String[] args) {

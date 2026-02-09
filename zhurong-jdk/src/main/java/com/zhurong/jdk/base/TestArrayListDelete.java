@@ -1,20 +1,9 @@
-/**
- * @Title: TestArrayListDelete.java
- * @Package: com.zhurong.jdk.base
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.jdk.base;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author LZG
- * @description:
- * @date 2020年05月27日
- */
 public class TestArrayListDelete {
 
     public static void main(String[] args) {

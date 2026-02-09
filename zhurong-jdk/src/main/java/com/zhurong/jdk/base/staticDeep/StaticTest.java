@@ -2,9 +2,7 @@ package com.zhurong.jdk.base.staticDeep;
 
 /**
  * 深入理解static，下面例子理解明白了，static再无难点
- *
- * @author LZG
- * @date 2018/11/8
+ * 2018/11/8
  */
 public class StaticTest {
 

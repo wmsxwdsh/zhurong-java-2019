@@ -2,8 +2,7 @@ package com.zhurong.jdk.java8.functional;
 
 /**
  * 函数式接口
- * @author LZG
- * @date 2019/3/12
+ * 2019/3/12
  */
 @FunctionalInterface
 public interface HelloInterface {

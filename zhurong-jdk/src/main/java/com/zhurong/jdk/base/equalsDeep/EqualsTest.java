@@ -1,10 +1,8 @@
 package com.zhurong.jdk.base.equalsDeep;
 
 /**
- * 深入理解equals方法
- *
- * @author LZG
- * @date 2019/3/4
+ * 深入理解 equals 方法
+ * 2019/3/4
  */
 public class EqualsTest {
 

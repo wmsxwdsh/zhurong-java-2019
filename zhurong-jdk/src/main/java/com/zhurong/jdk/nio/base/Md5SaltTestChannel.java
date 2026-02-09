@@ -1,9 +1,3 @@
-/**   
- * @Title: TestChannel.java
- * @Package: com.zhurong.jdk.nio.base
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 https://onezg.cnblogs.com
- */
 package com.zhurong.jdk.nio.base;
 
 import java.io.FileInputStream;
@@ -25,11 +19,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import org.junit.Test;
 
-/**
- * @description: 
- * @author LZG
- * @date 2018/11/6
- */
 public class Md5SaltTestChannel {
 
     /*

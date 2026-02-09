@@ -1,8 +1,5 @@
 package com.zhurong.jdk.java8.methodReference;
 
-/**
- * @author LZG
- */
 public class Student {
 
     private String name;
