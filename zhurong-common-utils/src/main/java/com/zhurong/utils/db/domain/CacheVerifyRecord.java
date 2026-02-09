@@ -1,17 +1,10 @@
-/**   
- * @Title: CacheVerifyRecord.java
- * @Package: com.zhurong.utils.db.domain
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.db.domain;
 
 import java.util.Date;
 
 /**
- * @description: 银行鉴权流水
- * @author LZG
- * @date 2018/8/27
+ * 银行鉴权流水
+ * 2018/8/27
  */
 public class CacheVerifyRecord {
 

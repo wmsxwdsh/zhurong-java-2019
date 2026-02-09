@@ -1,9 +1,3 @@
-/**   
- * @Title: LocalDateTimeUtil.java
- * @Package: com.zhurong.utils.date
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.date;
 
 import java.time.LocalDate;
@@ -16,7 +10,7 @@ import java.time.temporal.TemporalUnit;
 import java.util.Date;
 
 /**
- * @description: 日期时间工具类
+ * 日期时间工具类
  *      --1、jdk1.8以上
  *      --2、以前jdk版本的Date缺点太多，java8推出了线程安全、可靠的时间包。
  *      --3、数据库支持LocalDateTime类型
@@ -25,8 +19,7 @@ import java.util.Date;
  *              date -> LocalDate
  *              time -> LocalTime
  *              timestamp -> LocalDateTime
- * @author LZG
- * @date 2018/10/26
+ * 2018/10/26
  */
 public class LocalDateTimeUtil {
 
@@ -46,7 +39,6 @@ public class LocalDateTimeUtil {
 
     /**
      * Date转换为LocalDateTime.
-     *
      * @param date
      * @return java.time.LocalDateTime
      */
@@ -56,7 +48,6 @@ public class LocalDateTimeUtil {
 
     /**
      * LocalDateTime转换为Date.
-     *
      * @param time
      * @return java.util.Date
      */
@@ -67,7 +58,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 获取指定日期的毫秒.
-     *
      * @param time
      * @return java.lang.Long
      */
@@ -77,7 +67,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 获取指定日期的秒.
-     *
      * @param time
      * @return java.lang.Long
      */
@@ -87,7 +76,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 获取指定时间的指定格式.
-     *
      * @param time
      * @param pattern
      * @return java.lang.String
@@ -98,7 +86,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 获取当前时间的指定格式.
-     *
      * @param pattern
      * @return java.lang.String
      */
@@ -108,7 +95,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 日期加上一个数,根据field不同加不同值,field为ChronoUnit.*.
-     *
      * @param time
      * @param number
      * @param field
@@ -120,7 +106,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 日期减去一个数,根据field不同减不同值,field参数为ChronoUnit.*.
-     *
      * @param time
      * @param number
      * @param field
@@ -132,7 +117,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 获取两个日期的差  field参数为ChronoUnit.*.
-     *
      * @param startTime
      * @param endTime
      * @param field
@@ -151,7 +135,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 获取一天的开始时间，2017,7,22 00:00.
-     *
      * @param time
      * @return java.time.LocalDateTime
      */
@@ -164,7 +147,6 @@ public class LocalDateTimeUtil {
 
     /**
      * 获取一天的结束时间，2017,7,22 23:59:59.999999999.
-     *
      * @param time
      * @return java.time.LocalDateTime
      */

@@ -1,9 +1,3 @@
-/**
- * @Title: DateUtil.java
- * @Package: com.zhurong.utils.date
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.date;
 
 import java.text.ParseException;
@@ -16,9 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @description: 线程安全的日期时间工具类
- * @author LZG
- * @date 2018/8/27
+ * 线程安全的日期时间工具类
+ * 2018/8/27
  */
 public class DateUtil {
 
@@ -62,12 +55,7 @@ public class DateUtil {
     /*------end私有方法----------*/
 
     /**
-     * @Description: String Date转化为指定模板的Date
-     * @param dateStr
-     * @param pattern
-     * @return java.util.Date
-     * @author LZG
-     * @date 2018/8/27
+     * String Date转化为指定模板的Date
      */
     public static Date stringToDate(String dateStr, String pattern) {
         try {
@@ -80,12 +68,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: date类型数据转化为指定模板的String
-     * @param date
-     * @param pattern
-     * @return java.lang.String
-     * @author LZG
-     * @date 2018/8/27
+     * date类型数据转化为指定模板的String
      */
     public static String dateToString(Date date, String pattern) {
         SimpleDateFormat sdf = getSdf(pattern);
@@ -93,11 +76,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取当前日期
-     * @param pattern 日期的格式模板
-     * @return java.lang.String
-     * @author LZG
-     * @date 2018/8/27
+     * 获取当前日期
      */
     public static String getNow(String pattern) {
         SimpleDateFormat sdf = getSdf(pattern);
@@ -105,11 +84,8 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取昨天的日期(包含时分秒)
-     *      结合DateUtil.dateToString()效果更佳
-     * @return java.util.Date
-     * @author LZG
-     * @date 2018/8/27
+     * 获取昨天的日期(包含时分秒)
+     * --> 结合DateUtil.dateToString()效果更佳
      */
     public static Date getYesterday() {
         Calendar c = Calendar.getInstance();
@@ -119,12 +95,9 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取明天的日期(包含时分秒)
-     *      结合DateUtil.dateToString()效果更佳
-     *      常用于限定日期时间内完成XXX事的场景
-     * @return java.util.Date
-     * @author LZG
-     * @date 2018/8/27
+     * 获取明天的日期(包含时分秒)
+     * --> 结合DateUtil.dateToString()效果更佳
+     *     常用于限定日期时间内完成XXX事的场景
      */
     public static Date getTomorrow() {
         Calendar c = Calendar.getInstance();
@@ -134,12 +107,9 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 某日期时间加上指定天数后的日期
+     * 某日期时间加上指定天数后的日期
      * @param date 需要计算的日期时间
      * @param days 天数
-     * @return java.util.Date
-     * @author LZG
-     * @date 2018/8/27
      */
     public static Date addDays(Date date, int days) {
         Calendar ca = Calendar.getInstance();
@@ -149,12 +119,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取两个日期之间的天数
-     * @param before
-     * @param after
-     * @return int
-     * @author LZG
-     * @date 2018/8/27
+     * 获取两个日期之间的天数
      */
     public static int getDistanceTwoDate(Date before, Date after) {
         long beforeTime = before.getTime();
@@ -164,11 +129,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取某个date的年份
-     * @param date
-     * @return int
-     * @author LZG
-     * @date 2018/8/27
+     * 获取某个date的年份
      */
     public static int getYear(Date date) {
         Calendar c = Calendar.getInstance();
@@ -177,11 +138,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取某个date的月份
-     * @param date
-     * @return int
-     * @author LZG
-     * @date 2018/8/27
+     * 获取某个date的月份
      */
     public static int getMonth(Date date) {
         Calendar c = Calendar.getInstance();
@@ -190,11 +147,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取某个date的day
-     * @param date
-     * @return int
-     * @author LZG
-     * @date 2018/8/27
+     * 获取某个date的day
      */
     public static int getDayOfMonth(Date date) {
         Calendar c = Calendar.getInstance();
@@ -203,39 +156,26 @@ public class DateUtil {
     }
 
     /**
-     * @Description: 获取两个日期时间的时间差
-     * @param before
-     * @param after
+     * 获取两个日期时间的时间差
      * @param flag 0秒，1分，2时，3天
-     * @return int
-     * @author LZG
-     * @date 2018/8/27
      */
     public static int getDifferentNum(Date before, Date after, int flag) {
         if (before == null || after == null) {
             return 0;
         }
         long timeInterval = after.getTime() - before.getTime();
-        switch (flag) {
-            case 0:
-                return (int) (timeInterval / 1000);// 秒
-            case 1:
-                return (int) (timeInterval / (60 * 1000));// 分
-            case 2:
-                return (int) timeInterval / (60 * 60 * 1000);// 时
-            case 3:
-                return (int) timeInterval / (60 * 60 * 1000 * 24);// 天
-        }
-        return 0;
+        return switch (flag) {
+            case 0 -> (int) (timeInterval / 1000);// 秒
+            case 1 -> (int) (timeInterval / (60 * 1000));// 分
+            case 2 -> (int) timeInterval / (60 * 60 * 1000);// 时
+            case 3 -> (int) timeInterval / (60 * 60 * 1000 * 24);
+            default ->// 天
+                    0;
+        };
     }
 
     /**
-     * @Description: 获取两个日期字符串之间的日期集合
-     * @param startTime
-     * @param endTime
-     * @return java.util.List<java.lang.String>
-     * @author LZG
-     * @date 2019/7/11
+     * 获取两个日期字符串之间的日期集合
      */
     public static List<String> getBetweenDate(String startTime, String endTime){
         // 声明保存日期集合

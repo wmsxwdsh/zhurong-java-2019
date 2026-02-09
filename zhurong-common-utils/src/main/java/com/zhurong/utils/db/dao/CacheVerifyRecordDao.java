@@ -1,20 +1,9 @@
-/**   
- * @Title: CacheVerifyRecordDao.java
- * @Package: com.zhurong.utils.db.dao
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.db.dao;
 
 import com.zhurong.utils.db.domain.CacheVerifyRecord;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * @description: 
- * @author LZG
- * @date 2018/8/27
- */
 public interface CacheVerifyRecordDao {
 
     // 添加方法

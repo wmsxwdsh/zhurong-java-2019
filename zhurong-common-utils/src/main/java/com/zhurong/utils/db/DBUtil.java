@@ -1,9 +1,3 @@
-/**   
- * @Title: DBUtil.java
- * @Package: com.zhurong.utils.db
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.db;
 
 import com.zhurong.utils.properties.PropertiesUtil;
@@ -18,9 +12,8 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * @description: 数据库工具类
- * @author LZG
- * @date 2018/8/27
+ * 数据库工具类
+ * 2018/8/27
  */
 public class DBUtil {
 
@@ -76,12 +69,9 @@ public class DBUtil {
     }
 
     /**
-     * @Description: 检查数据库某个表是否存在某个列
+     * 检查数据库某个表是否存在某个列
      * @param tableName 表名
      * @param columnName 列名
-     * @return boolean
-     * @author LZG
-     * @date 2018/8/27
      */
     public static boolean columnContains(String tableName, String columnName) {
         Statement stat = null;

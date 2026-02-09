@@ -1,9 +1,3 @@
-/**
- * @Title: PersonService.java
- * @Package: com.zhurong.utils.db.service
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.db.service;
 
 
@@ -14,9 +8,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @description: DBUtil的使用
- * @author LZG
- * @date 2018/8/27
+ * DBUtil 的使用
+ * 2018/8/27
  */
 public class PersonService {
 

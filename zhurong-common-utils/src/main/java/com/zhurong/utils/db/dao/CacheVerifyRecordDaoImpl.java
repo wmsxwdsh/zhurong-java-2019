@@ -1,9 +1,3 @@
-/**   
- * @Title: CacheVerifyRecordDaoImpl.java
- * @Package: com.zhurong.utils.db.dao
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.db.dao;
 
 import com.zhurong.utils.db.domain.CacheVerifyRecord;
@@ -14,11 +8,7 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-/**
- * @description: 
- * @author LZG
- * @date 2018/8/27
- */
+
 public class CacheVerifyRecordDaoImpl implements CacheVerifyRecordDao {
 
     private QueryRunner runner = null; // 查询运行器

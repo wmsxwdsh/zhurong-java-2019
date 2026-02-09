@@ -1,16 +1,5 @@
-/**   
- * @Title: Person.java
- * @Package: com.zhurong.utils.db.domain
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.db.domain;
 
-/**
- * @description: 
- * @author LZG
- * @date 2018/8/27
- */
 public class Person {
 
     private int id;
