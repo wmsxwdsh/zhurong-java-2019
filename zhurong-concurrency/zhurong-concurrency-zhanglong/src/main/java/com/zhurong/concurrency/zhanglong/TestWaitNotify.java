@@ -1,16 +1,5 @@
-/**
- * @Title: TestWaitNotify.java
- * @Package: com.zhurong.concurrency.zhanglong
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.concurrency.zhanglong;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年02月21日
- */
 public class TestWaitNotify {
 
     public static void main(String[] args) throws Exception {
