@@ -1,9 +1,3 @@
-/**
- * @Title: KafkaServiceImpl.java
- * @Package: com.zhurong.kafka.service.impl
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.kafka.service.impl;
 
 import com.zhurong.db.persistence.domain.MerchUser;
@@ -19,11 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/7/18
- */
 @Service
 public class KafkaServiceImpl implements KafkaService {
 
@@ -33,10 +22,7 @@ public class KafkaServiceImpl implements KafkaService {
     private KafkaTemplate kafkaTemplate;
 
     /**
-     * @Description: 发送消息的方法
-     * @return void
-     * @author LZG
-     * @date 2019/7/18
+     * 发送消息的方法
      */
     @Override
     public void sendMessage() {

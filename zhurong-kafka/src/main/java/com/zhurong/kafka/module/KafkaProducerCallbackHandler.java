@@ -1,9 +1,3 @@
-/**   
- * @Title: KafkaProducerCallbackHandler.java
- * @Package: com.zhurong.kafka.module
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.kafka.module;
 
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -14,9 +8,8 @@ import org.springframework.kafka.support.ProducerListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @description: kafka生产者回调处理器
- * @author LZG
- * @date 2019/7/19
+ * kafka 生产者回调处理器
+ * 2019/7/19
  */
 @Component
 public class KafkaProducerCallbackHandler implements ProducerListener {
