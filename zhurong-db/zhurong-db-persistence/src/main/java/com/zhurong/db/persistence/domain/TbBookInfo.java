@@ -2,16 +2,16 @@ package com.zhurong.db.persistence.domain;
 
 import com.zhurong.db.persistence.validator.IdCardValidator;
 import java.util.Date;
-import javax.validation.constraints.NotNull;
+//import javax.validation.constraints.NotNull;
 
 public class TbBookInfo {
 
-    @NotNull(message = "id是主键不能为空啊")
+    //@NotNull(message = "id是主键不能为空啊")
     private String id;
 
     private String categoryCode;
 
-    @NotNull(message = "{TbBookInfo.bookName.NotNull}")
+    //@NotNull(message = "{TbBookInfo.bookName.NotNull}")
     private String bookName;
 
     private String isbn;

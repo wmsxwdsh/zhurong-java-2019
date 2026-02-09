@@ -1,9 +1,3 @@
-/**
- * @Title: MerchUserController.java
- * @Package: com.zhurong.db.druid.controller
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.db.druid.controller;
 
 import com.zhurong.db.druid.service.MerchUserService;
@@ -20,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @description:
- * @author LZG
- * @date 2019/3/7
+ * 2019/3/7
  */
 @Controller
 @RequestMapping("/merchUserAction")

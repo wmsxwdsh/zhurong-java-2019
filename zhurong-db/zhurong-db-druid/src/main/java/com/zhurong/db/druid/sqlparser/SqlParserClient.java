@@ -1,9 +1,3 @@
-/**
- * @Title: SqlParserClient.java
- * @Package: com.zhurong.db.druid.sqlparser
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.db.druid.sqlparser;
 
 import com.alibaba.druid.sql.SQLUtils;
@@ -13,11 +7,6 @@ import com.alibaba.druid.sql.ast.statement.SQLSelectQueryBlock;
 import com.alibaba.druid.sql.ast.statement.SQLSelectStatement;
 import com.alibaba.druid.util.JdbcConstants;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/3/11
- */
 public class SqlParserClient {
 
     public static void main(String[] args) {
