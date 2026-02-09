@@ -1,9 +1,3 @@
-/**   
- * @Title: JsonUtil.java
- * @Package: com.zhurong.utils.json
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.json;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -12,9 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 
 /**
- * @description: json工具类
- * @author LZG
- * @date 2018/8/27
+ * Json 工具类
+ * 2018/8/27
  */
 public class JsonUtil {
 
@@ -22,11 +15,9 @@ public class JsonUtil {
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
     /**
-     * @Description: 将对象转换成json字符串
+     * 将对象转换成json字符串
      * @param data
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/8/27
      */
     public static String objectToJson(Object data) {
         try {
@@ -39,12 +30,10 @@ public class JsonUtil {
     }
 
     /**
-     * @Description: 将json结果集转化为对象
+     * 将json结果集转化为对象
      * @param jsonData json数据
      * @param beanType 对象中的object类型
      * @return T
-     * @author LZG
-     * @date 2018/8/27
      */
     public static <T> T jsonToPojo(String jsonData, Class<T> beanType) {
         try {
@@ -57,12 +46,10 @@ public class JsonUtil {
     }
 
     /**
-     * @Description: 将json数据转换成pojo对象list
+     * 将json数据转换成pojo对象list
      * @param jsonData
      * @param beanType
      * @return java.util.List<T>
-     * @author LZG
-     * @date 2018/8/27
      */
     public static <T>List<T> jsonToList(String jsonData, Class<T> beanType) {
         JavaType javaType = MAPPER.getTypeFactory().constructParametricType(List.class, beanType);

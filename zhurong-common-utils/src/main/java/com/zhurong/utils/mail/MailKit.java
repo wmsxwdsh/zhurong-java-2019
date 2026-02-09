@@ -1,15 +1,7 @@
-/**   
- * @Title: MailKit.java
- * @Package: com.zhurong.utils.mail
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.mail;
 
 /**
- * @description: 邮件协议列表
- * @author LZG
- * @date 2018/8/27
+ * 邮件协议列表
  */
 public class MailKit {
 

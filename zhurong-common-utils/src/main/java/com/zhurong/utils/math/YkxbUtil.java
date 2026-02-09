@@ -1,30 +1,20 @@
-/**   
- * @Title: YkxbUtil.java
- * @Package: com.zhurong.utils.math
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.math;
 
 import java.math.BigDecimal;
 
 /**
- * @description: 二分插值y=kx+b工具类
- * @author LZG
- * @date 2019/2/28
+ * 二分插值 y=kx+b工具类
  */
 public class YkxbUtil {
 
     /**
-     * @Description: 根据y求x的差值
+     * 根据 y求x的差值
      * @param x1
      * @param y1
      * @param x2
      * @param y2
      * @param y
      * @return java.math.BigDecimal x 保留两位小数
-     * @author LZG
-     * @date 2019/2/28
      */
     public final static BigDecimal doCalcXByY(BigDecimal x1, BigDecimal y1, BigDecimal x2, BigDecimal y2, BigDecimal y) {
         //x1=x2时无需插值

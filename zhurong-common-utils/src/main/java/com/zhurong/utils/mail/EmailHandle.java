@@ -1,9 +1,3 @@
-/**   
- * @Title: EmailHandle.java
- * @Package: com.zhurong.utils.mail
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.mail;
 
 import java.util.Iterator;
@@ -31,9 +25,8 @@ import javax.mail.internet.MimeMultipart;
 import javax.mail.internet.MimeUtility;
 
 /**
- * @description: 邮件发送处理工具类
- * @author LZG
- * @date 2018/8/27
+ * 邮件发送处理工具类
+ * 2018/8/27
  */
 public class EmailHandle {
 
@@ -137,11 +130,9 @@ public class EmailHandle {
     }
 
     /**
-     * @Description: 设置邮件内容,并设置其为文本格式或HTML文件格式，编码方式为UTF-8
+     * 设置邮件内容,并设置其为文本格式或HTML文件格式，编码方式为UTF-8
      * @param mailBody
      * @return boolean
-     * @author LZG
-     * @date 2018/8/27
      */
     public boolean setBody(String mailBody) {
         try {
@@ -157,11 +148,9 @@ public class EmailHandle {
     }
 
     /**
-     * @Description: 增加发送附件
+     * 增加发送附件
      * @param filename 邮件附件的地址，只能是本机地址而不能是网络地址，否则抛出异常
      * @return boolean
-     * @author LZG
-     * @date 2018/8/27
      */
     public boolean addFileAffix(String filename) {
         try {
@@ -266,10 +255,7 @@ public class EmailHandle {
     }
 
     /**
-     * @Description: 同步发送邮件
-     * @return boolean
-     * @author LZG
-     * @date 2018/8/27
+     * 同步发送邮件
      */
     public boolean sendEmail() throws Exception {
         // LOGGER.debug("正在发送邮件....");
@@ -295,10 +281,7 @@ public class EmailHandle {
     }
 
     /**
-     * @Description: 异步发送邮件
-     * @return boolean
-     * @author LZG
-     * @date 2018/8/27
+     * 异步发送邮件
      */
     public boolean asynSendEmail() throws Exception {
         // LOGGER.debug("正在发送邮件....");
