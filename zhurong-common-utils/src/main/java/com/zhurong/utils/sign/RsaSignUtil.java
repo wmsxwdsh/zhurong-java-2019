@@ -1,9 +1,3 @@
-/**   
- * @Title: RSASignUtil.java
- * @Package: com.zhurong.utils.sign
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.sign;
 
 import com.zhurong.utils.common.LinkStrUtil;
@@ -32,7 +26,7 @@ import javax.crypto.Cipher;
 
 /**
  * RSA 验名工具类
- * @date 2019/3/4
+ * 2019/3/4
  */
 public class RsaSignUtil {
 
@@ -76,7 +70,6 @@ public class RsaSignUtil {
     /**
      * 生成公钥私钥
      * @param filePath 生成文件路径
-     * @date 2018/10/15
      */
     @SuppressWarnings("static-access")
     public static void getKeyPair(String filePath) {
@@ -112,7 +105,6 @@ public class RsaSignUtil {
      * 从文件中读取公钥或私钥
      * @param filePath filePath 文件路径
      * @return java.lang.String 公钥或私钥
-     * @date 2018/10/15
      */
     public static String readKeyFromFile(String filePath) {
         try {
@@ -133,7 +125,7 @@ public class RsaSignUtil {
 
     /**
      * 从字符串中加载公钥
-     * @date 2018/10/15
+     * 2018/10/15
      */
     public static RSAPublicKey readPublicKeyFromString(String publicKeyStr) {
         try {
@@ -151,7 +143,7 @@ public class RsaSignUtil {
 
     /**
      * 从字符串中加载私钥
-     * @date 2018/10/15
+     * 2018/10/15
      */
     public static RSAPrivateKey readPrivateKeyFromString(String privateKeyStr) {
         try {
@@ -171,7 +163,6 @@ public class RsaSignUtil {
      * @param content 明文
      * @param privateKey 私钥
      * @return java.lang.String 签名值
-     * @date 2018/10/15
      */
     public static String signByPrivateKey(String content, String privateKey) {
         try {
@@ -195,7 +186,6 @@ public class RsaSignUtil {
      * @param publicKey 公钥
      * @param sign 签名值
      * @return boolean 验签是否通过
-     * @date 2018/10/15
      */
     public static boolean verifySignByPublicKey(String content, String publicKey, String sign) {
         try {
@@ -216,7 +206,6 @@ public class RsaSignUtil {
      * 公钥加密
      * @param plainText 明文
      * @param publicKey 公钥
-     * @date 2018/10/15
      */
     public static String encryptByPublicKey(String plainText, RSAPublicKey publicKey) throws Exception {
         if (publicKey == null) {
@@ -238,7 +227,6 @@ public class RsaSignUtil {
      * 私钥解密
      * @param cipherText 密文
      * @param privateKey
-     * @date 2018/10/15
      */
     public static String decryptByPrivateKey(String cipherText, RSAPrivateKey privateKey) throws Exception {
         if (privateKey == null) {

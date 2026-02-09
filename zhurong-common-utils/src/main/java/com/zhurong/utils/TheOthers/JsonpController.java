@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * jsonp 的写法和用法
- * @date 2018/8/27
+ * 2018/8/27
  */
 public class JsonpController {
 

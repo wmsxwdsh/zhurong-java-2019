@@ -1,15 +1,8 @@
-/**   
- * @Title: JVMMemoryUtil.java
- * @Package: com.zhurong.utils.system
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.system;
 
 /**
- * @description: JVM内存查询工具类
- * @author LZG
- * @date 2018/8/27
+ * JVM 内存查询工具类
+ * 2018/8/27
  */
 public class JVMMemoryUtil {
 

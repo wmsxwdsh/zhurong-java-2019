@@ -1,22 +1,15 @@
-/**
- * @Title: MD5Util.java
- * @Package: com.zhurong.utils.sign
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.sign;
 
 import java.security.MessageDigest;
 
 /**
  * 纯粹的 MD5 工具类
- * @date 2019/7/28
+ * 2019/7/28
  */
 public class Md5Util {
 
     /**
-     * 字符串进行md5加密
-     * @date 2019/7/28
+     * 字符串进行 md5 加密
      */
     public static String string2MD5(String inStr) {
         MessageDigest md5 = null;

@@ -2,7 +2,7 @@ package com.zhurong.utils.security;
 
 /**
  * 摘自阿里巴巴 KeyUtilApp.jar（已开源）
- * @date 2019/5/17
+ * 2019/5/17
  */
 public class KeyType {
 

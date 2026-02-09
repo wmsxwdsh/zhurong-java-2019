@@ -17,9 +17,8 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * @description: AES加密工具类
- * @author LZG
- * @date 2019/3/22
+ * AES加密工具类
+ * 2019/3/22
  */
 public class AESUtil {
 
@@ -27,11 +26,10 @@ public class AESUtil {
     private static final String DEFAULT_CIPHER_ALGORITHM = "AES/ECB/PKCS5Padding";//默认的加密算法
 
     /**
-     * @Description: AES 加密操作
+     * AES 加密操作
      * @param content 待加密内容
      * @param salt 盐
      * @return java.lang.String 返回Base64转码后的加密数据
-     * @date 2019/3/22
      */
     public static String encrypt(String content, String salt) {
         try {
@@ -49,11 +47,10 @@ public class AESUtil {
     }
 
     /**
-     * @Description: AES 解密操作
+     * AES 解密操作
      * @param content 加密后的内容
      * @param salt 盐
      * @return java.lang.String
-     * @date 2019/3/22
      */
     public static String decrypt(String content, String salt) {
 
@@ -75,11 +72,10 @@ public class AESUtil {
     }
 
     /**
-     * @Description: 生成加密秘钥
+     * 生成加密秘钥
      * @param password
      * @return javax.crypto.spec.SecretKeySpec
      * @author LZG
-     * @date 2019/3/22
      */
     private static SecretKeySpec getSecretKey(final String password) {
         //返回生成指定算法密钥生成器的 KeyGenerator 对象

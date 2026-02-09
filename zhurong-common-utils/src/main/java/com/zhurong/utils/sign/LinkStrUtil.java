@@ -8,8 +8,7 @@ import java.util.*;
  * 2、可以对参数进行 ASCII 码排序
  * 3、测试用例附详细使用
  * 4、微信支付加签官方工具也是此手法
- *
- * @date 2018/8/27
+ * 2018/8/27
  */
 public class LinkStrUtil {
 

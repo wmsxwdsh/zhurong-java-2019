@@ -1,17 +1,7 @@
-/**
- * @Title: RSAUtil.java
- * @Package: com.zshy.infocoin.common.utils
- * @author LZG, liuzhongguochn@gmail.com
- * Copyright (c) 2018 北京中数合一科技有限公司
- */
 package com.zhurong.utils.sign;
 
 /**
- * @Description: 
- * @param null
- * @return null
- * @author LZG
- * @date 2018/10/12
+ * 2018/10/12
  */
 public class Base64Util {
 

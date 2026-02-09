@@ -22,7 +22,7 @@ import org.apache.commons.codec.binary.Base64OutputStream;
 /**
  * HtmlUnit：爬虫工具&页面内容填充工具
  * <a href="https://blog.csdn.net/wxl901018/article/details/44133873">...</a>
- * @date 2018/9/26
+ * 2018/9/26
  */
 public class HtmlUnitUtil {
 
@@ -30,7 +30,6 @@ public class HtmlUnitUtil {
      * 根据 URL 和验证码 ElementId 获取图片的 Base64 编码
      * @param url 完整的 url地址（支付https）
      * @param vCodeElementId 验证码 ElementId（查看源码）
-     * @date 2018/9/26
      */
     public static String getVCodeBase64Str(String url, String vCodeElementId) {
 

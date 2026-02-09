@@ -1,9 +1,3 @@
-/**   
- * @Title: MacAddressUtil.java
- * @Package: com.zhurong.utils.system
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.system;
 
 import java.io.BufferedReader;
@@ -13,27 +7,23 @@ import java.net.InetAddress;
 import java.net.NetworkInterface;
 
 /**
- * @description: 获取服务器mac地址的工具类
- * @author LZG
- * @date 2018/10/29
+ * 获取服务器 mac 地址的工具类
+ * 2018/10/29
  */
 public class MacAddressUtil {
 
     /**
-     * @Description: get os name
+     * get os name
      * @return java.lang.String
      * @author LZG
-     * @date 2018/10/29
      */
     public static String getOSName() {
         return System.getProperty("os.name").toLowerCase();
     }
 
     /**
-     * @Description: 获取linux网卡的mac地址. 非windows的系统默认调用本方法获取.
+     * 获取linux网卡的mac地址. 非windows的系统默认调用本方法获取.
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/10/29
      */
     public static String getLinuxMACAddress() {
         String mac = null;
@@ -73,10 +63,8 @@ public class MacAddressUtil {
     }
 
     /**
-     * @Description: 获取Windows网卡的mac地址
+     * 获取Windows网卡的mac地址
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/10/29
      */
     public static String getWindowsMACAddress() {
         String mac = null;
@@ -130,10 +118,8 @@ public class MacAddressUtil {
     }
 
     /**
-     * @Description: windows 7 专用 获取MAC地址
+     * windows 7 专用 获取MAC地址
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/10/29
      */
     public static String getWin7MACAddress() throws Exception {
 
@@ -159,10 +145,8 @@ public class MacAddressUtil {
     }
 
     /**
-     * @Description: 获取服务器的mac地址
+     * 获取服务器的mac地址
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/10/29
      */
     public static String getDishInfo() throws Exception {
 

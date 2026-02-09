@@ -1,9 +1,3 @@
-/**   
- * @Title: InfoCoinResponse.java
- * @Package: com.zhurong.utils.response
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.response;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -11,10 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 
 /**
- * @description: InfoCoin项目响应实体
- *      --InfoCoinResponse > XxxResult
- * @author LZG
- * @date 2018/11/6
+ * InfoCoin 项目响应实体
+ * -- InfoCoinResponse > XxxResult
  */
 public class InfoCoinResponse {
 
@@ -100,12 +92,10 @@ public class InfoCoinResponse {
     }
 
     /**
-     * @Description: 将json结果集转换为InfoCoinResponse对象
+     * 将json结果集转换为InfoCoinResponse对象
      * @param jsonData json数据
      * @param clazz InfoCoinResponse中的Object的类型
      * @return InfoCoinResponse
-     * @author LZG
-     * @date 2018/9/27
      */
     public static InfoCoinResponse formatToPojo(String jsonData, Class<?> clazz) {
         try {
@@ -129,12 +119,10 @@ public class InfoCoinResponse {
     }
 
     /**
-     * @Description: 将json集合串转化成List<clazz>
+     * 将json集合串转化成List<clazz>
      * @param jsonData
      * @param clazz
      * @return InfoCoinResponse
-     * @author LZG
-     * @date 2018/9/27
      */
     public static InfoCoinResponse formatToList(String jsonData, Class<?> clazz) {
         try {

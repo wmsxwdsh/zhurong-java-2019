@@ -1,9 +1,3 @@
-/**
- * @Title: EdopResponse.java
- * @Package: com.zshy.infocoin.common.domain
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 北京中数合一科技有限公司
- */
 package com.zhurong.utils.response.edop;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -11,9 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 
 /**
- * @description: EDOP响应实体统一封装
- * @author LZG
- * @date 2019/3/13
+ * EDOP 响应实体统一封装
+ * 2019/3/13
  */
 public class EdopResponse {
 
@@ -89,12 +82,10 @@ public class EdopResponse {
     }
 
     /**
-     * @Description: 将json结果集转换为InfoCoinResponse对象
+     * 将json结果集转换为InfoCoinResponse对象
      * @param jsonData json数据
      * @param clazz InfoCoinResponse中的Object的类型
      * @return EdopResponse
-     * @author LZG
-     * @date 2018/9/27
      */
     public static EdopResponse formatToPojo(String jsonData, Class<?> clazz) {
         try {
@@ -118,12 +109,10 @@ public class EdopResponse {
     }
 
     /**
-     * @Description: 将json集合串转化成List<clazz>
+     * 将json集合串转化成List<clazz>
      * @param jsonData
      * @param clazz
      * @return com.zshy.infocoin.service.common.EdopResponse
-     * @author LZG
-     * @date 2018/9/27
      */
     public static EdopResponse formatToList(String jsonData, Class<?> clazz) {
         try {

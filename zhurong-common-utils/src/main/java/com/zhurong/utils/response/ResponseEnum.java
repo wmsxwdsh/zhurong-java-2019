@@ -1,15 +1,7 @@
-/**   
- * @Title: ResponseEnum.java
- * @Package: com.zhurong.utils.response
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.response;
 
 /**
- * @description: 响应枚举（待完善）
- * @author LZG
- * @date 2018/11/6
+ * 响应枚举（待完善）
  */
 public enum ResponseEnum {
 

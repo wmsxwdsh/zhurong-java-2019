@@ -67,7 +67,6 @@ public class BossDigestUtils extends DigestUtils {
 
     /**
      * 校验加盐后是否和原文一致
-     * @date 2016-6-11
      */
     public static boolean verify(String password, String md5) {
         char[] cs1 = new char[32];

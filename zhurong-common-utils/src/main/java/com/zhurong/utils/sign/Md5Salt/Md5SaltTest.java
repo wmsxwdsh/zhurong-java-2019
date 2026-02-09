@@ -1,8 +1,7 @@
 package com.zhurong.utils.sign.Md5Salt;
 
-
 /**
- * @date 2020年06月22日
+ * 2020年06月22日
  */
 public class Md5SaltTest {
 

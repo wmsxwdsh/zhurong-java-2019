@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * dbf工具类
- * @date 2019/2/28
+ * 2019/2/28
  */
 public class DBFUtil {
 

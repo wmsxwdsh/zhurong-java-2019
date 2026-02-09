@@ -9,8 +9,8 @@ import java.security.SecureRandom;
 
 /**
  * 部分摘自阿里巴巴 KeyUtilApp.jar（已开源）
- *      （等同于用 蚂蚁金服RSA生成工具生成）
- * @date 2019/5/17
+ *（等同于用 蚂蚁金服RSA生成工具生成）
+ * 2019/5/17
  */
 public class KeyTool {
 

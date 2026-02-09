@@ -1,18 +1,10 @@
-/**
- * @Title: R.java
- * @Package: com.zhurong.utils.response.s12366
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.utils.response.s12366;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description:
- * @author LZG
- * @date 2020年06月15日
+ * 2020年06月15日
  */
 public class R extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;

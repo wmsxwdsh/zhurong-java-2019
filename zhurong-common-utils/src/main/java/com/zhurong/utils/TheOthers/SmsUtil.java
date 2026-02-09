@@ -11,7 +11,7 @@ import java.net.URLEncoder;
 
 /**
  * 短信工具类
- * @date 2018/9/21
+ * 2018/9/21
  */
 public class SmsUtil {
 
@@ -23,7 +23,6 @@ public class SmsUtil {
      *      --只能使用部分短信模板，自定义短信模板需要公司备案（一般短信平台商都这么搞）
      * @param mobile 手机号
      * @param code 短信内容
-     * @date 2018/9/21
      */
     public static void sendSms(String mobile, String code) {
         String account = "liuzhongguo123x";

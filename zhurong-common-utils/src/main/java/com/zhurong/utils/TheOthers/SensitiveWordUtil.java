@@ -14,7 +14,7 @@ import java.util.Set;
 
 /**
  * 敏感词过滤工具类
- * @date 2018/11/15
+ * 2018/11/15
  */
 public class SensitiveWordUtil {
 
@@ -36,7 +36,6 @@ public class SensitiveWordUtil {
 
     /**
      * 初始化敏感词库，构建DFA算法模型
-     *
      * @param sensitiveWordSet 敏感词库
      */
     public static synchronized void init(Set<String> sensitiveWordSet) {
@@ -45,7 +44,6 @@ public class SensitiveWordUtil {
 
     /**
      * 初始化敏感词库，构建DFA算法模型
-     *
      * @param sensitiveWordSet 敏感词库
      */
     private static void initSensitiveWordMap(Set<String> sensitiveWordSet) {
@@ -87,11 +85,9 @@ public class SensitiveWordUtil {
 
     /**
      * 判断文字是否包含敏感字符
-     *
      * @param txt       文字
      * @param matchType 匹配规则 1：最小匹配规则，2：最大匹配规则
      * @return 若包含返回true，否则返回false
-     * @date 2018/11/15
      */
     public static boolean contains(String txt, int matchType) {
         boolean flag = false;
@@ -108,10 +104,8 @@ public class SensitiveWordUtil {
 
     /**
      * 获取文字中的敏感词
-     *
      * @param txt       文字
      * @param matchType 匹配规则 1：最小匹配规则，2：最大匹配规则
-     * @date 2018/11/15
      */
     public static Set<String> getSensitiveWord(String txt, int matchType) {
         Set<String> sensitiveWordList = new HashSet<>();
@@ -130,11 +124,9 @@ public class SensitiveWordUtil {
 
     /**
      * 替换敏感字字符
-     *
      * @param txt         文本
      * @param replaceChar 替换的字符，匹配的敏感词以字符逐个替换，如 语句：我爱中国人 敏感词：中国人，替换字符：*， 替换结果：我爱***
      * @param matchType   敏感词匹配规则
-     * @date 2018/11/15
      */
     public static String replaceSensitiveWord(String txt, char replaceChar, int matchType) {
         String resultTxt = txt;
@@ -154,10 +146,8 @@ public class SensitiveWordUtil {
 
     /**
      * 获取替换字符串
-     *
      * @param replaceChar
      * @param length
-     * @return
      */
     private static String getReplaceChars(char replaceChar, int length) {
         String resultReplace = String.valueOf(replaceChar);
@@ -170,12 +160,10 @@ public class SensitiveWordUtil {
 
     /**
      * 检查文字中是否包含敏感字符，检查规则如下：<br>
-     *
      * @param txt
      * @param beginIndex
      * @param matchType
      * @return 如果存在，则返回敏感词字符的长度，不存在返回0
-     * @date 2018/11/15
      */
     private static int checkSensitiveWord(String txt, int beginIndex, int matchType) {
         //敏感词结束标识位：用于敏感词只有1位的情况
@@ -213,7 +201,6 @@ public class SensitiveWordUtil {
     /**
      * 校验是否存在敏感词
      * @return 存的敏感词集合
-     * @date 2018/11/15
      */
     public static Set<String> checkSensitiveWord(String content) {
         String fileName = SENSITIVE_WORD_PATH;

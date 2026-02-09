@@ -6,7 +6,7 @@ import java.io.Writer;
 
 /**
  * Euauth 自用 Base64 编码工具类
- * @date 2019/5/17
+ * 2019/5/17
  */
 public class Base64 {
 

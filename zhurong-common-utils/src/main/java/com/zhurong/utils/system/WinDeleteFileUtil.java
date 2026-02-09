@@ -1,9 +1,3 @@
-/**
- * @Title: WinDeleteFileUtil.java
- * @Package: com.zhurong.utils.system
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.system;
 
 import java.io.File;
@@ -11,10 +5,9 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
 /**
- * @description: Windows源文件名长度大于文件系统支持的长度的文件删除工具类
- *          ---原文地址：https://blog.csdn.net/www_wangjun/article/details/73716011
- * @author LZG
- * @date 2019/6/20
+ * Windows源文件名长度大于文件系统支持的长度的文件删除工具类
+ * -- 原文 <a href="https://blog.csdn.net/www_wangjun/article/details/73716011">...</a>
+ * 2019/6/20
  */
 public class WinDeleteFileUtil {
 
@@ -26,11 +19,8 @@ public class WinDeleteFileUtil {
     public static boolean first = true;
 
     /**
-     * @Description: 删除文件
+     * 删除文件
      * @param folderPath
-     * @return void
-     * @author LZG
-     * @date 2019/6/20
      */
     public static void handle(String folderPath) {
         long firstTime = System.currentTimeMillis();
@@ -57,11 +47,7 @@ public class WinDeleteFileUtil {
     }
 
     /**
-     * @Description: 删除文件夹下所有内容，包括此文件夹删除文件夹下所有内容，包括此文件夹
-     * @param f
-     * @return void
-     * @author LZG
-     * @date 2019/6/20
+     * 删除文件夹下所有内容，包括此文件夹删除文件夹下所有内容，包括此文件夹
      */
     private static void delAll(File f) throws IOException {
         File[] sub = f.listFiles();

@@ -1,9 +1,3 @@
-/**
- * @Title: MD5SignUtil.java
- * @Package: com.zhurong.utils.sign
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.utils.sign;
 
 import com.zhurong.utils.common.LinkStrUtil;
@@ -13,21 +7,18 @@ import java.util.Map;
 import org.apache.commons.codec.digest.DigestUtils;
 
 /**
- * @description: md5签名工具类
- * @author LZG
- * @date 2019/3/4
+ * md5签名工具类
+ * 2019/3/4
  */
 public class Md5SignUtil {
 
     public static final String md5SignKey = "liuzhongguochn@gmail.com";
 
     /**
-     * @Description: 加签（&key=拼接到最后）
+     * 加签（&key=拼接到最后）
      * @param text 需要签名的字符串
      * @param key 密钥
      * @return java.lang.String
-     * @author LZG
-     * @date 2018/10/15
      */
     public static String sign(String text, String key) {
         text = text + "&key=" + key;
@@ -35,13 +26,11 @@ public class Md5SignUtil {
     }
 
     /**
-     * @Description: 验签
+     * 验签
      * @param text 需要验签的字符串
      * @param sign 签名结果
      * @param key 密钥
      * @return boolean
-     * @author LZG
-     * @date 2018/10/15
      */
     public static boolean verify(String text, String sign, String key) {
         text = text + "&key=" + key;

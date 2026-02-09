@@ -2,9 +2,7 @@ package com.zhurong.utils.response;
 
 /**
  * 通用Response
- *
- * @author LZG
- * @date 2018/11/6
+ * 2018/11/6
  */
 public class CommonR<T> {
     private String code;

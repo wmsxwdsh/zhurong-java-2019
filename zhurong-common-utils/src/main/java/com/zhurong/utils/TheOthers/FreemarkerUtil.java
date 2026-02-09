@@ -1,9 +1,3 @@
-/**   
- * @Title: FreemarkerUtil.java
- * @Package: com.zhurong.utils.freemarker
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2018 https://onezg.cnblogs.com
- */
 package com.zhurong.utils.TheOthers;
 
 import freemarker.template.Configuration;
@@ -14,21 +8,17 @@ import java.io.StringWriter;
 import java.util.Map;
 
 /**
- * @description: freemarker工具类
- *      freemarker依赖版本号2.3.23
- * @author LZG
- * @date 2018/8/27
+ * freemarker工具类
+ * -- freemarker依赖版本号2.3.23
+ * 2018/8/27
  */
 public class FreemarkerUtil {
 
     /**
-     * @Description: 用dateMap填充freemarker模板
+     * 用dateMap填充freemarker模板
      * @param fltFile flt模板的名称
      * @param templatePath flt模板的位置
      * @param dateMap 数据
-     * @return java.lang.String
-     * @author LZG
-     * @date 2018/8/27
      */
     public static String geneFileStr(String fltFile, String templatePath, Map<String, Object> dateMap){
 
