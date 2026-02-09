@@ -1,15 +1,8 @@
-/**
- * @Title: Builder.java
- * @Package: com.zhurong.designpattern.chuangjianxing5.builder
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.designpattern.chuangjianxing5.builder;
 
 /**
- * @description: 抽象建造
- * @author LZG
- * @date 2019/3/20
+ * 抽象建造
+ * 2019/3/20
  */
 public interface Builder {
 
@@ -30,7 +23,6 @@ public interface Builder {
 
     /**
      * 造房子
-     * @return
      */
     public Product buildProduct();
 

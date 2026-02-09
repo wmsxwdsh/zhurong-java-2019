@@ -1,18 +1,11 @@
-/**
- * @Title: EMail.java
- * @Package: com.zhurong.designpattern.chuangjianxing5.prototype
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.designpattern.chuangjianxing5.prototype;
 
 
 import java.io.Serializable;
 
 /**
- * @description: 邮件
- * @author LZG
- * @date 2019/3/19
+ * 邮件
+ * 2019/3/19
  */
 public class EMail implements Serializable, Cloneable {
 

@@ -9,11 +9,6 @@ package com.zhurong.designpattern.chuangjianxing5.prototype;
 
 import com.zhurong.utils.idgen.UuidUtil;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/3/19
- */
 public class Client {
 
     public static void main(String[] args) throws Exception {

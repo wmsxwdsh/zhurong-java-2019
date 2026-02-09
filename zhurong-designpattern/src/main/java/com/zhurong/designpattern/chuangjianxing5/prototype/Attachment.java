@@ -1,18 +1,7 @@
-/**
- * @Title: Attachment.java
- * @Package: com.zhurong.designpattern.chuangjianxing5.prototype
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.designpattern.chuangjianxing5.prototype;
 
 import java.io.Serializable;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/3/19
- */
 public class Attachment implements Serializable, Cloneable {
 
     private String id;

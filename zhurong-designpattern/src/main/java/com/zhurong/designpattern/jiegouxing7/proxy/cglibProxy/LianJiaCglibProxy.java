@@ -1,9 +1,3 @@
-/**   
- * @Title: LianJiaCglibProxy.java
- * @Package: com.zhurong.designpattern.jiegouxing7.proxy.cglibProxy
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.designpattern.jiegouxing7.proxy.cglibProxy;
 
 import java.lang.reflect.Method;
@@ -12,9 +6,7 @@ import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
 /**
- * @description: 
- * @author LZG
- * @date 2019/3/19
+ * 2019/3/19
  */
 public class LianJiaCglibProxy implements MethodInterceptor {
 

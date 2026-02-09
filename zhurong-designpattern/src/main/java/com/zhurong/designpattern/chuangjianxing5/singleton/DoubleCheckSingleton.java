@@ -1,15 +1,8 @@
-/**
- * @Title: DoubleCheckSingleton.java
- * @Package: com.zhurong.designpattern.chuangjianxing5.singleton
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.designpattern.chuangjianxing5.singleton;
 
 /**
- * @description: 双重检查索 单例。实现了延迟加载和线程安全
- * @author LZG
- * @date 2019/3/18
+ * 双重检查索 单例。实现了延迟加载和线程安全
+ * 2019/3/18
  */
 public class DoubleCheckSingleton {
 
