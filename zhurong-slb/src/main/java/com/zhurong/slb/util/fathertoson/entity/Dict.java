@@ -2,9 +2,6 @@ package com.zhurong.slb.util.fathertoson.entity;
 
 import java.io.Serializable;
 
-/**
- * @date 2020年06月22日
- */
 public class Dict implements Serializable {
 
     private static final long serialVersionUID = -1336649311025709923L;

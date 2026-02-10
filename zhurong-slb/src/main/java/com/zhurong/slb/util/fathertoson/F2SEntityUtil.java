@@ -6,14 +6,13 @@ import java.util.Arrays;
 
 /**
  * 父转子 Util
- * @date 2020年06月22日
+ * 2020年06月22日
  */
 public class F2SEntityUtil {
 
     /**
      * @param oF : 父实体
      * @param oS : 子实体
-     * @date 2020/6/22
      */
     public static Object doJob(Object oF, Object oS)  {
 

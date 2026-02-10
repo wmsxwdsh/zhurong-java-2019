@@ -15,8 +15,6 @@ public class BossDigestUtils extends DigestUtils {
 
     /**
      * 普通的MD5加密方法
-     * @param bytes
-     * @return
      */
     public static String md5DigestAsHex(byte[] bytes) {
         return digestAsHexString(MD5_ALGORITHM_NAME, bytes);
@@ -24,7 +22,6 @@ public class BossDigestUtils extends DigestUtils {
 
     /**
      * 随机生成salt
-     * @return
      */
     public static String getSalt() {
         Random r = new Random();
@@ -42,9 +39,6 @@ public class BossDigestUtils extends DigestUtils {
 
     /**
      * 加盐的MD5加密方法
-     * @param password
-     * @param salt
-     * @return
      */
     public static String md5DigestAsHexSalt(String password, String salt) {
         password = md5Hex(password + salt);
@@ -73,11 +67,6 @@ public class BossDigestUtils extends DigestUtils {
 
     /**
      * 校验加盐后是否和原文一致
-     * @author daniel
-     * @time 2016-6-11 下午8:45:39
-     * @param password
-     * @param md5
-     * @return
      */
     public static boolean verify(String password, String md5) {
         char[] cs1 = new char[32];
