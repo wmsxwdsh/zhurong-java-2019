@@ -1,14 +1,7 @@
-/**
- * @Title: AttachFileController.java
- * @Package: com.zhurong.solution.uploadfile.controller
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.solution.uploadfile.controller;
 
 import com.zhurong.db.persistence.domain.AttachFile;
 import com.zhurong.solution.uploadfile.service.AttachFileService;
-import com.zhurong.utils.general.StringUtil;
 import com.zhurong.utils.response.InfoCoinResponse;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,18 +26,12 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/AttachFileController")
 public class AttachFileController {
 
+
     @Autowired
     private AttachFileService attachFileService;
 
     /**
-     * @Description: 上传文件（支持多文件上传）
-     * @param groupId
-     * @param files
-     * @param request
-     * @param response
-     * @return com.zhurong.utils.response.InfoCoinResponse
-     * @author LZG
-     * @date 2019/6/3
+     * 上传文件（支持多文件上传）
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public InfoCoinResponse upload(@RequestParam String groupId, @RequestParam MultipartFile[] files, HttpServletResponse response) {
@@ -68,14 +55,7 @@ public class AttachFileController {
     }
 
     /**
-     * @Description: 更新文件（限制单文件上传）
-     * @param groupId
-     * @param id
-     * @param files
-     * @param response
-     * @return com.zhurong.utils.response.InfoCoinResponse
-     * @author LZG
-     * @date 2019/6/3
+     * 更新文件（限制单文件上传）
      */
     @RequestMapping(value = "/update/{groupId}/{id}", method = RequestMethod.POST)
     public InfoCoinResponse update(@PathVariable(value = "groupId") String groupId, @PathVariable(value = "id") String id,
@@ -93,14 +73,7 @@ public class AttachFileController {
     }
 
     /**
-     * @Description: 下载文件，并自动拼装上格式化的文件名前缀
-     * @param id
-     * @param preName
-     * @param request
-     * @param response
-     * @return void
-     * @author LZG
-     * @date 2019/6/3
+     * 下载文件，并自动拼装上格式化的文件名前缀
      */
     @RequestMapping(value = "/downLoad/{id}/{preName}", method = RequestMethod.GET)
     public void downLoad(@PathVariable(value = "id") String id, @PathVariable(value = "preName") String preName, HttpServletRequest request,
@@ -110,13 +83,7 @@ public class AttachFileController {
     }
 
     /**
-     * @Description: 下载文件
-     * @param id
-     * @param request
-     * @param response
-     * @return void
-     * @author LZG
-     * @date 2019/6/3
+     * 下载文件
      */
     @RequestMapping(value = "/downLoad/{id}", method = RequestMethod.GET)
     public void downLoad(@PathVariable(value = "id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -125,8 +92,6 @@ public class AttachFileController {
 
     /**
      * 删除一条记录
-     * @param requestEntity
-     * @return
      */
     @RequestMapping(value = "/deleteFile/{id}", method = RequestMethod.GET)
     public InfoCoinResponse deleteFile(@PathVariable(value = "id") String id) {
@@ -136,9 +101,6 @@ public class AttachFileController {
 
     /**
      * 查询一条记录
-     *
-     * @param requestEntity
-     * @return
      */
     @RequestMapping(value = "/queryFile/{id}", method = RequestMethod.GET)
     public InfoCoinResponse queryFile(@PathVariable(value = "id") String id) {
@@ -160,9 +122,6 @@ public class AttachFileController {
 
     /**
      * 获取一个文件组的所有记录
-     * @param groupId
-     * @return
-     * @throws Exception
      */
     @RequestMapping(value = "/getFileList/{groupId}", method = RequestMethod.GET)
     public InfoCoinResponse getFileList(@PathVariable(value = "groupId") String groupId) throws Exception {
@@ -187,9 +146,6 @@ public class AttachFileController {
 
     /**
      * 打开管理附件页面
-     * @param groupId
-     * @param request
-     * @return
      */
     @RequestMapping("/list")
     public String listFile(String groupId, HttpServletRequest request) {
@@ -200,10 +156,6 @@ public class AttachFileController {
 
     /**
      * 打开管理附件页面，下载文件时强制重命名为预定义文件名
-     * @param groupId
-     * @param pre
-     * @param request
-     * @return
      */
     @RequestMapping("/manage")
     public String manageFile(String groupId, String pre, HttpServletRequest request) {
@@ -215,10 +167,6 @@ public class AttachFileController {
 
     /**
      * 预览文件，原文件
-     * @param id
-     * @param request
-     * @param response
-     * @throws Exception
      */
     @RequestMapping(value = "/preview/{id}", method = RequestMethod.GET)
     public @ResponseBody
@@ -228,11 +176,6 @@ public class AttachFileController {
 
     /**
      * 预览文件，指定大小进行预览，支持图片
-     * @param id
-     * @param size 60x60
-     * @param request
-     * @param response
-     * @throws Exception
      */
     @RequestMapping(value = "/preview/{id}/{size}", method = RequestMethod.GET)
     public void preview(@PathVariable(value = "id") String id, @PathVariable(value = "size") String size, HttpServletRequest request,
@@ -242,11 +185,6 @@ public class AttachFileController {
 
     /**
      * 预览文件，指定大小进行预览，支持图片
-     * @param id
-     * @param size 60x60
-     * @param request
-     * @param response
-     * @throws Exception
      */
     @RequestMapping(value = "/preview/{id}/{size}/{cut}", method = RequestMethod.GET)
     public void preview(@PathVariable(value = "id") String id, @PathVariable(value = "size") String size,

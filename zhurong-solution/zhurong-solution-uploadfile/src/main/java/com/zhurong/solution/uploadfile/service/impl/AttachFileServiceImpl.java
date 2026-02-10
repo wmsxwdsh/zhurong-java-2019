@@ -1,9 +1,3 @@
-/**
- * @Title: AttachFileServiceImpl.java
- * @Package: com.zhurong.solution.uploadfile.service.impl
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.solution.uploadfile.service.impl;
 
 import com.zhurong.db.persistence.domain.AttachFile;
@@ -27,11 +21,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/6/3
- */
 @Service
 public class AttachFileServiceImpl implements AttachFileService {
 
@@ -191,8 +180,6 @@ public class AttachFileServiceImpl implements AttachFileService {
 
     /**
      * 根据主键更新一条新记录
-     * @param elemType 要更新的对象
-     * @return int 执行成功的数量
      */
     @Override
     public AttachFile updateFile(String groupId, String fileId, MultipartFile file) {
@@ -245,7 +232,6 @@ public class AttachFileServiceImpl implements AttachFileService {
     /**
      * 根据附件组编号删除多个附件表记录
      * @param groupId Object
-     * @return int 执行成功的数量
      */
     @Override
     public void deleteFileByGroupId(String groupId) {

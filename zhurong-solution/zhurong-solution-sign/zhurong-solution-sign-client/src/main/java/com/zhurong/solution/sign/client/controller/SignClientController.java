@@ -1,9 +1,3 @@
-/**
- * @Title: SignClientController.java
- * @Package: com.zhurong.solution.sign.client.controller
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.solution.sign.client.controller;
 
 import com.zhurong.utils.sign.SignValidateUtil;
@@ -15,11 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/3/4
- */
 @Controller
 @RequestMapping("/signClientController")
 public class SignClientController {

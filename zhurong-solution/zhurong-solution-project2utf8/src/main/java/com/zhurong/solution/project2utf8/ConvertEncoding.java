@@ -16,8 +16,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /*******************************************************************
- * Created on 2017年4月20日 上午12:38:35
- * @author LZG (mailto:liuzhongguochn@gmail.com)
  * 功能说明：
  * 将别人写的工程导入Eclipse里的时候，java文件出现了乱码。
  * 因为工程的原始编码是GBK的，不是UTF-8编码，结果就会出现中文乱码的情况。
@@ -71,11 +69,10 @@ public class ConvertEncoding {
     }
 
     /**
-     * @Description: 获取文件列表
+     * 获取文件列表
      * @param srcPath 根文件夹路径
      * @param fileList 文件集合
      * @param regex 正则匹配
-     * @return void
      */
     public static void fetchFileList(String srcPath, List<String> fileList, final String regex) {
         File dir = new File(srcPath);

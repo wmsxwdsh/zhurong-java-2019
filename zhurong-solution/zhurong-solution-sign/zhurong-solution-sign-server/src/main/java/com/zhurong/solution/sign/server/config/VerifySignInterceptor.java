@@ -1,9 +1,3 @@
-/**
- * @Title: VerifySignInterceptor.java
- * @Package: com.zhurong.solution.sign.server.config
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.solution.sign.server.config;
 
 import com.zhurong.solution.sign.server.annotation.VerifySign;
@@ -17,13 +11,11 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 /**
- * @description: 验签拦截器
- * @author LZG
- * @date 2019/3/4
+ * 验签拦截器
+ * 2019/3/4
  */
 public class VerifySignInterceptor implements HandlerInterceptor {
 
-    @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
         throws Exception {
         if (!verifySignMethod(handler, request)) {
@@ -33,7 +25,6 @@ public class VerifySignInterceptor implements HandlerInterceptor {
         return true;
     }
 
-    @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,
         @Nullable Exception ex) throws Exception {
 
