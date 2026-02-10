@@ -1,0 +1,10 @@
+已经完全测试过了，模糊查询、多字段排序、分页，3合1，没问题。
+
+例子：
+
+1、多个排序条件，多个查询条件
+{"pageInfo":{"pageNum":"1", "pageSize":"10"}, "sortInfos": [ {"property":"city_name", "direction":"desc"},{"property":"city_code", "direction":"desc"} ], "searchInfos":[{"property":"cityName", "mate":"like", "value":"州"}, {"property":"createTime", "mate":">", "value":"2017-01-01"} ] }
+
+mybatis生成的sql如下：
+SELECT ID, CITY_CODE, CITY_NAME, VERSION, MODEL_FLAG, CREATE_TIME, CREATOR, MODIFY_TIME, UPDATER, PARENT_CITY_CODE, MODEL_ORDER, REMARK FROM tb_city_info WHERE (CITY_NAME LIKE ? AND CREATE_TIME > ?) order by city_name desc,city_code desc LIMIT ?
+pageNum等于2时，LIMIT ?,?

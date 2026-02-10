@@ -1,19 +1,8 @@
-/**
- * @Title: PageVO.java
- * @Package: com.zhurong.mybatis.page
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.mybatis.pagehelperplus;
 
 import com.github.pagehelper.PageInfo;
 import java.util.List;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/6/21
- */
 public class PageVO<T> {
 
     //PageHelper自带

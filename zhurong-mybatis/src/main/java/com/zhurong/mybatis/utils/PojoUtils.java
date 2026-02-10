@@ -5,10 +5,6 @@ import org.springframework.beans.BeanUtils;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author LZG
- * @date 2021/8/2
- */
 public class PojoUtils<V, E> {
     public PojoUtils() {
     }

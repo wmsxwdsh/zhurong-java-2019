@@ -1,9 +1,3 @@
-/**
- * @Title: CityInfoController.java
- * @Package: com.zhurong.mybatis.controller
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.mybatis.controller;
 
 import com.zhurong.db.persistence.domain.CityInfo;
@@ -16,10 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @description: 模糊查询、分页查询、结果排序，完整演示。
- *          -- pagehelp-plus说明.txt 例子
- * @author LZG
- * @date 2019/6/21
+ * 模糊查询、分页查询、结果排序，完整演示。
+ * -- pagehelp-plus说明.txt 例子
+ * 2019/6/21
  */
 @RestController
 @RequestMapping("/cityInfo")

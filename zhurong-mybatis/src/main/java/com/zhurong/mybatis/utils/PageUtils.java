@@ -4,10 +4,6 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * @author LZG
- * @date 2021/8/2
- */
 public class PageUtils<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     private int totalCount;

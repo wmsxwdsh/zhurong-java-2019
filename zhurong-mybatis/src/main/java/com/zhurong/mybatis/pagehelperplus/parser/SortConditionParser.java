@@ -1,18 +1,11 @@
-/**   
- * @Title: SortConditionParser.java
- * @Package: com.zhurong.mybatis.pagehelper.util
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.mybatis.pagehelperplus.parser;
 
 import com.zhurong.mybatis.pagehelperplus.SortCondition;
 import java.util.List;
 
 /**
- * @description: 排序条件解析器
- * @author LZG
- * @date 2019/6/21
+ * 排序条件解析器
+ * 2019/6/21
  */
 public class SortConditionParser {
 

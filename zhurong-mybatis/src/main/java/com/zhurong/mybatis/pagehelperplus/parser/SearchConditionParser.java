@@ -1,16 +1,10 @@
-/**
- * @Title: SearchConditionParser.java
- * @Package: com.zhurong.mybatis.pagehelper.util
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.mybatis.pagehelperplus.parser;
 
 import com.zhurong.db.persistence.domain.CityInfoExample;
 import com.zhurong.db.persistence.domain.CityInfoExample.Criteria;
 import com.zhurong.mybatis.pagehelperplus.SearchCondition;
+import com.zhurong.utils.common.StringUtil;
 import com.zhurong.utils.date.DateUtil;
-import com.zhurong.utils.general.StringUtil;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
@@ -21,9 +15,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @description: 模糊查询条件解析器
- * @author LZG
- * @date 2019/6/21
+ * 模糊查询条件解析器
+ * 2019/6/21
  */
 public class SearchConditionParser {
 

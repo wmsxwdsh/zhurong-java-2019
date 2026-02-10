@@ -1,16 +1,5 @@
-/**   
- * @Title: SearchCondition.java
- * @Package: com.zhurong.mybatis.page
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.mybatis.pagehelperplus;
 
-/**
- * @description: 
- * @author LZG
- * @date 2019/6/21
- */
 public class SearchCondition {
 
     //字段名称

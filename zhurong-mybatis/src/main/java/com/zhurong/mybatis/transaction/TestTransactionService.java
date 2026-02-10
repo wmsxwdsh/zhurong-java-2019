@@ -1,9 +1,3 @@
-/**
- * @Title: TestTransactionController.java
- * @Package: com.zhurong.mybatis.transaction
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.mybatis.transaction;
 
 import com.github.pagehelper.PageHelper;
@@ -20,9 +14,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @description: 事务传播性测试
- * @author LZG
- * @date 2020年05月27日
+ * 事务传播性测试
  */
 @Service
 public class TestTransactionService {

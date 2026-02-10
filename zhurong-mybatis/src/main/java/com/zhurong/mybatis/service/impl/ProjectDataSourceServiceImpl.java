@@ -1,9 +1,3 @@
-/**
- * @Title: ProjectDataSourceServiceImpl.java
- * @Package: com.zhurong.mybatis.service.impl
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.mybatis.service.impl;
 
 import com.github.pagehelper.Page;
@@ -18,11 +12,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/4/17
- */
 @Service
 public class ProjectDataSourceServiceImpl implements ProjectDataSourceService {
 
@@ -30,12 +19,9 @@ public class ProjectDataSourceServiceImpl implements ProjectDataSourceService {
     private ProjectDataSourceMapper projectDataSourceMapper;
 
     /**
-     * @Description: 分页查询数据源数据
+     * 分页查询数据源数据
      * @param currentPage 第X页
      * @param pageSize 条数
-     * @return java.util.List<com.zhurong.db.persistence.domain.ProjectDataSource>
-     * @author LZG
-     * @date 2019/4/17
      */
     @Override
     public List<ProjectDataSource> getPageProjectDataSource(int currentPage, int pageSize) {
