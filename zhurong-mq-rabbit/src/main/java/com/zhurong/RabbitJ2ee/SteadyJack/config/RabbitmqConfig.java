@@ -1,7 +1,7 @@
 package com.zhurong.RabbitJ2ee.SteadyJack.config;
 
-import com.debug.steadyjack.rabbitmq.SimpleListener;
-import com.debug.steadyjack.rabbitmq.UserOrderListener;
+import com.zhurong.RabbitJ2ee.SteadyJack.rabbitmq.SimpleListener;
+import com.zhurong.RabbitJ2ee.SteadyJack.rabbitmq.UserOrderListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.*;
