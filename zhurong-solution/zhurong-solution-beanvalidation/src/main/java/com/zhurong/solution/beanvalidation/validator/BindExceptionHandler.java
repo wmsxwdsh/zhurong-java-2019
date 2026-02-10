@@ -1,9 +1,3 @@
-/**
- * @Title: BindExceptionHandler.java
- * @Package: com.zhurong.solution.beanvalidation.validator
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.solution.beanvalidation.validator;
 
 import com.zhurong.utils.response.InfoCoinResponse;
@@ -15,9 +9,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
- * @description: 异常捕获类
- * @author LZG
- * @date 2019/3/21
+ * 异常捕获类
+ * 2019/3/21
  */
 @RestControllerAdvice
 public class BindExceptionHandler {

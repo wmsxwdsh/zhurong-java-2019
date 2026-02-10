@@ -1,9 +1,3 @@
-/**
- * @Title: TestBeanValidationController.java
- * @Package: com.zhurong.solution.beanvalidation
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.solution.beanvalidation.controller;
 
 import com.zhurong.db.persistence.domain.TbBookInfo;
@@ -14,11 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @description:
- * @author LZG
- * @date 2019/3/21
- */
 @RestController
 public class TestBeanValidationController {
 
