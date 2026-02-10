@@ -1,9 +1,3 @@
-/**
- * @Title: MyController.java
- * @Package: com.zhurong.springboot.controller
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.zhurong.springboot.test.controller;
 
 import com.zhurong.springboot.test.config.MyConfigBean;
@@ -18,11 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年03月09日
- */
 @RestController
 @RequestMapping("/api")
 public class MyController {

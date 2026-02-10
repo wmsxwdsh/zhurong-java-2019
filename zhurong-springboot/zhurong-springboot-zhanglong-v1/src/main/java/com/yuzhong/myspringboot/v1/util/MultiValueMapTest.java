@@ -1,9 +1,3 @@
-/**
- * @Title: MultiValueMapTest.java
- * @Package: com.yuzhong.myspringboot.util
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.yuzhong.myspringboot.v1.util;
 
 import org.springframework.util.LinkedMultiValueMap;
@@ -13,9 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @description: MultiValueMap, 一个key可以对应多个value
- * @author LZG
- * @date 2020年03月16日
+ * MultiValueMap, 一个key可以对应多个value
  */
 public class MultiValueMapTest {
 

@@ -6,7 +6,6 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author LZG
  * @date 2022.04.14
  */
 //@AtLeastOneNotNull(fieldNames = {"password", "verificationCode"}, message = "password，verificationCode不能都为空")

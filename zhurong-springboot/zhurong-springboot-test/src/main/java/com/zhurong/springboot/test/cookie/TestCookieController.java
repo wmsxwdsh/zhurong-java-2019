@@ -10,11 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- *
- * @author LZG
- * @date 2022年04月01日
- */
 @RestController
 public class TestCookieController {
 
@@ -37,14 +32,6 @@ public class TestCookieController {
         }
     }
 
-    /**
-     *
-     * @param req
-     * @param resp
-     * @throws ServletException
-     * @throws IOException
-     * 2022.04.01
-     */
     @GetMapping(value = "/doGet")
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Cookie cookie = new Cookie("admin", System.currentTimeMillis() + "");

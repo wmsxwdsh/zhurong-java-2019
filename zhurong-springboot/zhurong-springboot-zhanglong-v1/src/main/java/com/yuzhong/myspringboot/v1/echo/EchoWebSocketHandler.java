@@ -1,9 +1,3 @@
-/**
- * @Title: EchoWebSocketHandler.java
- * @Package: com.yuzhong.myspringboot.echo
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.yuzhong.myspringboot.v1.echo;
 
 import org.springframework.web.socket.CloseStatus;
@@ -11,11 +5,6 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年06月04日
- */
 public class EchoWebSocketHandler extends TextWebSocketHandler {
 
     private EchoServcie echoService;

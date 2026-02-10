@@ -17,8 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
 /**
- *
- * @author LZG
  * @date 2022.04.06
  */
 public class JwtInterceptor implements HandlerInterceptor {

@@ -1,18 +1,7 @@
-/**
- * @Title: MyConfigBean.java
- * @Package: com.zhurong.springboot.config
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.yuzhong.myspringboot.v1.config;
 
 import org.springframework.beans.factory.annotation.Value;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年03月09日
- */
 public class MyConfigBean {
 
     @Value("${myConfig.myObject.myName}")

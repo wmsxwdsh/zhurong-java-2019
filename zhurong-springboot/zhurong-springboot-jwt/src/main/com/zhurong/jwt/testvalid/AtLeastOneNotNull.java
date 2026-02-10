@@ -15,8 +15,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * 验证至少有一个不能为空
- *
- * @author admin
  */
 @Target({TYPE})
 @Retention(RUNTIME)

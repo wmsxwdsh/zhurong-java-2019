@@ -1,22 +1,10 @@
-/**
- * @Title: DatetimeVO.java
- * @Package: com.zhurong.myspring.vo
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.myspring.vo;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @description:
- * @author LZG
- * @date 2020年07月07日
- */
 public class DatetimeVO implements Serializable {
     private static final long serialVersionUID = -7605529449157357912L;
 

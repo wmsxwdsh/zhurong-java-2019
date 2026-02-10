@@ -1,8 +1,6 @@
 package com.zhurong.jwt.entity;
 
 /**
- *
- * @author LZG
  * @date 2022.04.06
  */
 public class User {

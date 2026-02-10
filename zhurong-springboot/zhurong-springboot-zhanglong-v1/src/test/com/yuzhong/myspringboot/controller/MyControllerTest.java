@@ -1,9 +1,3 @@
-/**
- * @Title: MyControllerTest.java
- * @Package: com.yuzhong.myspringboot
- * @author LZG, liuzhongguo@cdvcloud.com
- * Copyright (c) 2020 https://www.yunshicloud.com
- */
 package com.yuzhong.myspringboot.controller;
 
 import org.junit.Test;
@@ -19,11 +13,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-/**
- * @author LZG
- * @description:
- * @date 2020年06月04日
- */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class MyControllerTest {

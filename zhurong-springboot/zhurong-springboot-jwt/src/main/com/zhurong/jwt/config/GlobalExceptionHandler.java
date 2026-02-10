@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 全局捕获异常
- * @author LZG
- * @date 2022.04.06
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {

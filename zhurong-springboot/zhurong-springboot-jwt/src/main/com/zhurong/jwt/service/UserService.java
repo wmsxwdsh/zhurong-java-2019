@@ -4,8 +4,6 @@ import com.zhurong.jwt.entity.User;
 import org.springframework.stereotype.Service;
 
 /**
- *
- * @author LZG
  * @date 2022.04.06
  */
 @Service

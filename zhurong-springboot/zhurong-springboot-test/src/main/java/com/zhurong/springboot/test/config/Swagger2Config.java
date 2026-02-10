@@ -1,9 +1,3 @@
-/**
- * @Title: Swagger2Config.java
- * @Package: com.zhurong.springboot.test.config
- * @author LZG, liuzg@12366.com
- * Copyright (c) 2020 http://www.12366.com
- */
 package com.zhurong.springboot.test.config;
 
 import com.google.common.base.Predicates;
