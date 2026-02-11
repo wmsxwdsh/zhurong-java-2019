@@ -7,7 +7,7 @@ import com.rabbitmq.client.ConnectionFactory;
 
 /**
  * Fanout模式，分意识分发消息模型
- * 有没有rouctingKey都一样
+ * 有没有 routingKey 都一样
  * 实际场景不大使用
  */
 public class OneProducer {

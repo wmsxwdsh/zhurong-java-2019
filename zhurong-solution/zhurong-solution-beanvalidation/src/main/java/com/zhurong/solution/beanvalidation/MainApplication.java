@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * 用postman测试，即本目录下的“postman测试截图”
+ * 用 postman 测试，即本目录下的 “postman测试截图”
  * ！！bean validation的内容包含两部分：
  * -- 1、zhurong-solution-beanvlidation下的validator package、resources文件夹下的ValidationMessages.properties
  * -- 2、zhurong-db-persistence下的validator package、TbBookInfo

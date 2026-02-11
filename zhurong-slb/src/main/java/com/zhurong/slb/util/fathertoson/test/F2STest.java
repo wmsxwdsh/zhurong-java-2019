@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @date 2020年06月22日
- */
 public class F2STest {
 
     public static void main(String[] args) {
@@ -37,7 +34,6 @@ public class F2STest {
 
     /**
      * 强转是不行的。会报ClassCastException
-     * @date 2020/6/22
      */
     private static void testForce() {
         List<DictVO> collect = getDictLit().stream().map(

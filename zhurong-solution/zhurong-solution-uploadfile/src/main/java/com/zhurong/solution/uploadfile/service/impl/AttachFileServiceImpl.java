@@ -156,8 +156,6 @@ public class AttachFileServiceImpl implements AttachFileService {
 
     /**
      * 根据主键删除一条新记录
-     * @param PK Map<String,Object> 主键值
-     * @return int 执行成功的数量
      */
     @Override
     public void deleteFile(String id) {

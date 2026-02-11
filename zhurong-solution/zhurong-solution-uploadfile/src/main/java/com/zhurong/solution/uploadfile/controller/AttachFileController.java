@@ -18,9 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
- * @description: 摘自hdawi项目AttachFileAction
- * @author LZG
- * @date 2019/6/3
+ * 摘自 hdawi 项目 AttachFileAction
+ * 2019/6/3
  */
 @Controller
 @RequestMapping("/AttachFileController")

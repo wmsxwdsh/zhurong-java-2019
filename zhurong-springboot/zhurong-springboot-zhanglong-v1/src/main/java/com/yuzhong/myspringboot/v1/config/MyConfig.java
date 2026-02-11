@@ -4,8 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * //@Lazy  //延迟加载
- * 2020年03月09日
+ * //@Lazy
+ * //延迟加载
  */
 @Configuration
 public class MyConfig {
