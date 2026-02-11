@@ -7,7 +7,6 @@ import org.junit.Test;
 
 /**
  * 单向通道
- * @author LZG
  */
 public class Md5SaltTestPipe {
 

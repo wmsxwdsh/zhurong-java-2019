@@ -1,9 +1,3 @@
-/**
- * @Title: TestCallable.java
- * @Package: com.zhurong.jdk.java8.lambda
- * @author LZG, liuzhongguochn@gmail.com  
- * Copyright (c) 2019 北京艾森思科技有限公司
- */
 package com.zhurong.jdk.java8.lambda;
 
 import com.zhurong.utils.gen.ChineseNameGen;

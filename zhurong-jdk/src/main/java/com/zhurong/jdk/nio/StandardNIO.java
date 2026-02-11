@@ -14,7 +14,6 @@ import org.junit.Test;
 
 /**
  * 非阻塞式 IO 标准实现
- * 2018/11/6
  */
 public class StandardNIO {
 

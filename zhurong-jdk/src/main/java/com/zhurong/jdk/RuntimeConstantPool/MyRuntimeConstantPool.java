@@ -2,7 +2,6 @@ package com.zhurong.jdk.RuntimeConstantPool;
 
 /**
  * 运行时常量池 Runtime Constant Pool
- * 2019/3/4
  */
 public class MyRuntimeConstantPool {
 

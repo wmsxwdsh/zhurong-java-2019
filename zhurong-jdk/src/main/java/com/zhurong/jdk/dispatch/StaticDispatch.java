@@ -2,7 +2,6 @@ package com.zhurong.jdk.dispatch;
 
 /**
  * 静态分派示例
- * 2018/11/8
  */
 public class StaticDispatch {
 

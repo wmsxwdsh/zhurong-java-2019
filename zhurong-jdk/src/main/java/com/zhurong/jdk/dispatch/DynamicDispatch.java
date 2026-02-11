@@ -1,8 +1,7 @@
 package com.zhurong.jdk.dispatch;
 
 /**
- * 态分派示例
- * 2018/11/8
+ * 动态分派示例
  */
 public class DynamicDispatch {
 
